@@ -63,13 +63,3 @@ html {
     scale: 100%;
   }
 }
-.animationSection {
-  view-timeline: --section;
-  view-timeline-axis: block;
-
-  animation-timeline: --section;
-  animation-name: show;
-
-  animation-range: entry 25% cover 30%;
-  animation-fill-mode: both;
-}

@@ -8,7 +8,7 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
     animate(
       "#main",
       { y: [70, 0], opacity: [0, 1] },
-      { duration: 1.2, delay: stagger(1) }
+      { duration: 1.1, delay: stagger(1) }
     );
   }, []);
 

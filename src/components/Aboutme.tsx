@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   IconBrandRedux,
   IconBrandReact,
@@ -10,11 +10,22 @@ import {
 } from "@tabler/icons-react";
 import { sobremi } from "@/utils/TextAboutme";
 import { Aside } from ".";
+import { animate, inView } from "motion";
+
 const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
+  useEffect(() => {
+    inView("#aboutme", () => {
+      animate(
+        "#aboutme",
+        { scale: [0, 1], opacity: [0, 1] },
+        { delay: 0.2, duration: 1 }
+      );
+    });
+  });
   return (
     <section
       id="aboutme"
-      className="animationSection px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[19rem] flex flex-col justify-center h-screen dark:text-[#eeeeee]"
+      className="px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[19rem] flex flex-col justify-center h-screen dark:text-[#eeeeee]"
     >
       <div>
         <h3 className="lg:text-4xl text-3xl  font-bold mb-16">

@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { portfolios } from "@/utils/ProyectsTorender";
 import { IconCode, IconArrowRight } from "@tabler/icons-react";
+import { animate, inView } from "motion";
 
 const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
+  useEffect(() => {
+    inView("#projects", () => {
+      animate(
+        "#projects",
+        { scale: [0, 1], opacity: [0, 1] },
+        { delay: 0.2, duration: 1 }
+      );
+    });
+  });
   return (
     <section
       id="projects"
-      className="animationSection py-4 lg:py-10 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[19rem] flex flex-col justify-center h-auto  dark:text-[#eeeeee]"
+      className=" py-4 lg:py-10 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[19rem] flex flex-col justify-center h-auto  dark:text-[#eeeeee]"
     >
       <div>
         <h3 className="lg:text-4xl text-3xl font-bold mb-16">
