@@ -1,4 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/magilio");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,19 +35,15 @@ html {
 }
 .text-shadow-pink {
   color: #d36e70; /* Color rosa */
-  text-shadow: 0.1em 0.1em 0 hsl(200 50% 30%);
+  text-shadow: -0.05em 0.05em 0 hsl(200 50% 30%);
 }
 .title {
   font-family: "Magilio", sans-serif;
-  font-size: 10rem;
+
   font-weight: 900;
 }
+
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 400px;
-  border-radius: 8px;
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
@@ -54,4 +51,25 @@ html {
 
 .card:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.animationSection {
+  view-timeline: --section;
+  view-timeline-axis: block;
+
+  animation-timeline: --section;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
 }

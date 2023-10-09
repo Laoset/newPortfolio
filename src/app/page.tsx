@@ -1,11 +1,5 @@
 "use client";
-import {
-  Footer,
-  Navbar,
-  MainContent,
-  Aboutme,
-  ProyectosHome,
-} from "@/components";
+import { Footer, Navbar, Aboutme, ProyectosHome } from "@/components";
 import { useState } from "react";
 import MainContextAlter from "../components/MainContextAlter";
 export default function Home() {
@@ -15,12 +9,11 @@ export default function Home() {
   };
 
   return (
-    <main className="px-[19rem] min-h-screen min-w-full flex flex-col dark:bg-[#000000]">
+    <main className="min-h-screen min-w-full flex flex-col dark:bg-[#000000]">
       <Navbar handlerLanguage={handlerLanguage} isEnglish={isEnglish} />
       <MainContextAlter isEnglish={isEnglish} />
       <Aboutme isEnglish={isEnglish} />
       <ProyectosHome isEnglish={isEnglish} />
-      {/* <Proyectos isEnglish={isEnglish} /> */}
       <Footer isEnglish={isEnglish} />
     </main>
   );

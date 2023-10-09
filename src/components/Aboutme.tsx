@@ -9,28 +9,28 @@ import {
   IconArrowRight,
 } from "@tabler/icons-react";
 import { sobremi } from "@/utils/TextAboutme";
-import { Aside, MarqueeComponent } from ".";
+import { Aside } from ".";
 const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="aboutme"
-      className="flex flex-col justify-center h-screen dark:text-[#eeeeee]"
+      className="animationSection px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[19rem] flex flex-col justify-center h-screen dark:text-[#eeeeee]"
     >
       <div>
-        <h3 className="text-4xl font-bold mb-16">
+        <h3 className="lg:text-4xl text-3xl  font-bold mb-16">
           <span className="text-3xl">{"<"} </span>
           {isEnglish ? "About me" : "Sobre mí"}
           <span className="text-3xl ml-1">{"/>"}</span>
         </h3>
-        <div className="flex flex-col justify-between gap-10">
+        <div className="flex flex-col justify-between gap-60 xs:gap-48 sm:gap-28 lg:gap-14 2xl:gap-10">
           {/* INTRODUCCION */}
           <div className="flex flex-col gap-10 justify-between ">
             <p className="text-xl h-52">
               {isEnglish ? sobremi?.introEng : sobremi?.intro}
             </p>
           </div>
-          {/* ESTUDIOS Y TRABAJO */}
-          <div className="flex flex-row justify-between ">
+          {/* ESTUDIOS */}
+          <div className="flex flex-col xl:flex xl:flex-row justify-between gap-16 ">
             <div className="flex flex-col gap-5 text-xl">
               <h3>{isEnglish ? "Studies" : "Estudios"}</h3>
               <ul className="list-disc">
@@ -82,7 +82,7 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
                 </p>
                 <Aside />
               </div>
-              <div className="text-xl flex flex-row items-center gap-10">
+              <div className="text-xl flex flex-row items-center gap-10 justify-between">
                 <p className="flex flex-row items-center">
                   {isEnglish
                     ? "I use these technologies"
@@ -132,7 +132,6 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
               </div>
             </div>
           </div>
-          {/* CONTACT ICONS */}
         </div>
       </div>
     </section>
