@@ -4,7 +4,6 @@ import {
   Navbar,
   MainContent,
   Aboutme,
-  Proyectos,
   ProyectosHome,
 } from "@/components";
 import { useState } from "react";
