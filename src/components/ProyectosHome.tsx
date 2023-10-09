@@ -1,14 +1,10 @@
 import React from "react";
 import { portfolios } from "@/utils/ProyectsTorender";
-import { Swiper, SwiperSlide } from "swiper/react";
 import {
   IconCode,
   IconArrowRight,
   IconArrowBigRight,
 } from "@tabler/icons-react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 
 const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
