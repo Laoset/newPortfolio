@@ -1,10 +1,6 @@
 import React from "react";
 import { portfolios } from "@/utils/ProyectsTorender";
-import {
-  IconCode,
-  IconArrowRight,
-  IconArrowBigRight,
-} from "@tabler/icons-react";
+import { IconCode, IconArrowRight } from "@tabler/icons-react";
 
 const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
