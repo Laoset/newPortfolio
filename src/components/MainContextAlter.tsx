@@ -39,7 +39,7 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
       </div>
       <div className="flex flex-row justify-between mt-14 font-normal">
         <p className="lg:text-[2rem] 2xl:text-[2.5rem] text-[1.5rem] md:text-[2.3rem] w-4/5 font-normal text-[#333333] dark:text-[#eeeeee]">
-          <span className="text-[#d36e70] mr-3 font-bold">
+          <span className="text-[#A13032] mr-3 font-bold">
             {isEnglish ? "Front End Developer" : "Desarrollador Front End"}
           </span>
           {isEnglish
@@ -50,7 +50,8 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
           <button onClick={() => scrollToSection("projects")}>
             <IconSquareRoundedArrowDownFilled
               size={40}
-              className="hover:text-[#d36e70] transition-colors"
+              className="hover:text-[#A13032] transition-colors"
+              aria-label="Scroll"
             />
           </button>
           <span className="text-2xl text-[#333333] dark:text-[#eeeeee]">

@@ -9,21 +9,24 @@ const Aside = () => {
     <div className="flex flex-row gap-2 ">
       <a
         href="https://www.linkedin.com/in/kevin-corman-samanamud/"
-        className="hover:text-[#d36e70] transition-colors"
+        className="hover:text-[#A13032] transition-colors"
         target="_blank"
+        aria-label="LinkedIn"
       >
         <IconBrandLinkedin size={40} />
       </a>
       <a
         href="https://github.com/Laoset"
-        className="hover:text-[#d36e70] transition-colors"
+        className="hover:text-[#A13032] transition-colors"
         target="_blank"
+        aria-label="GitHub"
       >
         <IconBrandGithub size={40} />
       </a>
       <a
         href="mailto:kevin143corman@gmail.com"
-        className="hover:text-[#d36e70] transition-colors"
+        className="hover:text-[#A13032] transition-colors"
+        aria-label="Email"
       >
         <IconMail size={40} />
       </a>

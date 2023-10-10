@@ -42,7 +42,7 @@
 //                     <a href={item.code} target="_blank">
 //                       <IconCode
 //                         size={24}
-//                         className="hover:text-[#d36e70] transition-colors"
+//                         className="hover:text-[#A13032] transition-colors"
 //                       />
 //                     </a>
 //                     <p className="text-lg font-bold cursor-default">
@@ -51,7 +51,7 @@
 //                     <a href={item.href}>
 //                       <IconArrowRight
 //                         size={24}
-//                         className="hover:text-[#d36e70] transition-colors"
+//                         className="hover:text-[#A13032] transition-colors"
 //                       />
 //                     </a>
 //                   </div>

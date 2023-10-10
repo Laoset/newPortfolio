@@ -44,7 +44,7 @@ const Navbar = ({
       }
     >
       <div className="sticky top-0 flex flex-row justify-between items-center h-[4.75rem] border-b-[1.5px] border-gray-400 z-50 bg-[#fbfcfd] text-lg font-medium dark:bg-[#000000] dark:text-[#eeeeee] bg-gradient-conic  from-[#ffffff] to-[#fbfcfd] dark:bg-gradient-conic dark:from-black dark:to-black">
-        <h1 className="xs:block hidden hover:animate-pulse hover:text-[#d36e70] transition-colors">
+        <h1 className="xs:block hidden hover:animate-pulse hover:text-[#A13032] transition-colors">
           #KC
         </h1>
         <div className="flex flex-row gap-4 ">
@@ -91,6 +91,7 @@ const Navbar = ({
                 <IconMoonFilled
                   className="hover:rotate-12  duration-300"
                   onClick={handlerTheme}
+                  aria-label="Dark mode"
                 />
               </button>
             ) : (
@@ -98,6 +99,7 @@ const Navbar = ({
                 <IconSunFilled
                   className="hover:rotate-12  duration-300"
                   onClick={handlerTheme}
+                  aria-label="Light mode"
                 />
               </button>
             )}
@@ -105,6 +107,7 @@ const Navbar = ({
               <IconWorld
                 className="hover:rotate-12  duration-300"
                 onClick={handlerLanguage}
+                aria-label="Language"
               />
             </button>
           </div>

@@ -1,4 +1,8 @@
-@import url("https://fonts.cdnfonts.com/css/magilio");
+@font-face {
+  font-family: "Magilio";
+  src: url("/MagilioRegular-8Mxvg.otf") format("opentype");
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -24,7 +28,7 @@ html {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #d36e70;
+  background-color: #a13032;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -34,12 +38,11 @@ html {
   transform-origin: bottom left;
 }
 .text-shadow-pink {
-  color: #d36e70; /* Color rosa */
+  color: #a13032; /* Color rosa */
   text-shadow: -0.05em 0.05em 0 hsl(200 50% 30%);
 }
 .title {
   font-family: "Magilio", sans-serif;
-
   font-weight: 900;
 }
 

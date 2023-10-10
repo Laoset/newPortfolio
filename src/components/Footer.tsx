@@ -14,13 +14,13 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
         </p>
         {isEnglish ? (
           <>
-            <button className="w-44 p-2 rounded-md bg-[#d36e70]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
+            <button className="w-44 p-2 rounded-md bg-[#A13032]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
               Download Resume
             </button>
           </>
         ) : (
           <>
-            <button className="w-40 p-2 rounded-md bg-[#d36e70]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
+            <button className="w-40 p-2 rounded-md bg-[#A13032]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
               Descargar CV
             </button>
           </>

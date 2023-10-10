@@ -33,14 +33,22 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
             </p>
             <p>
               {isEnglish ? (
-                <a href="https://github.com/Laoset" target="_blank">
-                  <button className="px-2 py-1 rounded-md bg-[#d36e70]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
+                <a
+                  href="https://github.com/Laoset"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <button className="px-2 py-1 rounded-md bg-[#A13032]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
                     View More
                   </button>
                 </a>
               ) : (
-                <a href="https://github.com/Laoset" target="_blank">
-                  <button className="px-2 py-1 rounded-md bg-[#d36e70]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
+                <a
+                  href="https://github.com/Laoset"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <button className="px-2 py-1 rounded-md bg-[#A13032]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
                     Ver más
                   </button>
                 </a>
@@ -64,10 +72,10 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                   >
                     <div className="flex flex-col justify-evenly py-2">
                       <div className="flex flex-row justify-evenly ">
-                        <a href={item.code} target="_blank">
+                        <a href={item.code} target="_blank" aria-label="GitHub">
                           <IconCode
                             size={24}
-                            className="hover:text-[#d36e70] transition-colors"
+                            className="hover:text-[#A13032] transition-colors"
                           />
                         </a>
                         <p className="text-lg font-bold cursor-default">
@@ -76,7 +84,8 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.href} target="_blank">
                           <IconArrowRight
                             size={24}
-                            className="hover:text-[#d36e70] transition-colors"
+                            className="hover:text-[#A13032] transition-colors"
+                            aria-label="Website"
                           />
                         </a>
                       </div>
@@ -119,7 +128,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.code} target="_blank">
                           <IconCode
                             size={24}
-                            className="hover:text-[#d36e70] transition-colors"
+                            className="hover:text-[#A13032] transition-colors"
                           />
                         </a>
                         <p className="text-lg font-bold cursor-default">
@@ -128,7 +137,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.href} target="_blank">
                           <IconArrowRight
                             size={24}
-                            className="hover:text-[#d36e70] transition-colors"
+                            className="hover:text-[#A13032] transition-colors"
                           />
                         </a>
                       </div>
