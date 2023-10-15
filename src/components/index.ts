@@ -5,10 +5,8 @@ import MainContent from "./MainContent";
 import Aboutme from "./Aboutme";
 import TypeWritter from "./TypeWritter";
 import ProyectosHome from "./ProyectosHome";
-import MarqueeComponent from "./Marquee";
 
 export {
-  MarqueeComponent,
   Navbar,
   Footer,
   Aside,

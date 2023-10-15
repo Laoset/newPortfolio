@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { animate, stagger } from "motion";
 import { IconSquareRoundedArrowDownFilled } from "@tabler/icons-react";
 import { scrollToSection } from "@/utils/ScrollMovement";
+import { TypeWritter } from ".";
 
 const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
   useEffect(() => {
@@ -15,13 +16,13 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="main"
-      className="px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[19rem]  flex flex-col lg:gap-4 4xl:gap-20  h-screen text-black dark:text-[#eeeeee]"
+      className="px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col lg:gap-4 4xl:gap-20  h-screen text-black dark:text-[#eeeeee]"
     >
       <div className="flex flex-col lg:items-end  lg:mt-10 2xl:mt-14 4xl:mt-28">
         <h2 className="title  text-[3rem] sm:text-[5rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[9rem] 4xl:text-[10rem]">
           {isEnglish ? "Hello" : "Hola"}
         </h2>
-        <h2 className="title  text-[3rem] sm:text-[5rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[9rem] 4xl:text-[10rem]">
+        <h2 className="title  text-[3rem] sm:text-[5rem] lg:text-[6rem] xl:text-[8rem] 2xl:text-[9rem] 4xl:text-[9.8rem]">
           {isEnglish ? (
             <>
               <span className="mr-10">I'm</span>
@@ -38,14 +39,15 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
         </h2>
       </div>
       <div className="flex flex-row justify-between mt-14 font-normal">
-        <p className="lg:text-[2rem] 2xl:text-[2.5rem] text-[1.5rem] md:text-[2.3rem] w-4/5 font-normal text-[#333333] dark:text-[#eeeeee]">
-          <span className="text-[#A13032] mr-3 font-bold">
+        <div className="lg:text-[2rem] 2xl:text-[2.5rem] text-[1.5rem] md:text-[2.3rem] w-4/5 font-normal text-[#333333] dark:text-[#eeeeee] 3xl:h-36 ">
+          {/* <span className="text-[#A13032] mr-3 font-bold">
             {isEnglish ? "Front End Developer" : "Desarrollador Front End"}
           </span>
           {isEnglish
             ? "that seeks creative solutions to everyday challenges."
-            : "que busca soluciones creativas para los desafios diarios."}
-        </p>
+            : "que busca soluciones creativas para los desafios diarios."} */}
+          <TypeWritter />
+        </div>
         <div className="w-20 flex flex-col items-center justify-center gap-1">
           <button onClick={() => scrollToSection("projects")}>
             <IconSquareRoundedArrowDownFilled

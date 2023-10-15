@@ -2,6 +2,7 @@
 import { Footer, Navbar, Aboutme, ProyectosHome } from "@/components";
 import { useState } from "react";
 import MainContextAlter from "../components/MainContextAlter";
+
 export default function Home() {
   const [isEnglish, setIsEnglish] = useState<boolean>(false);
   const handlerLanguage = () => {

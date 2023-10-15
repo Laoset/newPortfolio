@@ -4,7 +4,7 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <footer
       id="footer"
-      className="pt-20 lg:pt-4 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[19rem]  flex flex-col justify-center items-center dark:text-[#eeeeee]"
+      className="pt-20 lg:pt-4 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col justify-center items-center dark:text-[#eeeeee]"
     >
       <div className="text-lg flex flex-col justify-center items-center gap-4">
         <p>
@@ -29,7 +29,7 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
       <div className="flex flex-row gap-2 mt-10 mb-5  ">
         <p>{isEnglish ? "- Made with" : "- Hecho con"}</p>
         <span>
-          <IconHeartCode color="#FF0000" />
+          <IconHeartCode color="#A13032" />
         </span>
         <p>
           {isEnglish

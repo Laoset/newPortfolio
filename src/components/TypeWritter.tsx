@@ -1,41 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Typewriter from "typewriter-effect";
 
-const frases = [
-  "Accesibilidad y minimalismo",
-  "React/Redux my first love",
-  "TypeScript fan",
-];
+// const frases = [
+//   "Forjando soluciones impactantes desde líneas de código como Desarrollador Front End",
+//   "Desarrollador Front End que busca soluciones creativas para los desafios diarios",
+// ];
 
 const TypeWritter: React.FC = () => {
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState<number>(0);
-  const [currentText, setCurrentText] = useState<string>("");
-  const [charIndex, setCharIndex] = useState<number>(0);
-
-  useEffect(() => {
-    const typingInterval = setInterval(() => {
-      if (charIndex < frases[currentPhraseIndex].length) {
-        setCurrentText(
-          (prevText) => prevText + frases[currentPhraseIndex].charAt(charIndex)
-        );
-        setCharIndex(charIndex + 1);
-      } else {
-        clearInterval(typingInterval);
-        setTimeout(() => {
-          setCharIndex(0);
-          setCurrentText("");
-          setCurrentPhraseIndex((currentPhraseIndex + 1) % frases.length);
-        }, 1000); // Cambia de frase después de 1 segundo
-      }
-    }, 100);
-
-    return () => {
-      clearInterval(typingInterval);
-    };
-  }, [charIndex, currentPhraseIndex]);
-
   return (
     <div>
-      <p>{currentText}</p>
+      <Typewriter
+        options={{
+          strings: [
+            'Forjando soluciones impactantes desde líneas de código como <span style="color: #A13032; font-weight: bold; margin-right: 12px;"> Desarrollador Front End</span>',
+            '<span style="color: #A13032; font-weight: bold; margin-right: 12px;">Desarrollador Front End</span>que busca soluciones creativas para los desafios diarios',
+          ],
+          autoStart: true,
+          loop: true,
+          deleteSpeed: 20,
+          delay: 20,
+        }}
+      />
     </div>
   );
 };
