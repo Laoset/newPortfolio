@@ -1,5 +1,5 @@
 import React from "react";
-import { Aside, TypeWritter } from ".";
+// import { Aside, TypeWritter } from ".";
 
 const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
@@ -8,9 +8,7 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
         <h2 className="text-8xl font-bold">KEVIN</h2>
         <h2 className="text-8xl font-bold">FRONT END DEVELOPER</h2>
 
-        <div className="h-8 mb-5 text-xl">
-          <TypeWritter />
-        </div>
+        <div className="h-8 mb-5 text-xl"></div>
       </div>
       <button className="text-lg px-4 py-2 rounded-md bg-[#1C1CFF] text-[#FFFFFF] hover:bg-opacity-80 transition-opacity">
         Proyectos
