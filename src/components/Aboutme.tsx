@@ -25,24 +25,24 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="aboutme"
-      className="px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center h-screen dark:text-[#eeeeee]"
+      className="scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center h-screen dark:text-[#eeeeee]"
     >
       <div>
-        <h3 className="lg:text-4xl text-3xl  font-bold mb-16">
+        <h3 className="lg:text-4xl text-3xl font-bold m:mb-16 mb-4">
           <span className="text-3xl">{"<"} </span>
           {isEnglish ? "About me" : "Sobre mí"}
           <span className="text-3xl ml-1">{"/>"}</span>
         </h3>
-        <div className="flex flex-col justify-between gap-60 xs:gap-48 sm:gap-28 lg:gap-14 2xl:gap-10">
+        <div className="flex flex-col justify-between gap-4 m:gap-60 xs:gap-48 sm:gap-28 lg:gap-14 2xl:gap-10">
           {/* INTRODUCCION */}
           <div className="flex flex-col gap-10 justify-between ">
-            <p className="text-xl h-52 ">
+            <p className="m:text-xl m:h-52 h-auto">
               {isEnglish ? sobremi?.introEng : sobremi?.intro}
             </p>
           </div>
           {/* ESTUDIOS */}
-          <div className="flex flex-col xl:flex xl:flex-row justify-between gap-16 ">
-            <div className="flex flex-col gap-5 text-xl">
+          <div className="flex flex-col xl:flex xl:flex-row justify-between m:gap-16 ">
+            <div className="flex flex-col gap-2 m:gap-5 md:text-xl">
               <p className="text-2xl">{isEnglish ? "Studies" : "Estudios"}</p>
               <ul className="list-disc">
                 <li>
@@ -83,8 +83,8 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col justify-around">
-              <div className="text-xl flex flex-row items-center gap-10 justify-between ">
+            <div className="flex flex-col justify-around m:gap-0 gap-4">
+              <div className="md:text-xl flex flex-col md:flex-row items-center md:gap-10 justify-between ">
                 <p className="flex flex-row items-center">
                   {isEnglish ? "You can find me at" : "Me podes encontrar en"}
                   <span className="ml-2">
@@ -93,7 +93,7 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
                 </p>
                 <Aside />
               </div>
-              <div className="text-xl flex flex-row items-center gap-10 justify-between">
+              <div className="md:text-xl flex flex-col md:flex-row items-center md:gap-10 justify-between">
                 <p className="flex flex-row items-center">
                   {isEnglish
                     ? "I use these technologies"

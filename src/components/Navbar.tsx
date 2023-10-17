@@ -90,7 +90,7 @@ const Navbar = ({
             <IconMenu onClick={() => setModal(!modal)} />
           </div>
           {modal ? (
-            <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black gap-4">
+            <ul className="z-10 flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full bg-black gap-4">
               <p
                 className="absolute top-4 right-4 text-xl text-white"
                 onClick={() => setModal(!modal)}

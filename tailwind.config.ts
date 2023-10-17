@@ -9,13 +9,15 @@ const config: Config = {
   darkMode: "class",
   theme: {
     screens: {
-      xs: "490px",
+      xs: "520px",
 
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 
       md: "768px",
       // => @media (min-width: 768px) { ... }
+      m: "850px",
+      // => @media (min-width: 850px) { ... }
 
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }
