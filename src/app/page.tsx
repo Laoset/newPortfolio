@@ -10,7 +10,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen min-w-full flex flex-col dark:bg-[#000000]">
+    <main className="min-h-screen min-w-full flex flex-col dark:bg-[#1c1a27]">
       <Navbar handlerLanguage={handlerLanguage} isEnglish={isEnglish} />
       <MainContextAlter isEnglish={isEnglish} />
       <Aboutme isEnglish={isEnglish} />

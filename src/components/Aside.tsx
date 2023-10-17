@@ -9,7 +9,7 @@ const Aside = () => {
     <div className="flex flex-row gap-2 ">
       <a
         href="https://www.linkedin.com/in/kevin-corman-samanamud/"
-        className="hover:text-[#A13032] transition-colors"
+        className="hover:text-[#6D67E4] transition-colors"
         target="_blank"
         aria-label="LinkedIn"
       >
@@ -17,7 +17,7 @@ const Aside = () => {
       </a>
       <a
         href="https://github.com/Laoset"
-        className="hover:text-[#A13032] transition-colors"
+        className="hover:text-[#6D67E4] transition-colors"
         target="_blank"
         aria-label="GitHub"
       >
@@ -25,7 +25,7 @@ const Aside = () => {
       </a>
       <a
         href="mailto:kevin143corman@gmail.com"
-        className="hover:text-[#A13032] transition-colors"
+        className="hover:text-[#6D67E4] transition-colors"
         aria-label="Email"
       >
         <IconMail size={40} />

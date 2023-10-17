@@ -15,7 +15,8 @@ const Navbar = ({
   isEnglish: boolean;
   handlerLanguage: () => void;
 }) => {
-  const [theme, setTheme] = useState<string>("light");
+  const [isScroll, setIsScroll] = useState<boolean>(false);
+  const [theme, setTheme] = useState<string>("dark");
   const [modal, setModal] = useState<boolean>(false);
   useEffect(() => {
     if (theme === "dark") {
@@ -24,6 +25,13 @@ const Navbar = ({
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const handlerTheme = () => {
     if (theme === "light") {
       setTheme("dark");
@@ -35,16 +43,33 @@ const Navbar = ({
     setModal(!modal);
     scrollToSection(item);
   };
+
+  // Handle de navbar sticky
+  const handleScroll = () => {
+    if (window.scrollY > 30) {
+      // Ajusta este valor según tus necesidades
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
+
   return (
     <nav
       className={
         modal
           ? ""
-          : "px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]"
+          : "px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] sticky top-0 z-10 "
       }
     >
-      <div className="sticky top-0 flex flex-row justify-between items-center h-[4.75rem] border-b-[1.5px] border-gray-400 z-50 bg-[#fbfcfd] text-lg font-medium dark:bg-[#000000] dark:text-[#eeeeee] bg-gradient-conic  from-[#ffffff] to-[#fbfcfd] dark:bg-gradient-conic dark:from-black dark:to-black">
-        <h1 className="xs:block hidden hover:animate-pulse hover:text-[#A13032] transition-colors">
+      <div
+        className={`px-4 h-[64px]  ${
+          isScroll
+            ? "insideNav bg-[#ffffff] dark:bg-[#f8f7fe] dark:text-black "
+            : "insideNavNoScroll bg-[#f8f7fe]  dark:bg-[#1c1a27] dark:text-[#ffffff] "
+        } h-[4.75rem] flex flex-row justify-between items-center  z-50  text-lg font-medium  `}
+      >
+        <h1 className="xs:block hidden hover:animate-pulse hover:text-[#6D67E4] transition-colors">
           #KC
         </h1>
         <div className="flex flex-row gap-4 ">

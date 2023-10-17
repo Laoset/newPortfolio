@@ -16,7 +16,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="projects"
-      className=" py-4 lg:py-10 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center h-auto  dark:text-[#eeeeee]"
+      className=" py-4 lg:py-10 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center h-screen  dark:text-[#eeeeee]"
     >
       <div>
         <h3 className="lg:text-4xl text-3xl font-bold mb-16">
@@ -38,7 +38,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                   target="_blank"
                   aria-label="GitHub"
                 >
-                  <button className="px-2 py-1 rounded-md bg-[#A13032]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
+                  <button className="px-2 py-1 rounded-md bg-[#6D67E4]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
                     View More
                   </button>
                 </a>
@@ -48,7 +48,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                   target="_blank"
                   aria-label="GitHub"
                 >
-                  <button className="px-2 py-1 rounded-md bg-[#A13032]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
+                  <button className="px-2 py-1 rounded-md bg-[#6D67E4]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
                     Ver más
                   </button>
                 </a>
@@ -75,7 +75,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.code} target="_blank" aria-label="GitHub">
                           <IconCode
                             size={24}
-                            className="hover:text-[#A13032] transition-colors"
+                            className="hover:text-[#6D67E4] transition-colors"
                           />
                         </a>
                         <p className="text-lg font-bold cursor-default">
@@ -84,7 +84,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.href} target="_blank">
                           <IconArrowRight
                             size={24}
-                            className="hover:text-[#A13032] transition-colors"
+                            className="hover:text-[#6D67E4] transition-colors"
                             aria-label="Website"
                           />
                         </a>
@@ -128,7 +128,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.code} target="_blank">
                           <IconCode
                             size={24}
-                            className="hover:text-[#A13032] transition-colors"
+                            className="hover:text-[#6D67E4] transition-colors"
                           />
                         </a>
                         <p className="text-lg font-bold cursor-default">
@@ -137,7 +137,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.href} target="_blank">
                           <IconArrowRight
                             size={24}
-                            className="hover:text-[#A13032] transition-colors"
+                            className="hover:text-[#6D67E4] transition-colors"
                           />
                         </a>
                       </div>

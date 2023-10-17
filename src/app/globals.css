@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @font-face {
   font-family: "Magilio";
   src: url("/MagilioRegular-8Mxvg.otf") format("opentype");
@@ -8,12 +10,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: "Nunito Sans", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
 body {
-  background-color: #ffffff;
+  background-color: #f8f7fe;
   color: #333333;
 }
-html {
-  scroll-behavior: smooth;
+nav {
+  padding: 16px 8px 0px;
+}
+.insideNavNoScroll {
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: all 200ms ease-in 0s;
+}
+.insideNav {
+  border-radius: 16px;
+  border: 1px solid transparent;
+  box-shadow: 0px 12px 16px rgba(28, 26, 39, 0.08),
+    0px 8px 12px rgba(28, 26, 39, 0.12), 0px 0px 1px rgba(28, 26, 39, 0.16);
+  transition: all 200ms ease-in 0s;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+}
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+}
+h2 {
+  font-family: "Nunito Sans", sans-serif;
+}
+h3 {
+  font-family: "Nunito Sans", sans-serif;
+}
+button {
+  font-family: "Nunito Sans", sans-serif;
 }
 .hover-underline-animation {
   display: inline-block;
@@ -28,7 +64,7 @@ html {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #a13032;
+  background-color: #6d67e4;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -38,12 +74,15 @@ html {
   transform-origin: bottom left;
 }
 .text-shadow-pink {
-  color: #a13032; /* Color rosa */
+  /* color: #6D67E4; Color rosa */
+  /* color: #6D67E4; */
+  color: #6d67e4;
   text-shadow: -0.05em 0.05em 0 hsl(200 50% 30%);
 }
 .title {
-  font-family: "Magilio", sans-serif;
-  font-weight: 900;
+  /* font-family: "Magilio", sans-serif; */
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
 }
 
 .card {
@@ -54,15 +93,4 @@ html {
 
 .card:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-@keyframes show {
-  from {
-    opacity: 0;
-    scale: 25%;
-  }
-
-  to {
-    opacity: 1;
-    scale: 100%;
-  }
 }

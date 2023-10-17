@@ -36,14 +36,14 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
         <div className="flex flex-col justify-between gap-60 xs:gap-48 sm:gap-28 lg:gap-14 2xl:gap-10">
           {/* INTRODUCCION */}
           <div className="flex flex-col gap-10 justify-between ">
-            <p className="text-xl h-52">
+            <p className="text-xl h-52 ">
               {isEnglish ? sobremi?.introEng : sobremi?.intro}
             </p>
           </div>
           {/* ESTUDIOS */}
           <div className="flex flex-col xl:flex xl:flex-row justify-between gap-16 ">
             <div className="flex flex-col gap-5 text-xl">
-              <h3>{isEnglish ? "Studies" : "Estudios"}</h3>
+              <p className="text-2xl">{isEnglish ? "Studies" : "Estudios"}</p>
               <ul className="list-disc">
                 <li>
                   <p className="font-semibold mb-2">
