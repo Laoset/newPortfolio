@@ -25,7 +25,7 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="aboutme"
-      className="scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center h-screen dark:text-[#eeeeee]"
+      className="scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center tall:h-screen h-auto tall:py-0 py-20 dark:text-[#eeeeee]"
     >
       <div>
         <h3 className="lg:text-4xl text-3xl font-bold m:mb-16 mb-4">

@@ -16,7 +16,7 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="main"
-      className="scroll-mt-[4.75rem] py-28 3xl:py-0 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col lg:gap-4 4xl:gap-20  h-screen text-black dark:text-[#eeeeee]"
+      className="scroll-mt-[4.75rem] py-28 3xl:py-0 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col lg:gap-4 4xl:gap-20 tall:h-screen h-auto text-black dark:text-[#eeeeee] "
     >
       <div className="flex flex-col lg:items-end text-right lg:mt-10 2xl:mt-14 3xl:mt-32">
         <h2 className="w-full title text-[2.5rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem] xl:text-[7rem] 3xl:text-[7.8rem] 4xl:text-[8rem]">
@@ -39,7 +39,7 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
         </h2>
       </div>
       <div className="md:h-32 xs:h-48 h-64 flex flex-col md:flex-row justify-between m:mt-24 mt-40 font-normal">
-        <div className="lg:text-[2rem] 2xl:text-[2.5rem] text-lg xs:text-[1.5rem] md:text-[2.3rem] w-4/5 font-normal text-[#333333] dark:text-[#eeeeee] ">
+        <div className="lg:text-3xl 2xl:text-4xl text-lg xs:text-2xl md:text-4xl w-4/5 font-normal text-[#333333] dark:text-[#eeeeee]">
           <TypeWritter isEnglish={isEnglish} />
         </div>
         <div className="w-20 flex flex-col items-center justify-center gap-1 self-center md:self-auto">

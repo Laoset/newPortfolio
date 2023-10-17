@@ -16,7 +16,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="projects"
-      className="scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center lg:h-screen h-auto lg:py-0 py-20 dark:text-[#eeeeee]"
+      className="tall:h-screen h-auto tall:py-0 py-20 scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center dark:text-[#eeeeee]"
     >
       <div>
         <h3 className="lg:text-4xl text-3xl font-bold m:mb-16 mb-4">

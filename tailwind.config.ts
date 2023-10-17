@@ -33,6 +33,8 @@ const config: Config = {
 
       "4xl": "1920px ",
       // => @media (min-width: 1536px) { ... }
+      tall: { raw: "(min-height: 720px)" },
+      // => @media (min-height: 800px) { ... }
     },
     extend: {
       backgroundImage: {

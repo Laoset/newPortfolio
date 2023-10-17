@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 
 const TypeWritter = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
-    <div>
+    <div className="h-full flex  py-4">
       {isEnglish ? (
         <Typewriter
           options={{
@@ -15,6 +15,7 @@ const TypeWritter = ({ isEnglish }: { isEnglish: boolean }) => {
             loop: true,
             deleteSpeed: 20,
             delay: 20,
+            skipAddStyles: false,
           }}
         />
       ) : (
@@ -22,7 +23,7 @@ const TypeWritter = ({ isEnglish }: { isEnglish: boolean }) => {
           options={{
             strings: [
               'Creando soluciones eficaces desde líneas de código como <span style="color: #6D67E4; font-weight: bold; margin-right: 12px;"> Desarrollador Front End</span>',
-              '<span style="color: #6D67E4; font-weight: bold; margin-right: 12px;">Desarrollador Front End</span>que busca soluciones creativas para los desafios diarios',
+              '<span style="color: #6D67E4; font-weight: bold; margin-right: 12px; ">Desarrollador Front End</span>que busca soluciones creativas para los desafios diarios',
             ],
             autoStart: true,
             loop: true,
