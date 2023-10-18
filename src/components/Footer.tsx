@@ -9,7 +9,7 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
       <div className="text-lg flex flex-col justify-center items-center gap-4">
         <p>
           {isEnglish
-            ? "Thank you for coming here, here is my CV so you can learn more about me."
+            ? "Thank you for coming here, I leave you my resume so you can know more about me."
             : "Gracias por llegar hasta aquí, te dejo mi CV para que conozcas más sobre mí."}
         </p>
         {isEnglish ? (
