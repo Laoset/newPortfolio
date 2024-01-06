@@ -75,7 +75,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.code} target="_blank" aria-label="GitHub">
                           <IconCode
                             size={24}
-                            className="hover:text-[#6D67E4] transition-colors"
+                            className="hover:text-[#c3c3df] text-[#6D67E4] transition-colors"
                           />
                         </a>
                         <p className="text-lg font-bold cursor-default">
@@ -84,7 +84,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.href} target="_blank">
                           <IconArrowRight
                             size={24}
-                            className="hover:text-[#6D67E4] transition-colors"
+                            className="hover:text-[#c3c3df] text-[#6D67E4] transition-colors"
                             aria-label="Website"
                           />
                         </a>
@@ -100,7 +100,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                       {item.tech?.map((tech, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 bg-gray-200 rounded-full text-sm font-semibold text-gray-700"
+                          className="px-2 py-1 bg-gray-200 rounded-full text-sm font-semibold text-gray-700 cursor-default"
                         >
                           {tech}
                         </span>

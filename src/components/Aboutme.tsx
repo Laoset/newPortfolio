@@ -1,18 +1,12 @@
 import React, { useEffect } from "react";
-import {
-  IconBrandRedux,
-  IconBrandReact,
-  IconBrandTypescript,
-  IconBrandTailwind,
-  IconBrandFigma,
-  IconBrandGit,
-  IconArrowRight,
-} from "@tabler/icons-react";
+import { IoIosArrowForward } from "react-icons/io";
+import { SiMui,SiJavascript,SiTailwindcss,SiJira,SiFigma ,SiRedux,SiReact,SiGithub  } from "react-icons/si";
 import { sobremi } from "@/utils/TextAboutme";
 import { Aside } from ".";
 import { animate, inView } from "motion";
-
 const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
+const reactAdminImg = "/reactadminlogo.png";
+
   useEffect(() => {
     inView("#aboutme", () => {
       animate(
@@ -88,10 +82,38 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
                 <p className="flex flex-row items-center">
                   {isEnglish ? "You can find me at" : "Me podes encontrar en"}
                   <span className="ml-2">
-                    <IconArrowRight size={25} />
+                    <IoIosArrowForward size={25} />
                   </span>
                 </p>
-                <Aside />
+                <Aside isEnglish={isEnglish}/>
+              </div>
+              <div className="md:text-xl flex flex-col md:flex-row items-center md:gap-10 justify-between">
+              <p className="flex flex-row items-center">
+                  {isEnglish ? "I use these tools" : "Utilizo estas herramientas"}
+                <span className="ml-2">
+                    <IoIosArrowForward size={25} />
+                  </span>
+                </p>
+                <div className="flex flex-row gap-2 justify-between">
+                  <div className="relative group">
+                    <SiGithub size={30} />
+                    <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
+                      GIT
+                    </div>
+                  </div>
+                  <div className="relative group">
+                    <SiJira size={30} />
+                    <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
+                      Jira
+                    </div>
+                  </div>
+                  <div className="relative group">
+                    <SiFigma size={30} />
+                    <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
+                      Figma
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="md:text-xl flex flex-col md:flex-row items-center md:gap-10 justify-between">
                 <p className="flex flex-row items-center">
@@ -99,44 +121,44 @@ const Aboutme = ({ isEnglish }: { isEnglish: boolean }) => {
                     ? "I use these technologies"
                     : "Manejo estas tecnologias"}
                   <span className="ml-2">
-                    <IconArrowRight size={25} />
+                    <IoIosArrowForward size={25} />
                   </span>
                 </p>
                 <div className="flex flex-row gap-2 justify-between">
                   <div className="relative group">
-                    <IconBrandTypescript size={40} />
+                    <SiJavascript size={30} />
                     <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
-                      TypeScript
+                      JavaScript
                     </div>
                   </div>
                   <div className="relative group">
-                    <IconBrandReact size={40} />
+                    <img src={reactAdminImg} alt="react admin" className="w-10 h-8"/>
+                    <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
+                      React Admin
+                    </div>
+                  </div>
+                  <div className="relative group">
+                    <SiReact size={30} />
                     <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
                       React
                     </div>
                   </div>
                   <div className="relative group">
-                    <IconBrandRedux size={40} />
+                    <SiRedux size={30} />
                     <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
                       Redux
                     </div>
                   </div>
                   <div className="relative group">
-                    <IconBrandTailwind size={40} />
+                    <SiMui size={30} />
+                    <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
+                      MaterialUI
+                    </div>
+                  </div>
+                  <div className="relative group">
+                    <SiTailwindcss size={30} />
                     <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
                       TailwindCSS
-                    </div>
-                  </div>
-                  <div className="relative group">
-                    <IconBrandGit size={40} />
-                    <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
-                      GIT
-                    </div>
-                  </div>
-                  <div className="relative group">
-                    <IconBrandFigma size={40} />
-                    <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out">
-                      Figma
                     </div>
                   </div>
                 </div>
