@@ -20,20 +20,20 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
     >
       <div className="flex flex-col lg:items-end text-right lg:mt-10 2xl:mt-14 3xl:mt-32">
         <h2 className="w-full title text-[2.5rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem] xl:text-[7rem] 3xl:text-[7.8rem] 4xl:text-[8rem]">
-          {isEnglish ? "Hello" : "Hola"}
+          {isEnglish ? "HELLO" : "HOLA"}
         </h2>
         <h2 className="w-full title text-[2.2rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem] xl:text-[7rem] 2xl:text-[7.4rem] 3xl:text-[7.8rem] 4xl:text-[8rem]">
           {isEnglish ? (
             <>
-              <span className="sm:mr-10 mr-4">I'm</span>
-              <span className="text-shadow-pink">K</span>evin
-              <span className="text-shadow-pink ml-3 lg:ml-10">C</span>orman
+              <span className="sm:mr-10 mr-4">I'M</span>
+              <span className="text-shadow-pink">K</span>EVIN
+              <span className="text-shadow-pink ml-3 lg:ml-10">C</span>ORMAN
             </>
           ) : (
             <>
-              <span className="sm:mr-10 mr-4">Soy</span>
-              <span className="text-shadow-pink">K</span>evin
-              <span className="text-shadow-pink ml-3 lg:ml-10">C</span>orman
+              <span className="sm:mr-10 mr-4">SOY</span>
+              <span className="text-shadow-pink">K</span>EVIN
+              <span className="text-shadow-pink ml-3 lg:ml-10">C</span>ORMAN
             </>
           )}
         </h2>
