@@ -14,7 +14,7 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
         </p>
         {isEnglish ? (
           <>
-            <button className="w-44 p-2 rounded-md bg-[#6D67E4]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors" >
+            <button className="w-44 p-2 rounded-md bg-[#BB2649]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors" >
             <a href="/cvKevinCorman.pdf" download>
               Download Resume
             </a>
@@ -22,7 +22,7 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
           </>
         ) : (
           <>
-            <button className="w-40 p-2 rounded-md bg-[#6D67E4]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors" >
+            <button className="w-40 p-2 rounded-md bg-[#BB2649]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors" >
               <a href="/cvKevinCorman.pdf" download>
                 Descargar CV
               </a>
@@ -33,7 +33,7 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
       <div className="flex flex-row gap-2 mt-10 mb-5  ">
         <p>{isEnglish ? "- Made with" : "- Hecho con"}</p>
         <span>
-          <IconHeartCode color="#6D67E4" />
+          <IconHeartCode color="#BB2649" />
         </span>
         <p>
           {isEnglish

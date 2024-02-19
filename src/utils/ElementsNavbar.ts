@@ -1,20 +1,20 @@
 export const ElementsNavbar = [
   {
     id: 1,
-    name: "Inicio",
-    nameEng: "Home",
+    name: "INICIO",
+    nameEng: "HOME",
     href: "main",
   },
   {
     id: 2,
-    name: "Sobre mí",
-    nameEng: "About me",
+    name: "SOBRE MI",
+    nameEng: "ABOUT ME",
     href: "aboutme",
   },
   {
     id: 3,
-    name: "Proyectos",
-    nameEng: "Projects",
+    name: "PROYECTOS",
+    nameEng: "PROJECTS",
     href: "projects",
   },
 ];

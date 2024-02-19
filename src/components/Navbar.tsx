@@ -69,9 +69,11 @@ const Navbar = ({
             : "insideNavNoScroll bg-[#f8f7fe]  dark:bg-[#1c1a27] dark:text-[#ffffff] "
         } h-[4.75rem] flex flex-row justify-between items-center  z-50  text-lg font-medium  `}
       >
-        <h1 className="xs:block hidden hover:animate-pulse hover:text-[#6D67E4] transition-colors">
-          #KC
-        </h1>
+        <button onClick={() => scrollTo(0,0)}>
+          <h1 className="xs:block hidden hover:animate-pulse hover:text-[#BB2649] transition-colors">
+            #KC
+          </h1>
+        </button>
         <div className="flex flex-row gap-4 ">
           {ElementsNavbar.map((item) => (
             <button
@@ -79,9 +81,9 @@ const Navbar = ({
               key={item.id}
               className="hover-underline-animation text-base md:text-lg"
             >
-              {"<"}
+              {"< "}
               {isEnglish ? item.nameEng : item.name}
-              {"/>"}
+              {" />"}
             </button>
           ))}
         </div>

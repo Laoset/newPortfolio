@@ -7,7 +7,7 @@ const Aside = ({ isEnglish }: { isEnglish: boolean }) => {
       <div className="relative group">
         <a
           href="https://www.linkedin.com/in/kevin-corman-samanamud/"
-          className="hover:text-[#6D67E4] transition-colors"
+          className="hover:text-[#BB2649] transition-colors"
           target="_blank"
           aria-label="LinkedIn"
         >
@@ -20,7 +20,7 @@ const Aside = ({ isEnglish }: { isEnglish: boolean }) => {
       <div className="relative group">
         <a
           href="https://github.com/Laoset"
-          className="hover:text-[#6D67E4] transition-colors"
+          className="hover:text-[#BB2649] transition-colors"
           target="_blank"
           aria-label="GitHub"
         >
@@ -33,7 +33,7 @@ const Aside = ({ isEnglish }: { isEnglish: boolean }) => {
       <div className="relative group">
       <a
         href="mailto:kevin143corman@gmail.com"
-        className="hover:text-[#6D67E4] transition-colors"
+        className="hover:text-[#BB2649] transition-colors"
         aria-label="Email"
       >
         <SiGmail size={30} />

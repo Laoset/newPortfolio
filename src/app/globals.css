@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Stalinist+One&family=Voltaire&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +9,7 @@
 
 @layer base {
   html {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: 'Voltaire', sans-serif;
     scroll-behavior: smooth;
   }
 }
@@ -34,19 +34,20 @@ nav {
 }
 
 p {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Voltaire', sans-serif;
 }
 h1 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Voltaire', sans-serif;
 }
 h2 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Voltaire', sans-serif;
 }
 h3 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
 }
 button {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Voltaire', sans-serif;
 }
 .hover-underline-animation {
   display: inline-block;
@@ -61,7 +62,7 @@ button {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #6d67e4;
+  background-color: #BB2649;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -71,16 +72,15 @@ button {
   transform-origin: bottom left;
 }
 .text-shadow-pink {
-  /* color: #6D67E4; Color rosa */
-  /* color: #6D67E4; */
-  color: #6d67e4;
+  color: #BB2649;
   text-shadow: -0.05em 0.05em 0 hsl(200 50% 30%);
 }
+
 .title {
-  /* font-family: "Magilio", sans-serif; */
-  /* font-family: "Rubik", sans-serif; */
-  font-family: 'Oswald', sans-serif;
-  font-weight: 600;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: normal;
 }
 
 .card {
@@ -92,3 +92,36 @@ button {
 .card:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* PROJECTS CIRCLE */
+.container {
+  position: relative;
+  width: 200px; /* Ajusta el tamaño según tus necesidades */
+  height: 200px;
+  /* background-color: #ccc; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: anim 10s linear infinite;
+}
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.subContainer span {
+  position: absolute;
+  left:50%;
+  font-size: 1.2em;
+  transform-origin: 0 100px;
+}
+

@@ -38,7 +38,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                   target="_blank"
                   aria-label="GitHub"
                 >
-                  <button className="px-2 py-1 rounded-md bg-[#6D67E4]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
+                  <button className="px-2 py-1 rounded-md bg-[#BB2649]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
                     View More
                   </button>
                 </a>
@@ -48,7 +48,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                   target="_blank"
                   aria-label="GitHub"
                 >
-                  <button className="px-2 py-1 rounded-md bg-[#6D67E4]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
+                  <button className="px-2 py-1 rounded-md bg-[#BB2649]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors">
                     Ver más
                   </button>
                 </a>
@@ -75,7 +75,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.code} target="_blank" aria-label="GitHub">
                           <IconCode
                             size={24}
-                            className="hover:text-[#c3c3df] text-[#6D67E4] transition-colors"
+                            className="hover:text-[#c3c3df] text-[#BB2649] transition-colors"
                           />
                         </a>
                         <p className="text-lg font-bold cursor-default">
@@ -84,7 +84,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         <a href={item.href} target="_blank">
                           <IconArrowRight
                             size={24}
-                            className="hover:text-[#c3c3df] text-[#6D67E4] transition-colors"
+                            className="hover:text-[#c3c3df] text-[#BB2649] transition-colors"
                             aria-label="Website"
                           />
                         </a>

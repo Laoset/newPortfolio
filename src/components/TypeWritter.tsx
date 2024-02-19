@@ -8,8 +8,8 @@ const TypeWritter = ({ isEnglish }: { isEnglish: boolean }) => {
         <Typewriter
           options={{
             strings: [
-              'Creating effective solutions from lines of code as a <span style="color: #6D67E4; font-weight: bold; margin-right: 12px;"> Front End Developer</span>',
-              '<span style="color: #6D67E4; font-weight: bold; margin-right: 12px;">Front End Developer</span>seeking creative solutions to everyday challenges',
+              'Creating effective solutions from lines of code as a <span style="color: #BB2649; font-weight: bold; margin-right: 12px;"> Front End Developer</span>',
+              '<span style="color: #BB2649; font-weight: bold; margin-right: 12px;">Front End Developer</span>seeking creative solutions to everyday challenges',
             ],
             autoStart: true,
             loop: true,
@@ -22,8 +22,8 @@ const TypeWritter = ({ isEnglish }: { isEnglish: boolean }) => {
         <Typewriter
           options={{
             strings: [
-              'Creando soluciones eficaces desde líneas de código como <span style="color: #6D67E4; font-weight: bold; margin-right: 12px;"> Desarrollador Front End</span>',
-              '<span style="color: #6D67E4; font-weight: bold; margin-right: 12px; ">Desarrollador Front End</span>que busca soluciones creativas para los desafios diarios',
+              'Creando soluciones eficaces desde líneas de código como <span style="color: #BB2649; font-weight: bold; margin-right: 12px;"> Desarrollador Front End</span>',
+              '<span style="color: #BB2649; font-weight: bold; margin-right: 12px; ">Desarrollador Front End</span>que busca soluciones creativas para los desafios diarios',
             ],
             autoStart: true,
             loop: true,
