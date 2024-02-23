@@ -40,7 +40,7 @@ const reactAdminImg = "/reactadminlogo.png";
               <p className="text-2xl">{isEnglish ? "Studies" : "Estudios"}</p>
               <ul className="list-disc">
                 <li>
-                  <p className="font-semibold mb-2">
+                  <p className="font-medium mb-2">
                     Full Stack Web Developer -
                     <span className="text-lg ml-2 font-normal italic">
                       Henry Bootcamp, Argentina -
@@ -49,7 +49,7 @@ const reactAdminImg = "/reactadminlogo.png";
                   </p>
                 </li>
                 <li>
-                  <p className="font-semibold mb-2">
+                  <p className="font-medium mb-2">
                     Responsive Web Design -
                     <span className="text-lg ml-2 font-normal italic">
                       freeCodeCamp -
@@ -58,7 +58,7 @@ const reactAdminImg = "/reactadminlogo.png";
                   </p>
                 </li>
                 <li>
-                  <p className="font-semibold mb-2">
+                  <p className="font-medium mb-2">
                     {isEnglish ? "PC Technician -" : " Tecnico PC -"}
                     <span className="text-lg ml-2 font-normal italic">
                       Centro de Formación Profesional, Argentina -
@@ -67,7 +67,7 @@ const reactAdminImg = "/reactadminlogo.png";
                   </p>
                 </li>
                 <li>
-                  <p className="font-semibold mb-2">
+                  <p className="font-medium mb-2">
                     {isEnglish ? "Computer networks -" : "Redes Informáticas -"}
                     <span className="text-lg ml-2 font-normal italic">
                       EducacionIT , Argentina -
