@@ -1,5 +1,5 @@
 "use client";
-import { Footer, Navbar, Aboutme, ProyectosHome } from "@/components";
+import { Footer, Navbar, Aboutme, ProyectosHome, ChatBot } from "@/components";
 import { useEffect, useState } from "react";
 import MainContextAlter from "../components/MainContextAlter";
 
@@ -15,6 +15,7 @@ export default function Home() {
       <Aboutme isEnglish={isEnglish} />
       <ProyectosHome isEnglish={isEnglish} />
       <Footer isEnglish={isEnglish} />
+      <ChatBot isEnglish={isEnglish} />
     </main>
   );
 }
