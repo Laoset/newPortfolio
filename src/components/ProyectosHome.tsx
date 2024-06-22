@@ -16,10 +16,10 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="projects"
-      className="tall:h-screen h-auto tall:py-0 py-20 scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center dark:text-[#eeeeee]"
+      className="tall:h-screen h-auto tall:py-0 py-20 scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center dark:text-[#bbb]"
     >
       <div>
-        <h3 className="lg:text-4xl text-3xl font-bold m:mb-16 mb-4">
+        <h3 className="lg:text-4xl text-3xl font-bold m:mb-16 mb-4 dark:text-[#ddd]">
           <span className="text-3xl">{"<"} </span>
           {isEnglish ? "Projects" : "Proyectos"}
           <span className="text-3xl ml-1">{"/>"}</span>
@@ -68,7 +68,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                 return (
                   <div
                     key={item.id}
-                    className="flex flex-col justify-between 2xl:max-w-[350px] max-w-[350px] 3xl:max-w-[400px]  rounded-lg card dark:text-black"
+                    className="flex flex-col justify-between 2xl:max-w-[350px] max-w-[350px] 3xl:max-w-[400px]  rounded-lg card dark:bg-[#e7e6ece0]"
                   >
                     <div className="flex flex-col justify-evenly py-2">
                       <div className="flex flex-row justify-evenly ">
@@ -78,7 +78,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                             className="hover:text-[#c3c3df] text-[#BB2649] transition-colors"
                           />
                         </a>
-                        <p className="text-lg font-bold cursor-default">
+                        <p className="text-lg font-bold cursor-default dark:text-black">
                           {item.title}
                         </p>
                         <a href={item.href} target="_blank">
@@ -90,7 +90,7 @@ const ProyectosHome = ({ isEnglish }: { isEnglish: boolean }) => {
                         </a>
                       </div>
                       <div className="px-6 py-4">
-                        <p className="text-base cursor-default">
+                        <p className="text-base cursor-default dark:text-gray-700 font-medium">
                           {isEnglish ? item.parrafoEng : item.parrafo}
                         </p>
                       </div>

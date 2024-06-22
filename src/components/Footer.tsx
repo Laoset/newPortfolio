@@ -4,7 +4,7 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <footer
       id="footer"
-      className="pt-20 lg:pt-4 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col justify-center items-center dark:text-[#eeeeee]"
+      className="pt-20 lg:pt-4 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col justify-center items-center dark:text-[#bbb]"
     >
       <div className="text-lg flex flex-col justify-center items-center gap-4">
         <p>
@@ -22,7 +22,7 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
           </>
         ) : (
           <>
-            <button className="w-40 p-2 rounded-md bg-[#BB2649]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors" >
+            <button className="w-40 p-2 rounded-md bg-[#BB2649]  text-[#ddd] hover:bg-opacity-80 transition-colors" >
               <a href="/cvKevinCorman.pdf" download>
                 Descargar CV
               </a>
@@ -35,11 +35,11 @@ const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
         <span>
           <IconHeartCode color="#BB2649" />
         </span>
-        <p>
+        <a href="https://github.com/Laoset" target="_blank">
           {isEnglish
             ? "by Alan Kevin Corman Samanamud-"
             : "por Alan Kevin Corman Samanamud-"}
-        </p>
+        </a>
       </div>
     </footer>
   );

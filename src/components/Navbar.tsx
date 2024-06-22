@@ -70,11 +70,11 @@ const Navbar = ({
         } h-[4.75rem] flex flex-row justify-between items-center  z-50  text-lg font-medium  `}
       >
         <button onClick={() => scrollTo(0,0)}>
-          <h1 className="xs:block hidden hover:animate-pulse hover:text-[#BB2649] transition-colors">
+          <h1 className="xs:block hidden hover:animate-pulse hover:text-[#BB2649] transition-colors navbarTitle md:text-lg">
             #KC
           </h1>
         </button>
-        <div className="flex flex-row gap-4 ">
+        <div className="flex flex-row gap-4 navbarTitle">
           {ElementsNavbar.map((item) => (
             <button
               onClick={() => scrollToSection(item.href)}

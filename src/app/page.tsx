@@ -9,7 +9,7 @@ export default function Home() {
     setIsEnglish(!isEnglish);
   };
   return (
-    <main className="min-h-screen min-w-full flex flex-col dark:bg-[#272325]">
+    <main className="min-h-screen min-w-full flex flex-col dark:bg-[#1E1E1E]">
       <Navbar handlerLanguage={handlerLanguage} isEnglish={isEnglish} />
       <MainContextAlter isEnglish={isEnglish} />
       <Aboutme isEnglish={isEnglish} />

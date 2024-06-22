@@ -19,10 +19,10 @@ const reactAdminImg = "/reactadminlogo.png";
   return (
     <section
       id="aboutme"
-      className="scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center tall:h-screen h-auto tall:py-0 py-20 dark:text-[#eeeeee]"
+      className="scroll-mt-[4.75rem] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem] flex flex-col justify-center tall:h-screen h-auto tall:py-0 py-20 dark:text-[#bbb]"
     >
       <div>
-        <h3 className="lg:text-4xl text-3xl font-bold m:mb-16 mb-4">
+        <h3 className="lg:text-4xl text-3xl font-bold m:mb-16 mb-4 dark:text-[#ddd]">
           <span className="text-3xl">{"<"} </span>
           {isEnglish ? "About me" : "Sobre mí"}
           <span className="text-3xl ml-1">{"/>"}</span>
@@ -30,13 +30,25 @@ const reactAdminImg = "/reactadminlogo.png";
         <div className="flex flex-col justify-between gap-4 m:gap-60 xs:gap-48 sm:gap-28 lg:gap-14 2xl:gap-10">
           {/* INTRODUCCION */}
           <div className="flex flex-col gap-10 justify-between ">
-            <p className="m:text-xl m:h-52 h-auto">
-              {isEnglish ? sobremi?.introEng : sobremi?.intro}
+           {isEnglish? 
+           <p className="m:text-[21px] m:h-52 h-auto">
+              👋 Welcome! I am Alan Kevin Corman Samanamud and, from a very young age, I was fortunate enough to have a personal computer on which I spent hours and hours taking apart piece by piece, trying to understand its functioning, which generated in me a love for <strong className="text-[#BB2649]">technology</strong> that never stopped growing. Life took me on a professional career very far removed from the world of technology, but it gave me many personal skills and satisfaction. Until I discovered the world of <strong  className="text-[#BB2649]">programming</strong>, which I fell in love with from the first moment I coded my first
+              <span className="ml-1 p-1 relative bg-[#BB2649] hover:scale-110 transform transition-transform duration-300 inline-block rotate-2 text-white">
+                {sobremi?.introEng.highlight}
+              </span>
+           </p>
+            :
+            <p className="m:text-[21px] m:h-52 h-auto">
+               👋 ¡Bienvenid@s! Soy Alan Kevin Corman Samanamud y desde muy temprana edad, fui afortunado al tener una computadora personal en la que pasaba horas y horas desmontando pieza por pieza, tratando de entender su funcionamiento, lo cual generó en mí un gusto por la <strong className="text-[#BB2649]">tecnología</strong> que nunca dejó de crecer. La vida me llevó por una carrera profesional muy alejada del mundo de la tecnología, pero me brindó muchas habilidades personales y satisfacción. Hasta que descubrí el mundo de la <strong className="text-[#BB2649]">programación</strong>, que me enamoró desde el momento en que programe mi primer
+              <span className="ml-1 p-1 relative bg-[#BB2649] hover:scale-110 transform transition-transform duration-300 inline-block rotate-2 text-white">
+                {sobremi?.intro.highlight}
+              </span>
             </p>
+            }
           </div>
           {/* ESTUDIOS */}
           <div className="flex flex-col xl:flex xl:flex-row justify-between m:gap-16 ">
-            <div className="flex flex-col gap-2 m:gap-5 md:text-xl">
+            <div className="flex flex-col gap-2 m:gap-5 md:text-[21px]">
               <p className="text-2xl">{isEnglish ? "Studies" : "Estudios"}</p>
               <ul className="list-disc">
                 <li>
@@ -78,7 +90,7 @@ const reactAdminImg = "/reactadminlogo.png";
               </ul>
             </div>
             <div className="flex flex-col justify-around m:gap-0 gap-4">
-              <div className="md:text-xl flex flex-col md:flex-row items-center md:gap-10 justify-between ">
+              <div className="md:text-[21px] flex flex-col md:flex-row items-center md:gap-10 justify-between ">
                 <p className="flex flex-row items-center">
                   {isEnglish ? "You can find me at" : "Me podes encontrar en"}
                   <span className="ml-2">
@@ -87,7 +99,7 @@ const reactAdminImg = "/reactadminlogo.png";
                 </p>
                 <Aside isEnglish={isEnglish}/>
               </div>
-              <div className="md:text-xl flex flex-col md:flex-row items-center md:gap-10 justify-between">
+              <div className="md:text-[21px] flex flex-col md:flex-row items-center md:gap-10 justify-between">
               <p className="flex flex-row items-center">
                   {isEnglish ? "I use these tools" : "Utilizo estas herramientas"}
                 <span className="ml-2">
@@ -115,7 +127,7 @@ const reactAdminImg = "/reactadminlogo.png";
                   </div>
                 </div>
               </div>
-              <div className="md:text-xl flex flex-col md:flex-row items-center md:gap-10 justify-between">
+              <div className="md:text-[21px] flex flex-col md:flex-row items-center md:gap-10 justify-between">
                 <p className="flex flex-row items-center">
                   {isEnglish
                     ? "I use these technologies"

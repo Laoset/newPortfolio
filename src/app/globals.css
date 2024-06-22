@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Stalinist+One&family=Voltaire&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +7,7 @@
 
 @layer base {
   html {
-    font-family: 'Voltaire', sans-serif;
+    font-family: 'Scope One', sans-serif;
     scroll-behavior: smooth;
   }
 }
@@ -34,21 +32,25 @@ nav {
 }
 
 p {
-  font-family: 'Voltaire', sans-serif;
+  font-family: 'Scope One', sans-serif;
   font-weight: 400;
+  line-height: normal;
 }
 h1 {
-  font-family: 'Voltaire', sans-serif;
+  font-family: 'Scope One', sans-serif;
 }
 h2 {
-  font-family: 'Voltaire', sans-serif;
+  font-family: 'Scope One', sans-serif;
 }
 h3 {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "Scope One", sans-serif;
   font-weight: 700;
+  letter-spacing: 2px;
 }
-button {
-  font-family: 'Voltaire', sans-serif;
+
+.navbarTitle {
+  font-family: "Scope One", sans-serif;
+  font-weight: 600;
 }
 .hover-underline-animation {
   display: inline-block;
@@ -78,7 +80,7 @@ button {
 }
 
 .title {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Mono", sans-serif;
   font-weight: 900;
   letter-spacing: -2px;
   line-height: normal;
