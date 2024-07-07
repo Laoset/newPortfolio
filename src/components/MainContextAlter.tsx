@@ -16,10 +16,9 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
     const timeoutId = setTimeout(() => {
       setShouldRenderCircle(true);
     }, 1000);
-
-    // Limpia el timeout cuando el componente se desmonta o se actualiza
+   
     return () => clearTimeout(timeoutId);
-  }, []); // Solo se ejecuta una vez al montar el componente
+  }, []); 
 
   const renderCircle = () => {
     return <ProjectsCircle isEnglish={isEnglish} />;
@@ -47,7 +46,7 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
           )}
         </h2>
       </div>
-      <div className="mt-20 w-full flex justify-center text-[#333333] dark:text-[#ffedd5]">
+      <div className="mt-8 w-full flex justify-center text-[#333333] dark:text-[#ffedd5]">
       {shouldRenderCircle && renderCircle()}
       </div>
     </section>
