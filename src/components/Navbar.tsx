@@ -55,13 +55,12 @@ const Navbar = ({
   };
 
   return (
-    <nav
-      className={
-        modal
-          ? ""
-          : "px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[10rem] 4xl:px-[20rem] sticky top-0 z-10 "
-      }
-    >
+    <header className={
+      modal
+        ? ""
+        : "px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[10rem] 4xl:px-[20rem] sticky top-0 z-10 "
+    }>
+      <nav>
       <div
         className={`px-4 h-[64px]  ${
           isScroll
@@ -141,6 +140,7 @@ const Navbar = ({
         </div>
       </div>
     </nav>
+    </header>
   );
 };
 

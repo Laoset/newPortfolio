@@ -27,7 +27,7 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
   return (
     <section
       id="main"
-      className="scroll-mt-[4.75rem] py-28 3xl:py-0 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col lg:gap-4 4xl:gap-20 tall:h-screen h-auto text-black dark:text-[#ffedd5] "
+      className="scroll-mt-[4.75rem] py-0 3xl:pt-28 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col lg:gap-4 4xl:gap-20 tall:h-screen h-auto text-black dark:text-[#ffedd5] "
     >
       <div className="flex flex-col text-center lg:mt-10 2xl:mt-14 3xl:mt-32">
         <h2 className="w-full title text-[2.5rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem] xl:text-[7rem] 2xl:text-[6.5rem] 3xl:text-[7rem] 4xl:text-[8rem]">
@@ -46,7 +46,7 @@ const MainContent = ({ isEnglish }: { isEnglish: boolean }) => {
           )}
         </h2>
       </div>
-      <div className="mt-8 w-full flex justify-center text-[#333333] dark:text-[#ffedd5]">
+      <div className="h-[150px] mt-0 w-full flex justify-center text-[#333333] dark:text-[#ffedd5]">
       {shouldRenderCircle && renderCircle()}
       </div>
     </section>
