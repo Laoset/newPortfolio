@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React,{useEffect} from 'react'
 import { IconSquareRoundedArrowDownFilled } from "@tabler/icons-react";
 import { scrollToSection } from "@/utils/ScrollMovement";
 
@@ -27,7 +27,6 @@ const ProjectsCircle = ({ isEnglish }: { isEnglish: boolean }) => {
 
     }
   },[isEnglish])
-console.log(isEnglish)
   return (
     <>
     {isEnglish&& 
