@@ -1,45 +1,49 @@
-import React from "react";
-import { IconHeartCode } from "@tabler/icons-react";
-const Footer = ({ isEnglish }: { isEnglish: boolean }) => {
+'use client';
+import React from 'react';
+import { IconHeartCode, IconLinkedin } from './icons';
+import { useTranslations } from 'next-intl';
+const Footer = () => {
+  const t = useTranslations('Footer');
   return (
     <footer
-      id="footer"
-      className="pt-20 lg:pt-4 px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col justify-center items-center dark:text-[#bbb]"
+      id='footer'
+      className='sectionwrapper pt-[80px] lg:mt-[80px] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col justify-center items-center dark:text-[#bbb]'
     >
-      <div className="text-lg flex flex-col justify-center items-center gap-4">
-        <p>
-          {isEnglish
-            ? "Thank you for coming here, I leave you my resume so you can know more about me."
-            : "Gracias por llegar hasta aquí, te dejo mi CV para que conozcas más sobre mí."}
-        </p>
-        {isEnglish ? (
-          <>
-            <button className="w-44 p-2 rounded-md bg-[#BB2649]  text-[#FFFFFF] hover:bg-opacity-80 transition-colors" >
-            <a href="/cvKevinCorman.pdf" download>
-              Download Resume
-            </a>
-            </button>
-          </>
-        ) : (
-          <>
-            <button className="w-40 p-2 rounded-md bg-[#BB2649]  text-[#ddd] hover:bg-opacity-80 transition-colors" >
-              <a href="/cvKevinCorman.pdf" download>
-                Descargar CV
-              </a>
-            </button>
-          </>
-        )}
-      </div>
-      <div className="flex flex-row gap-2 mt-10 mb-5  ">
-        <p>{isEnglish ? "- Made with" : "- Hecho con"}</p>
-        <span>
-          <IconHeartCode color="#BB2649" />
-        </span>
-        <a href="https://github.com/Laoset" target="_blank">
-          {isEnglish
-            ? "by Alan Kevin Corman Samanamud-"
-            : "por Alan Kevin Corman Samanamud-"}
-        </a>
+      <div className='section flex flex-col justify-center items-center'>
+        <div className='text-lg flex flex-col justify-center items-center gap-4'>
+          <p>{t('title')}</p>
+          <a
+            href={'https://www.linkedin.com/in/kevin-corman-samanamud/'}
+            className='hover:text-[#BB2649] transition-colors relative group'
+            target='_blank'
+            aria-label='redirects'
+          >
+            <IconLinkedin className='w-[28px] h-[28px]' />
+            <div className='absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out text-center'>
+              Linkedin
+            </div>
+          </a>
+        </div>
+        <div className='flex flex-row gap-2 mt-10 mb-5 h-auto items-center'>
+          <p>{'<'}</p>
+          <p>{t('letter')}</p>
+          <IconHeartCode color='#BB2649' />
+          <a
+            className='hidden lg:block'
+            href='https://github.com/Laoset'
+            target='_blank'
+          >
+            <p>{t('letter2')}</p>
+          </a>
+          <a
+            className='lg:hidden'
+            href='https://github.com/Laoset'
+            target='_blank'
+          >
+            <p>{t('letter2Mobile')}</p>
+          </a>
+          <p>{'/>'}</p>
+        </div>
       </div>
     </footer>
   );

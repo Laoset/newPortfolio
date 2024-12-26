@@ -1,7 +1,6 @@
 export const portfolios = [
   {
     id: 1,
-    src: "/gameCenter.avif",
     href: "https://game-center-akcs.netlify.app/",
     code: "https://github.com/Laoset/gameCenter",
     parrafo: "Pagina que contiene 3 juegos : Memotest - WPM - Pokemon Finder",
@@ -10,15 +9,11 @@ export const portfolios = [
       "TypeScript",
       "React",
       "Tailwind",
-      // "https://icongr.am/devicon/typescript-original.svg?size=128&color=ffffff",
-      // "https://icongr.am/devicon/react-original.svg?size=128&color=ffffff",
-      // "https://www.svgrepo.com/show/374118/tailwind.svg",
     ],
     parrafoEng: "Web page containing 3 games : Memotest - WPM - Pokemon Finder",
   },
   {
     id: 2,
-    src: "/ecommerce.avif",
     href: "https://ecommerce-vercel-tau.vercel.app/",
     code: "https://github.com/Laoset/ecommerceVercel",
     parrafo:
@@ -29,17 +24,12 @@ export const portfolios = [
       "React",
       "Context",
       "NextJS",
-      // "https://icongr.am/devicon/typescript-original.svg?size=128&color=ffffff",
-      // "https://icongr.am/devicon/react-original.svg?size=128&color=ffffff",
-      // "https://icongr.am/devicon/css3-original.svg?size=128&color=currentColor",
-      // "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
     ],
     parrafoEng:
       "Peripherals store, multipage, with the possibility to add products to a cart and proceed with the possible payment, soon to be implemented with Mercado Pago.",
   },
   {
     id: 3,
-    src: "/pomodoro.avif",
     href: "https://pomodoro-app-sooty.vercel.app/",
     code: "https://github.com/Laoset/pomodoroApp",
     parrafo:
@@ -49,9 +39,6 @@ export const portfolios = [
       "React",
       "Context",
       "Tailwind",
-      // "https://icongr.am/devicon/typescript-original.svg?size=128&color=ffffff",
-      // "https://icongr.am/devicon/react-original.svg?size=128&color=ffffff",
-      // "https://www.svgrepo.com/show/374118/tailwind.svg",
     ],
     title: "Pomodoro App",
     parrafoEng:
@@ -59,7 +46,6 @@ export const portfolios = [
   },
   {
     id: 4,
-    src: "/perros2.avif",
     href: "https://deploy-perritos.vercel.app/",
     code: "https://github.com/Laoset/DeployPerritos",
     parrafo:
@@ -73,19 +59,12 @@ export const portfolios = [
       "Express",
       "PostgreSQL",
       "CSS",
-      // "https://icongr.am/devicon/react-original.svg?size=128&color=ffffff",
-      // "https://www.svgrepo.com/show/303557/redux-logo.svg",
-      // "https://icongr.am/devicon/nodejs-original.svg?size=128&color=ffffff",
-      // "https://icongr.am/devicon/express-original.svg?size=128&color=000000",
-      // "https://icongr.am/devicon/postgresql-original.svg?size=128&color=ffffff",
-      // "https://icongr.am/devicon/css3-original.svg?size=128&color=currentColor",
     ],
     parrafoEng:
       "Design and development of a dog breed App that included: searches, combined filtering, sorting, API consumption, creation, modification and deletion of breeds.",
   },
   {
     id: 5,
-    src: "/studiotatuaje.avif",
     href: "https://studiotatto.netlify.app/",
     code: "https://github.com/Laoset/StudioTattoo",
     parrafo:
@@ -94,17 +73,12 @@ export const portfolios = [
     tech: [
       "TypeScript",
       "React",
-      // "Redux",
-      // "https://icongr.am/devicon/typescript-original.svg?size=128&color=ffffff",
-      // "https://icongr.am/devicon/react-original.svg?size=128&color=ffffff",
-      // "https://www.svgrepo.com/show/374118/tailwind.svg",
     ],
     parrafoEng:
       "Informative and contact page focused on a tattoo studio, with different artistic sections related to the tattoo artist, and possibility of appointments via Instagram and direct message by WhatsApp.",
   },
   {
     id: 6,
-    src: "/popcorn.avif",
     href: "https://popcorn-plus.vercel.app/",
     code: "https://github.com/Laoset/PopcornPlus",
     parrafo:
@@ -115,18 +89,12 @@ export const portfolios = [
       "React",
       "Redux",
       "Tailwind",
-      // "Tailwind"
-      // "https://icongr.am/devicon/typescript-original.svg?size=128&color=ffffff",
-      // "https://icongr.am/devicon/react-original.svg?size=128&color=ffffff",
-      // "https://www.svgrepo.com/show/303557/redux-logo.svg",
-      // "https://www.svgrepo.com/show/374118/tailwind.svg",
     ],
     parrafoEng:
       "Streaming website, a mix between Netflix and Disney+, uses the TMDB API to display movies and series",
   },
   {
     id: 7,
-    src: "/showCrypto.avif",
     href: "https://show-crypto.vercel.app/",
     code: "https://github.com/Laoset/showCrypto",
     parrafo:
@@ -137,10 +105,6 @@ export const portfolios = [
       "React",
       "NextJS",
       "Tailwind",
-      // "https://icongr.am/devicon/javascript-original.svg?size=128&color=currentColor",
-      // "https://icongr.am/devicon/react-original.svg?size=128&color=ffffff",
-      // "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
-      // "https://www.svgrepo.com/show/374118/tailwind.svg",
     ],
     parrafoEng:
       "Application that consumes the CoinRanking API to display relevant data about the current cryptocurrencies, has search and filter",
@@ -164,23 +128,5 @@ export const portfolios = [
     title: "iCare",
     parrafoEng:
       "Participation in an agile development team with one-week sprints presenting to a Product Owner progress on the development of a complete Digital Healthcare App.",
-  },
-  {
-    id: 9,
-    src: "/shopping-carrito.avif",
-    href: "https://shoopingcart-akcs.vercel.app/",
-    code: "https://github.com/Laoset/ShoopingCart",
-    parrafo:
-      "Simulador de carrito de compras, incluye: filtrar por tipo de producto, registro e inicio de sesión y eliminación e inclusión de productos.",
-    title: "Shopping Cart",
-    tech: [
-      "https://icongr.am/devicon/react-original.svg?size=128&color=ffffff",
-      "https://www.svgrepo.com/show/303557/redux-logo.svg",
-      "https://www.svgrepo.com/show/374118/tailwind.svg",
-      "https://icongr.am/devicon/nodejs-original.svg?size=128&color=ffffff",
-      "https://icongr.am/devicon/express-original.svg?size=128&color=000000",
-    ],
-    parrafoEng:
-      "Shopping cart simulator, including: filtering by product type, registration and login, and product deletion and inclusion.",
   },
 ];

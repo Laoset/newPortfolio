@@ -1,0 +1,110 @@
+{
+  "Navbar": {
+    "1_name": "HOME",
+    "2_name": "ABOUT ME",
+    "3_name": "PROJECTS"
+  },
+  "Hero": {
+    "subtitle": "WEB DEVELOPER",
+    "animationCircle": "My - projects - #KC®️"
+  },
+  "AboutMe": {
+    "title": "About me",
+    "description": "👋 Welcome! I am Alan Kevin Corman Samanamud and, from a very young age, I was fortunate enough to have a personal computer on which I spent hours and hours taking apart piece by piece, trying to understand its functioning, which generated in me a love for <strong>technology</strong> that never stopped growing. Life took me on a professional career very far removed from the world of technology, but it gave me many personal skills and satisfaction. Until I discovered the world of <strong>programming</strong>, which I fell in love with from the first moment I coded my first <highlight>Hello World.</highlight>",
+    "studies": [
+      {
+        "title": "Frontend Developer",
+        "subtitle": "from 2022 to 2023",
+        "time": "2022"
+      },
+      {
+        "title": "Responsive Web Design -",
+        "subtitle": "freeCodeCamp -",
+        "time": "2022"
+      },
+      {
+        "title": "PC Technician -",
+        "subtitle": "Centro de Formación Profesional, Argentina -",
+        "time": "2019"
+      },
+      {
+        "title": "Computer networks -",
+        "subtitle": "EducacionIT , Argentina -",
+        "time": "2018"
+      }
+    ],
+    "extrainfo": {
+      "title1": "You can find me at",
+      "title2": "I use these tools",
+      "title3": "My actual stack is"
+    }
+  },
+  "Projects": {
+    "title": "Projects",
+    "description": "These are my completed projects, I look forward to your feedback!",
+    "button": "View More",
+    "cards": [
+      {
+        "title": "Game Center",
+        "description": "Web page containing 3 games : Memotest - WPM - Pokemon Finder",
+        "link": "https://game-center-akcs.netlify.app/",
+        "github": "https://github.com/Laoset/gameCenter",
+        "tech": ["TypeScript", "React", "Tailwind"]
+      },
+      {
+        "title": "Periféricool",
+        "description": "Peripherals store, multipage, with the possibility to add products to a cart and proceed with the possible payment, soon to be implemented with Mercado Pago.",
+        "link": "https://ecommerce-vercel-tau.vercel.app/",
+        "github": "https://github.com/Laoset/ecommerceVercel",
+        "tech": ["TypeScript", "React", "Context", "NextJS"]
+      },
+      {
+        "title": "Pomodoro App",
+        "description": "Page containing a Pomodoro style timer, with the possibility of time modification.",
+        "link": "https://pomodoro-app-sooty.vercel.app/",
+        "github": "https://github.com/Laoset/pomodoroApp",
+        "tech": ["TypeScript", "React", "Context", "Tailwind"]
+      },
+      {
+        "title": "Tattoo Studio",
+        "description": "Informative and contact page focused on a tattoo studio, with different artistic sections related to the tattoo artist, and possibility of appointments via Instagram and direct message by WhatsApp.",
+        "link": "https://studiotatto.netlify.app/",
+        "github": "https://github.com/Laoset/StudioTattoo",
+        "tech": ["TypeScript", "React"]
+      },
+      {
+        "title": "Popcorn Plus",
+        "description": "Streaming website, a mix between Netflix and Disney+, uses the TMDB API to display movies and series",
+        "link": "https://popcorn-plus.vercel.app/",
+        "github": "https://github.com/Laoset/PopcornPlus",
+        "tech": ["TypeScript", "React", "Redux", "Tailwind"]
+      },
+      {
+        "title": "Show Crypto",
+        "description": "Application that consumes the CoinRanking API to display relevant data about the current cryptocurrencies, has search and filter",
+        "link": "https://show-crypto.vercel.app/",
+        "github": "https://github.com/Laoset/showCrypto",
+        "tech": ["TypeScript", "React", "Redux", "Tailwind"]
+      }
+    ]
+  },
+  "Footer": {
+    "title": "Thank you for making it this far! If you have any proposals or questions, feel free to reach out.",
+    "letter": "Made with",
+    "letter2": "by Alan Kevin Corman Samanamud",
+    "letter2Mobile": "by #KC"
+  },
+  "Chatbot": {
+    "placeholder": "Type your message...",
+    "button": "Send",
+    "default": "I'm actually not Kevin, I'm an AI. Please rephrase your question.",
+    "intro": "Hi, how are you? I'm Kevin Corman, FrontEnd developer.",
+    "personal": "I was born in Lima, Peru, currently living in Buenos Aires, Argentina. I work full-time as a FrontEnd developer.",
+    "contact": "You can contact me through ",
+    "contact2": " and also via ",
+    "contact3": "I have several projects on my ",
+    "contact4": " for you to take a look at.",
+    "skills": "My work technology stack includes React, MaterialUI, and React Admin. Personally, I often use TypeScript along with TailwindCSS instead. I also use tools like Jira, Figma, and Git. Currently, I'm studying NextJs.",
+    "experience": "I have 1 year of work experience in web development, I have worked in international as well as Argentine companies, and I currently hold the position of FrontEnd Developer."
+  }
+}

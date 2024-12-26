@@ -1,0 +1,88 @@
+{
+  "Navbar": {
+    "1_name": "INICIO",
+    "2_name": "SOBRE MI",
+    "3_name": "PROYECTOS"
+  },
+  "Hero": {
+    "subtitle": "DESARROLLADOR WEB",
+    "animationCircle": "Mis - proyectos - #KC®️"
+  },
+  "AboutMe": {
+    "title": "Sobre mí",
+    "description": "👋 ¡Bienvenid@s! Soy Alan Kevin Corman Samanamud y desde muy temprana edad, fui afortunado al tener una computadora personal en la que pasaba horas y horas desmontando pieza por pieza, tratando de entender su funcionamiento, lo cual generó en mí un gusto por la <strong>tecnología</strong> que nunca dejó de crecer. La vida me llevó por una carrera profesional muy alejada del mundo de la tecnología, pero me brindó muchas habilidades personales y satisfacción. Hasta que descubrí el mundo de la <strong>programación</strong>, que me enamoró desde el momento en que programe mi primer <highlight>Hello World.</highlight>",
+    "extrainfo": {
+      "title1": "Me podes encontrar en",
+      "title2": "Uso estas herramientas",
+      "title3": "Mi stack actual es"
+    }
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "description": "Estos son mis proyectos concluidos, ¡espero tu feedback!",
+    "button": "Ver más",
+    "cards": [
+      {
+        "title": "Game Center",
+        "description": "Pagina que contiene 3 juegos : Memotest - WPM - Pokemon Finder",
+        "link": "https://game-center-akcs.netlify.app/",
+        "github": "https://github.com/Laoset/gameCenter",
+        "tech": ["TypeScript", "React", "Tailwind"]
+      },
+      {
+        "title": "Periféricool",
+        "description": "Tienda de perifericos, multipagina, con posibilidad de añadir productos a un carrito y proceder con el posible pago.",
+        "link": "https://ecommerce-vercel-tau.vercel.app/",
+        "github": "https://github.com/Laoset/ecommerceVercel",
+        "tech": ["TypeScript", "React", "Context", "NextJS"]
+      },
+      {
+        "title": "Pomodoro App",
+        "description": "Pagina que contiene un timer estilo Pomodoro, con posibilidad de modificacion de tiempos.",
+        "link": "https://pomodoro-app-sooty.vercel.app/",
+        "github": "https://github.com/Laoset/pomodoroApp",
+        "tech": ["TypeScript", "React", "Context", "Tailwind"]
+      },
+      {
+        "title": "Tattoo Studio",
+        "description": "Página enfocada hacia un estudio de tatuajes, con diferentes secciones artísticas relacionadas con el tatuador y de turnos mediante Instagram o WhatsApp.",
+        "link": "https://studiotatto.netlify.app/",
+        "github": "https://github.com/Laoset/StudioTattoo",
+        "tech": ["TypeScript", "React"]
+      },
+      {
+        "title": "Popcorn Plus",
+        "description": "Web de streaming, mezcla entre Netflix y Disney+, consume la API de TMDB para mostrar las peliculas y series.",
+        "link": "https://popcorn-plus.vercel.app/",
+        "github": "https://github.com/Laoset/PopcornPlus",
+        "tech": ["TypeScript", "React", "Redux", "Tailwind"]
+      },
+      {
+        "title": "Show Crypto",
+        "description": "Aplicacion que consume la API de CoinRanking para mostrar los datos relevantes de las criptomonedas actuales, posee busqueda y filtros",
+        "link": "https://show-crypto.vercel.app/",
+        "github": "https://github.com/Laoset/showCrypto",
+        "tech": ["TypeScript", "React", "Redux", "Tailwind"]
+      }
+    ]
+  },
+  "Footer": {
+    "title": "Gracias por llegar hasta aquí. Si tienes alguna propuesta o consulta, no dudes en contactarme.",
+    "letter": "Hecho con",
+    "letter2": "por Alan Kevin Corman Samanamud",
+    "letter2Mobile": "por #KC"
+  },
+  "Chatbot": {
+    "placeholder": "Escribe tu mensaje...",
+    "button": "Enviar",
+    "default": "En realidad no soy Kevin, soy una IA. Por favor reformula tu pregunta.",
+    "intro": "Hola, como estas ? Soy Kevin Corman, desarrollador FrontEnd.",
+    "personal": "Nací en Lima, Perú, actualmente vivo en Buenos Aires, Argentina. Trabajo a tiempo completo como desarrollador FrontEnd.",
+    "contact": "Me puedes contactar por ",
+    "contact2": " y también por ",
+    "contact3": "Tengo varios proyectos en mi ",
+    "contact4": " para que le eches un vistazo.",
+    "skills": "Mi stack tecnológico laboral comprende React, MaterialUI y React Admin. Por mi cuenta suelo utilizar TypeScript junto a TailwindCSS en reemplazo. Además hago uso de herramientas como Jira, Figma y Git. Actualmente me encuentro estudiando NextJs.",
+    "experience": "Tengo 1 año de experiencia laboral en el área de desarrollo web, trabajé en empresas internacionales como también argentinas, actualmente tengo el cargo de Desarrollador FrontEnd."
+  }
+}

@@ -9,6 +9,8 @@ const config: Config = {
   darkMode: "class",
   theme: {
     screens: {
+      xxs:'320px',
+      364:'364px',
       xs: "520px",
 
       sm: "640px",
@@ -22,7 +24,7 @@ const config: Config = {
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }
 
-      xl: "1280px",
+      xl: "1270px",
       // => @media (min-width: 1280px) { ... }
 
       "2xl": "1450px",
