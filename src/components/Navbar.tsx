@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import IconClose from './icons/IconClose';
 import { useTranslations } from 'next-intl';
 import LocaleSwitcher from './LocaleSwitcher';
+import TextScramble from './TextScramble';
 
 const Navbar = () => {
   const t = useTranslations('Navbar');
@@ -65,17 +66,13 @@ const Navbar = () => {
               #KC
             </h1>
           </button>
-          <div className='hidden lg:flex flex-row gap-4 '>
+          <div className='hidden lg:flex flex-row gap-4'>
             {ElementsNavbar.map((item) => (
-              <button
-                onClick={() => scrollToSection(item.href)}
+              <TextScramble
+                element={item}
+                callback={scrollToSection}
                 key={item.id}
-                className='hover-underline-animation text-base md:text-lg'
-              >
-                {'< '}
-                {t(item.name)}
-                {' />'}
-              </button>
+              />
             ))}
           </div>
           <div className='flex flex-row gap-4 '>

@@ -1,5 +1,12 @@
 import { IconDiscord, IconFigma, IconGithub, IconGmail, IconLinkedin, IconNextjs, IconReact, IconReactAdmin, IconRedux, IconTailwindcss, IconTypescript } from "@/components/icons";
 
+export type ElementNavbar =
+{
+  id:number,
+  name:string,
+  href:string
+}
+
 export const ElementsNavbar = [
   {
     id: 1,
