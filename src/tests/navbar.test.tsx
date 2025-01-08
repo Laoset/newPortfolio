@@ -2,7 +2,7 @@ import { describe, expect, test } from 'vitest';
 import { render } from 'vitest-browser-react';
 import Navbar from '../components/Navbar';
 // FIRST
-// Wee need to test if the Navbar is rendering
+// Wee need to test if the Navbar is rendering.
 
 describe('Navbar render all the content correctly', () => {
   describe('Desktop version', () => {
