@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@types/node": "20.6.5",
@@ -27,5 +29,12 @@
   "overrides": {
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2"
+  },
+  "devDependencies": {
+    "@vitest/browser": "^2.1.8",
+    "@vitest/coverage-v8": "^2.1.8",
+    "playwright": "^1.49.1",
+    "vitest": "^2.1.8",
+    "vitest-browser-react": "^0.0.4"
   }
 }

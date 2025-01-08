@@ -14,6 +14,7 @@ const Navbar = () => {
   const [isScroll, setIsScroll] = useState<boolean>(false);
   const [theme, setTheme] = useState<string>('dark');
   const [modal, setModal] = useState<boolean>(false);
+
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -21,13 +22,13 @@ const Navbar = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [theme]);
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   const handlerTheme = () => {
     if (theme === 'light') {
       setTheme('dark');
@@ -39,7 +40,6 @@ const Navbar = () => {
     setModal(!modal);
     scrollToSection(item);
   };
-
   const handleScroll = () => {
     if (window.scrollY > 30) {
       setIsScroll(true);
@@ -49,7 +49,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className={modal ? '' : 'sectionWrapper fixed top-0 z-10 '}>
+    <header
+      className={modal ? '' : 'sectionWrapper fixed top-0 z-10'}
+      data-testid='navbar-header'
+    >
       <nav className='section'>
         <motion.div
           className={`px-4 h-[64px]  ${
@@ -61,12 +64,15 @@ const Navbar = () => {
           animate={{ opacity: modal ? 0 : 1 }}
           transition={{ duration: 0.3 }}
         >
-          <button onClick={() => scrollTo(0, 0)}>
+          <button onClick={() => scrollTo(0, 0)} data-testid='navbar-btlogo'>
             <h1 className='hover:animate-pulse hover:text-[#BB2649] transition-colors md:text-lg'>
               #KC
             </h1>
           </button>
-          <div className='hidden lg:flex flex-row gap-4'>
+          <div
+            className='hidden lg:flex flex-row gap-4'
+            data-testid='navbar-content'
+          >
             {ElementsNavbar.map((item) => (
               <TextScramble
                 element={item}
@@ -75,7 +81,7 @@ const Navbar = () => {
               />
             ))}
           </div>
-          <div className='flex flex-row gap-4 '>
+          <div className='flex flex-row gap-4'>
             <div className='hidden lg:block'>
               {theme === 'light' ? (
                 <button>
@@ -83,6 +89,7 @@ const Navbar = () => {
                     className='hover:rotate-12  duration-300'
                     onClick={handlerTheme}
                     aria-label='Dark mode'
+                    data-testid='navbar-desktop-bttheme-light'
                   />
                 </button>
               ) : (
@@ -91,6 +98,7 @@ const Navbar = () => {
                     className='hover:rotate-12  duration-300'
                     onClick={handlerTheme}
                     aria-label='Light mode'
+                    data-testid='navbar-desktop-bttheme-dark'
                   />
                 </button>
               )}
