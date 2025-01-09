@@ -1,51 +1,51 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
-  darkMode: "class",
+  darkMode: 'class',
   theme: {
     screens: {
-      xxs:'320px',
-      364:'364px',
-      xs: "520px",
+      xxs: '320px',
+      364: '364px',
+      xs: '520px',
 
-      sm: "640px",
+      sm: '640px',
       // => @media (min-width: 640px) { ... }
 
-      md: "768px",
+      md: '768px',
       // => @media (min-width: 768px) { ... }
-      m: "850px",
+      m: '850px',
       // => @media (min-width: 850px) { ... }
 
-      lg: "1024px",
+      lg: '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      xl: "1270px",
+      xl: '1270px',
       // => @media (min-width: 1280px) { ... }
 
-      "2xl": "1450px",
+      '2xl': '1450px',
       // => @media (min-width: 1536px) { ... }
 
-      "3xl": "1650px ",
+      '3xl': '1650px ',
       // => @media (min-width: 1536px) { ... }
 
-      "4xl": "1920px ",
+      '4xl': '1920px ',
       // => @media (min-width: 1536px) { ... }
-      tall: { raw: "(min-height: 720px)" },
+      tall: { raw: '(min-height: 720px)' }
       // => @media (min-height: 800px) { ... }
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
 export default config;

@@ -7,8 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint-staged": "lint-staged",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "test-commit": "vitest run",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky install",
+    "check-format": "prettier --ignore-path ./.gitignore --check .",
+    "prettier": "prettier --ignore-path ./.gitignore --write .",
+    "validate": "npm run check-format && npm run prettier && npm run lint && npm run test-commit"
   },
   "dependencies": {
     "@types/node": "20.6.5",
@@ -31,10 +37,22 @@
     "@types/react-dom": "19.0.2"
   },
   "devDependencies": {
-    "@vitest/browser": "^2.1.8",
+    "@eslint/js": "^9.17.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.3",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "jsdom": "^25.0.1",
+    "lint-staged": "^15.3.0",
     "playwright": "^1.49.1",
-    "vitest": "^2.1.8",
-    "vitest-browser-react": "^0.0.4"
+    "prettier": "^3.4.2",
+    "typescript-eslint": "^8.19.1",
+    "vitest": "^2.1.8"
   }
 }

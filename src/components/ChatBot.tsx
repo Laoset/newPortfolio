@@ -42,14 +42,14 @@ const EXAMPLES = [
 
   {
     text: 'Con que herramientas de trabajo tienes experiencia?',
-    label: 'skills',
+    label: 'skills'
   },
   { text: 'What tools do you have experiencie with?', label: 'skills' },
   { text: 'Sabes otros idiomas?', label: 'personal' },
   { text: 'Sabes ingles?', label: 'personal' },
   {
     text: 'Do you know other lenguajes? Like English or French?',
-    label: 'personal',
+    label: 'personal'
   },
   { text: 'Hola', label: 'intro' },
   { text: 'Hi', label: 'intro' },
@@ -60,7 +60,7 @@ const EXAMPLES = [
   { text: 'Eres', label: 'intro' },
   { text: 'Who are you?', label: 'intro' },
   { text: 'Who are you', label: 'intro' },
-  { text: 'What are you', label: 'intro' },
+  { text: 'What are you', label: 'intro' }
 ];
 const API_KEY = 'ImQGf4ec238hvore7hGMsBjXSeuTU0U3OXlkPL2Q';
 const ChatBot = () => {
@@ -79,29 +79,29 @@ const ChatBot = () => {
       <p>
         {t('contact')}
         <a
-          className='underline'
-          href='https://www.linkedin.com/in/kevin-corman-samanamud/'
-          rel='noreferrer noopener'
-          target='_blank'
+          className="underline"
+          href="https://www.linkedin.com/in/kevin-corman-samanamud/"
+          rel="noreferrer noopener"
+          target="_blank"
         >
           LinkedIn
         </a>
         {t('contact2')}
         <a
-          className='underline'
-          rel='noreferrer noopener'
-          target='_blank'
-          href='mailto:kevin143corman@gmail.com'
-          aria-label='Email'
+          className="underline"
+          rel="noreferrer noopener"
+          target="_blank"
+          href="mailto:kevin143corman@gmail.com"
+          aria-label="Email"
         >
           Email
         </a>
         . {t('contact3')}
         <a
-          className='underline'
-          href='https://github.com/Laoset'
-          rel='noreferrer noopener'
-          target='_blank'
+          className="underline"
+          href="https://github.com/Laoset"
+          rel="noreferrer noopener"
+          target="_blank"
         >
           GitHub
         </a>
@@ -109,7 +109,7 @@ const ChatBot = () => {
       </p>
     ),
     skills: <p>{t('skills')}</p>,
-    experience: <p>{t('experience')}</p>,
+    experience: <p>{t('experience')}</p>
   };
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
@@ -120,7 +120,7 @@ const ChatBot = () => {
       messages.concat({
         id: String(Date.now()),
         type: 'user',
-        text: question,
+        text: question
       })
     );
     setQuestion('');
@@ -130,13 +130,13 @@ const ChatBot = () => {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${API_KEY}`,
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           model: 'embed-multilingual-v3.0',
           inputs: [question],
-          examples: EXAMPLES,
-        }),
+          examples: EXAMPLES
+        })
       }
     ).then((res) => res.json());
     setMessage((messages) =>
@@ -147,7 +147,7 @@ const ChatBot = () => {
           classifications[0]?.confidence > 0.35
             ? ANSWERS[classifications[0]?.prediction as keyof typeof ANSWERS] ||
               ANSWERS['default']
-            : ANSWERS['default'],
+            : ANSWERS['default']
       })
     );
     setLoading(false);
@@ -157,30 +157,30 @@ const ChatBot = () => {
     container.current?.scrollTo(0, container.current?.scrollHeight);
   }, [message]);
   return (
-    <div className='section fixed bottom-0 right-0 mb-4 mr-4 w-auto'>
+    <div className="section fixed bottom-0 right-0 mb-4 mr-4 w-auto">
       {isOpen && (
         <div
           ref={container}
-          className='flex flex-col justify-between z-50 w-64 h-[300px] mt-12 top-0 right-0 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-100 overflow-y-auto'
+          className="flex flex-col justify-between z-50 w-64 h-[300px] mt-12 top-0 right-0 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-100 overflow-y-auto"
         >
-          <div className='px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg flex justify-between items-center sticky top-0'>
-            <h3 className='font-semibold text-gray-900'>Chat</h3>
+          <div className="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg flex justify-between items-center sticky top-0">
+            <h3 className="font-semibold text-gray-900">Chat</h3>
             <button
               onClick={() => setIsOpen(false)}
-              className='focus:outline-none'
+              className="focus:outline-none"
             >
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-6 w-6 text-gray-500'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-gray-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeWidth={2}
-                  d='M6 18L18 6M6 6l12 12'
+                  d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             </button>
@@ -197,33 +197,33 @@ const ChatBot = () => {
               {messag?.text}
             </div>
           ))}
-          <form className='px-3 pb-2 align-bottom mt-1' onSubmit={handleSubmit}>
+          <form className="px-3 pb-2 align-bottom mt-1" onSubmit={handleSubmit}>
             <input
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
-              type='text'
-              name='question'
+              type="text"
+              name="question"
               placeholder={t('placeholder')}
-              className='border border-gray-200 rounded-s-md px-3 py-2'
+              className="border border-gray-200 rounded-s-md px-3 py-2"
             />
             <button
               disabled={loading}
               className={`px-4 py-2 bg-[#272325] rounded-lg rounded-l-none ${
                 loading ? 'bg-blue-300' : '#272325'
               }`}
-              type='submit'
+              type="submit"
             >
               {t('button')}
             </button>
           </form>
         </div>
       )}
-      <div className='relative flex justify-end'>
+      <div className="relative flex justify-end">
         <button
-          id='open-chat'
+          id="open-chat"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label='Chat'
-          name='Chat'
+          aria-label="Chat"
+          name="Chat"
         >
           <IconChatBot
             className={`w-[40px] h-[40px] hover:text-[#BB2649] ${

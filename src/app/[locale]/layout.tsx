@@ -8,23 +8,23 @@ import { getMessages } from 'next-intl/server';
 
 const poppinsFont = Poppins({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 });
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700'],
-  variable: '--font-ibm-plex-mono',
+  variable: '--font-ibm-plex-mono'
 });
 
 export const metadata: Metadata = {
   title: 'Alan Kevin Corman Samanamud',
   description:
-    'Portfolio of Alan Kevin Corman Samanamud, Frontend Developer from Argentina, Buenos Aires',
+    'Portfolio of Alan Kevin Corman Samanamud, Frontend Developer from Argentina, Buenos Aires'
 };
 
 export default async function RootLayout({
   children,
-  params,
+  params
 }: {
   children: React.ReactNode;
   params: any;
@@ -38,17 +38,17 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className='dark'>
+    <html lang={locale} className="dark">
       <head>
         <link
-          rel='preconnect'
-          href='https://fonts.googleapis.com'
-          crossOrigin='anonymous'
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin="anonymous"
         />
         <link
-          rel='preconnect'
-          href='https://fonts.gstatic.com'
-          crossOrigin='anonymous'
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
       </head>
       <body

@@ -6,39 +6,39 @@ const Footer = () => {
   const t = useTranslations('Footer');
   return (
     <footer
-      id='footer'
-      className='sectionwrapper pt-[80px] lg:mt-[80px] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col justify-center items-center dark:text-[#bbb]'
+      id="footer"
+      className="sectionwrapper pt-[80px] lg:mt-[80px] px-[2rem] lg:px-[8rem] 2xl:px-[12rem] 3xl:px-[16rem] 4xl:px-[23rem]  flex flex-col justify-center items-center dark:text-[#bbb]"
     >
-      <div className='section flex flex-col justify-center items-center'>
-        <div className='text-lg flex flex-col justify-center items-center gap-4'>
+      <div className="section flex flex-col justify-center items-center">
+        <div className="text-lg flex flex-col justify-center items-center gap-4">
           <p>{t('title')}</p>
           <a
             href={'https://www.linkedin.com/in/kevin-corman-samanamud/'}
-            className='hover:text-[#BB2649] transition-colors relative group'
-            target='_blank'
-            aria-label='redirects'
+            className="hover:text-[#BB2649] transition-colors relative group"
+            target="_blank"
+            aria-label="redirects"
           >
-            <IconLinkedin className='w-[28px] h-[28px]' />
-            <div className='absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out text-center'>
+            <IconLinkedin className="w-[28px] h-[28px]" />
+            <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out text-center">
               Linkedin
             </div>
           </a>
         </div>
-        <div className='flex flex-row gap-2 mt-10 mb-5 h-auto items-center'>
+        <div className="flex flex-row gap-2 mt-10 mb-5 h-auto items-center">
           <p>{'<'}</p>
           <p>{t('letter')}</p>
-          <IconHeartCode color='#BB2649' />
+          <IconHeartCode color="#BB2649" />
           <a
-            className='hidden lg:block'
-            href='https://github.com/Laoset'
-            target='_blank'
+            className="hidden lg:block"
+            href="https://github.com/Laoset"
+            target="_blank"
           >
             <p>{t('letter2')}</p>
           </a>
           <a
-            className='lg:hidden'
-            href='https://github.com/Laoset'
-            target='_blank'
+            className="lg:hidden"
+            href="https://github.com/Laoset"
+            target="_blank"
           >
             <p>{t('letter2Mobile')}</p>
           </a>

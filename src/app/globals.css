@@ -22,8 +22,10 @@ nav {
 .insideNav {
   border-radius: 16px;
   border: 1px solid transparent;
-  box-shadow: 0px 12px 16px rgba(28, 26, 39, 0.08),
-    0px 8px 12px rgba(28, 26, 39, 0.12), 0px 0px 1px rgba(28, 26, 39, 0.16);
+  box-shadow:
+    0px 12px 16px rgba(28, 26, 39, 0.08),
+    0px 8px 12px rgba(28, 26, 39, 0.12),
+    0px 0px 1px rgba(28, 26, 39, 0.16);
   transition: all 200ms ease-in 0s;
 }
 h3 {
@@ -149,7 +151,9 @@ h3 {
 
 .glitchAnimationTitle {
   position: relative;
-  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+  text-shadow:
+    0.05em 0 0 #00fffc,
+    -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
   animation: glitch 4000ms infinite;
 }
@@ -176,27 +180,39 @@ h3 {
 
 @keyframes glitch {
   0% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    text-shadow:
+      0.05em 0 0 #00fffc,
+      -0.03em -0.04em 0 #fc00ff,
       0.025em 0.04em 0 #fffc00;
   }
   25% {
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    text-shadow:
+      0.05em 0 0 #00fffc,
+      -0.03em -0.04em 0 #fc00ff,
       0.025em 0.04em 0 #fffc00;
   }
   30% {
-    text-shadow: -0.04em -0.025em 0 #00fffc, 0.02em 0.025em 0 #fc00ff,
+    text-shadow:
+      -0.04em -0.025em 0 #00fffc,
+      0.02em 0.025em 0 #fc00ff,
       -0.04em -0.03em 0 #fffc00;
   }
   50% {
-    text-shadow: -0.03em -0.015em 0 #00fffc, 0.015em 0.02em 0 #fc00ff,
+    text-shadow:
+      -0.03em -0.015em 0 #00fffc,
+      0.015em 0.02em 0 #fc00ff,
       -0.03em -0.02em 0 #fffc00;
   }
   70% {
-    text-shadow: 0.03em 0.025em 0 #00fffc, 0.025em 0 0 #fc00ff,
+    text-shadow:
+      0.03em 0.025em 0 #00fffc,
+      0.025em 0 0 #fc00ff,
       0 -0.03em 0 #fffc00;
   }
   100% {
-    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+    text-shadow:
+      -0.05em 0 0 #00fffc,
+      -0.025em -0.04em 0 #fc00ff,
       -0.04em -0.025em 0 #fffc00;
   }
 }

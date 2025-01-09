@@ -14,9 +14,10 @@ const LocaleSwitcher = () => {
   return (
     <button>
       <IconWorld
-        className='hover:rotate-12  duration-300'
+        className="hover:rotate-12  duration-300"
         onClick={onSelectChange}
-        aria-label='Language'
+        aria-label="Language"
+        data-testid="locale-switcher"
       />
     </button>
   );

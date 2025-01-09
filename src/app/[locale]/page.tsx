@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className='sectionWrapper overflow-hidden'>
+      <main className="sectionWrapper overflow-hidden">
         <MainContextAlter />
         <Aboutme />
         <ProyectosHome />

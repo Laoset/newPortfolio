@@ -25,19 +25,19 @@ const ProjectsCircle = () => {
 
   return (
     <>
-      <div className='containerEng'>
+      <div className="containerEng">
         <button
           onClick={() => scrollToSection('projects')}
-          className='btAnimation z-10'
+          className="btAnimation z-10"
         >
           <IconArrowDownSquare
-            className='hover:text-[#BB2649] transition-colors w-[40px] h-[40px]'
-            aria-label='Scroll'
+            className="hover:text-[#BB2649] transition-colors w-[40px] h-[40px]"
+            aria-label="Scroll"
           />
         </button>
-        <div className='subContainerEng'>
-          <div className=''>{t('Hero.animationCircle')}</div>
-          <p className=''></p>
+        <div className="subContainerEng">
+          <div className="">{t('Hero.animationCircle')}</div>
+          <p className=""></p>
         </div>
       </div>
     </>

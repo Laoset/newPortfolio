@@ -16,13 +16,13 @@ const TextScramble = ({ callback, element }: TextScrambleProps) => {
     <button
       onClick={() => callback(element.href)}
       key={element.id}
-      className='hover-underline-animation text-base md:text-lg'
+      className="hover-underline-animation text-base md:text-lg"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <span className='relative inline-block'>
+      <span className="relative inline-block">
         {'< '}
-        <span className='font-mono'>{displayText}</span>
+        <span className="font-mono">{displayText}</span>
         {' />'}
       </span>
     </button>
