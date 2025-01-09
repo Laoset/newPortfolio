@@ -5,7 +5,9 @@ import React, { useState } from 'react';
 import { IconBot, IconChatBot } from './icons';
 
 const ChatBot = () => {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<{ sender: string; text: string }[]>(
+    []
+  );
   const [input, setInput] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const params = useParams();
