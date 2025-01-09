@@ -9,7 +9,7 @@ export default function Home() {
         <MainContextAlter />
         <Aboutme />
         <ProyectosHome />
-        {/* <ChatBot /> */}
+        <ChatBot />
       </main>
       <Footer />
     </>

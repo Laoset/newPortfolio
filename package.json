@@ -17,10 +17,12 @@
     "validate": "npm run check-format && npm run prettier && npm run lint && npm run test-commit"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "@types/node": "20.6.5",
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
     "autoprefixer": "10.4.16",
+    "cheerio": "^1.0.0",
     "cohere-ai": "^7.7.5",
     "eslint-config-next": "15.1.2",
     "motion": "^11.15.0",

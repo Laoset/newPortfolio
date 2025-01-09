@@ -18,3 +18,4 @@ export { default as IconLinkedin } from './IconLinkedin';
 export { default as IconGmail } from './IconGmail';
 export { default as IconReactAdmin } from './IconReactAdmin';
 export { default as IconChatBot } from './IconChatbot';
+export { default as IconBot } from './IconBot';

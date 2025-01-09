@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={modal ? '' : 'sectionWrapper fixed top-0 z-10'}
+      className={modal ? '' : 'sectionWrapper fixed top-0 z-20'}
       data-testid="navbar-header"
     >
       <nav className="section">

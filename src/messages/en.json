@@ -95,6 +95,7 @@
     "letter2Mobile": "by #KC"
   },
   "Chatbot": {
+    "modalTitle": "Virtual Assistant",
     "placeholder": "Type your message...",
     "button": "Send",
     "default": "I'm actually not Kevin, I'm an AI. Please rephrase your question.",

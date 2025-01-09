@@ -73,6 +73,7 @@
     "letter2Mobile": "por #KC"
   },
   "Chatbot": {
+    "modalTitle": "Asistente Virtual",
     "placeholder": "Escribe tu mensaje...",
     "button": "Enviar",
     "default": "En realidad no soy Kevin, soy una IA. Por favor reformula tu pregunta.",

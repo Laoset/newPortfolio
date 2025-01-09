@@ -43,7 +43,7 @@ const ProyectosHome = () => {
             {t('button')}
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-y-9 gap-x-3 3xl:gap-x-6 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-y-9 gap-x-3 3xl:gap-x-6 justify-center justify-items-center">
           {projects.map((item: projectsType, index: number) => {
             return (
               <motion.div
@@ -76,7 +76,10 @@ const ProyectosHome = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-row flex-wrap gap-4 px-6 pt-4 pb-4">
+                <div
+                  className="flex flex-row flex-wrap gap-4 px-6 pt-4 pb-4"
+                  id="skills"
+                >
                   {item.tech?.map((tech: string, index: number) => (
                     <span
                       key={`tech-${index}`}
