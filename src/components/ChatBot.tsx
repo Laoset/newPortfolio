@@ -85,7 +85,7 @@ const ChatBot = () => {
             ))}
           </div>
           <div className="px-[20px] mb-4">
-            <div className="border-[2px] border-gray-400 dark:border-[#323234] rounded-[50px] py-2 px-2">
+            <div className="flex justify-between border-[2px] border-gray-400 dark:border-[#323234] rounded-[50px] py-2 px-2">
               <input
                 type="text"
                 value={input}
@@ -96,7 +96,7 @@ const ChatBot = () => {
                   }
                 }}
                 placeholder={t('placeholder')}
-                className="bg-transparent dark:text-white text-[15px] focus:outline-none"
+                className="bg-transparent dark:text-white text-[15px] focus:outline-none w-[75%]"
               />
               <button
                 onClick={sendMessage}
