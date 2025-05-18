@@ -58,11 +58,11 @@
         "tech": ["TypeScript", "React", "Redux", "Tailwind"]
       },
       {
-        "title": "Show Crypto",
-        "description": "Aplicacion que consume la API de CoinRanking para mostrar los datos relevantes de las criptomonedas actuales, posee busqueda y filtros",
+        "title": "Crypto Cards",
+        "description": "Aplicacion que consume la API de CoinGecko para mostrar los datos relevantes de las criptomonedas actuales, en formato tarjeta.",
         "link": "https://show-crypto.vercel.app/",
         "github": "https://github.com/Laoset/showCrypto",
-        "tech": ["TypeScript", "React", "Redux", "Tailwind"]
+        "tech": ["Javascript", "React", "Redux", "Tailwind"]
       }
     ]
   },

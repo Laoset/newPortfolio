@@ -74,17 +74,17 @@
       },
       {
         "title": "Popcorn Plus",
-        "description": "Streaming website, a mix between Netflix and Disney+, uses the TMDB API to display movies and series",
+        "description": "Streaming website, a mix between Netflix and Disney+, uses the TMDB API to display movies and series.",
         "link": "https://popcorn-plus.vercel.app/",
         "github": "https://github.com/Laoset/PopcornPlus",
         "tech": ["TypeScript", "React", "Redux", "Tailwind"]
       },
       {
-        "title": "Show Crypto",
-        "description": "Application that consumes the CoinRanking API to display relevant data about the current cryptocurrencies, has search and filter",
+        "title": "Crypto Cards",
+        "description": "Application that consumes the CoinGecko API to display relevant data about the current cryptocurrencies, has a card format.",
         "link": "https://show-crypto.vercel.app/",
         "github": "https://github.com/Laoset/showCrypto",
-        "tech": ["TypeScript", "React", "Redux", "Tailwind"]
+        "tech": ["Javascript", "React", "Redux", "Tailwind"]
       }
     ]
   },
