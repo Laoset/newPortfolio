@@ -28,11 +28,11 @@ const MainContent = () => {
       transition={{ duration: 1 }}
     >
       <div className="flex flex-col text-center mt-[80px]">
-        <h2 className="w-full title text-[2.6rem] 364:text-[2.8rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem] xl:text-[7rem] 2xl:text-[6.5rem] 3xl:text-[7rem] 4xl:text-[8rem]">
+        <h2 className="w-full title text-[2.6rem] 364:text-[2.8rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem] xl:text-[6rem] 2xl:text-[6rem] 3xl:text-[6.2rem]">
           <span className="text-shadow-pink">K</span>EVIN
           <span className="text-shadow-pink ml-3 lg:ml-10">C</span>ORMAN
         </h2>
-        <h2 className="w-full title text-[2.6rem] 364:text-[2.8rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem] xl:text-[7rem] 2xl:text-[6.5rem] 3xl:text-[7rem] 4xl:text-[8rem]">
+        <h2 className="w-full title text-[2.6rem] 364:text-[2.8rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem] xl:text-[6rem] 2xl:text-[6rem] 3xl:text-[6.2rem]">
           {t('Hero.subtitle')}
         </h2>
       </div>

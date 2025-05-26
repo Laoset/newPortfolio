@@ -17,9 +17,7 @@ const Aboutme = () => {
       transition={{ duration: 0.5 }}
     >
       <h3 className="lg:text-4xl text-3xl font-bold mb-4 lg:mb-16 dark:text-[#ddd]">
-        <span className="text-3xl">{'<'} </span>
         {t('title')}
-        <span className="text-3xl ml-1">{'/>'}</span>
       </h3>
       <div className="flex flex-col justify-between">
         {/* INTRODUCCION */}

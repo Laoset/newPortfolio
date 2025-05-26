@@ -21,9 +21,7 @@ const TextScramble = ({ callback, element }: TextScrambleProps) => {
       onMouseLeave={() => setIsHovering(false)}
     >
       <span className="relative inline-block">
-        {'< '}
         <span className="font-mono">{displayText}</span>
-        {' />'}
       </span>
     </button>
   );

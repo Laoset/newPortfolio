@@ -1,21 +1,92 @@
 {
   "Navbar": {
-    "1_name": "INICIO",
-    "2_name": "SOBRE MI",
-    "3_name": "PROYECTOS"
+    "1_name": "/inicio",
+    "2_name": "/perfil",
+    "3_name": "/experiencia",
+    "4_name": "/proyectos"
   },
   "Hero": {
-    "subtitle": "DESARROLLADOR WEB",
+    "subtitle": "SOFTWARE DEVELOPER",
     "animationCircle": "Mis - proyectos - #KC®️"
   },
   "AboutMe": {
-    "title": "Sobre mí",
-    "description": "👋 ¡Bienvenid@s! Soy Alan Kevin Corman Samanamud y desde muy temprana edad, fui afortunado al tener una computadora personal en la que pasaba horas y horas desmontando pieza por pieza, tratando de entender su funcionamiento, lo cual generó en mí un gusto por la <strong>tecnología</strong> que nunca dejó de crecer. La vida me llevó por una carrera profesional muy alejada del mundo de la tecnología, pero me brindó muchas habilidades personales y satisfacción. Hasta que descubrí el mundo de la <strong>programación</strong>, que me enamoró desde el momento en que programe mi primer <highlight>Hello World.</highlight>",
+    "title": "Perfil",
+    "description": "👋 ¡Bienvenid@s! Soy Alan Kevin Corman Samanamud. Desde muy temprana edad, tuve la suerte de tener una computadora personal en la que pasaba mis días tratando de entender su funcionamiento. Así nació mi pasión por la <strong>tecnología</strong> que nunca dejó de crecer. Años después, descubrí el mundo de la <strong>programación</strong> y me enamoré desde el momento en que escribí mi primer <highlight>Hello World.</highlight>",
     "extrainfo": {
       "title1": "Me podes encontrar en",
       "title2": "Uso estas herramientas",
       "title3": "Mi stack actual es"
     }
+  },
+  "Experience": {
+    "title": "Experiencia",
+    "description": "Mi carrera profesional comenzó en el 2023. Desde entonces, he trabajado en diversas empresas, tanto internacionales como argentinas, donde he podido aplicar mis conocimientos y seguir aprendiendo cada día.",
+    "workingExperience": [
+      {
+        "title": "Desarrollador FrontEnd",
+        "company": "Puntospoint",
+        "time": "May 2025 - Actualidad",
+        "country": "Santiago de Chile, Chile",
+        "description": "Formo parte del equipo de desarrollo web, donde me encargo de la creación y mantenimiento de aplicaciones web utilizando React y TypeScript. Trabajo en un entorno ágil, colaborando estrechamente con diseñadores y otros desarrolladores para crear experiencias de usuario adecuadass y eficientes.",
+        "techTitle": "Tecnologías utilizadas",
+        "tech": [
+          "TypeScript",
+          "React",
+          "Material UI",
+          "NextJS",
+          "Zustand",
+          "Jest",
+          "Testing Library"
+        ],
+        "workingTitle": "Logros destacados",
+        "workingKeys": null
+      },
+      {
+        "title": "Desarrollador FrontEnd",
+        "company": "Muvinai",
+        "time": "Oct 2023- Feb 2025",
+        "country": "Buenos Aires, Argentina",
+        "description": "Formé parte de un equipo multidisciplinario en el área de IT, desarrollando soluciones digitales enfocadas para festivales, SPAs y aplicaciones móviles.",
+        "techTitle": "Tecnologías utilizadas",
+        "tech": [
+          "TypeScript",
+          "React",
+          "React Native",
+          "Redux",
+          "Jest",
+          "Testing Library",
+          "Material UI",
+          "React Admin",
+          "NextJS"
+        ],
+        "workingTitle": "Logros destacados",
+        "workingKeys": [
+          "Desarrollé un SaaS para gestionar personal y eventos desde un Backoffice",
+          "Construí una librería en TypeScript para la gestión de horarios y eventos, publicada en NPM y utilizada por diversos proyectos"
+        ]
+      },
+      {
+        "title": "Desarrollador FullStack",
+        "company": "TechMinds",
+        "time": "June 2023 - Aug 2023",
+        "country": "Puebla, Mexico",
+        "description": "Desarrolle un backoffice de gestion de stock y distribución de alimentos. usando React y NodeJS",
+        "techTitle": "Tecnologías utilizadas",
+        "tech": [
+          "TypeScript",
+          "React",
+          "Material UI",
+          "NodeJS",
+          "PrismaORM",
+          "PostgreSQL"
+        ],
+        "workingTitle": "Logros destacados",
+        "workingKeys": [
+          "Desarrollé un dashboard moderno y funcional, mejorando la experiencia del usuario y facilitando la gestión interna del stock.",
+          "Implementé microservicios eficientes, lo que permitió una escalabilidad correcta de la plataforma y una gestión de datos optimizada."
+        ]
+      }
+    ]
   },
   "Projects": {
     "title": "Proyectos",
@@ -24,45 +95,21 @@
     "cards": [
       {
         "title": "Game Center",
-        "description": "Pagina que contiene 3 juegos : Memotest - WPM - Pokemon Finder",
+        "description": "Web que reúne 3 juegos interactivos: Memotest - WPM - Pokemon Finder",
         "link": "https://game-center-akcs.netlify.app/",
-        "github": "https://github.com/Laoset/gameCenter",
-        "tech": ["TypeScript", "React", "Tailwind"]
-      },
-      {
-        "title": "Periféricool",
-        "description": "Tienda de perifericos, multipagina, con posibilidad de añadir productos a un carrito y proceder con el posible pago.",
-        "link": "https://ecommerce-vercel-tau.vercel.app/",
-        "github": "https://github.com/Laoset/ecommerceVercel",
-        "tech": ["TypeScript", "React", "Context", "NextJS"]
+        "github": "https://github.com/Laoset/gameCenter"
       },
       {
         "title": "Pomodoro App",
-        "description": "Pagina que contiene un timer estilo Pomodoro, con posibilidad de modificacion de tiempos.",
+        "description": "Aplicación web con temporizador estilo Pomodoro, configurable por el usuario.",
         "link": "https://pomodoro-app-sooty.vercel.app/",
-        "github": "https://github.com/Laoset/pomodoroApp",
-        "tech": ["TypeScript", "React", "Context", "Tailwind"]
-      },
-      {
-        "title": "Tattoo Studio",
-        "description": "Página enfocada hacia un estudio de tatuajes, con diferentes secciones artísticas relacionadas con el tatuador y de turnos mediante Instagram o WhatsApp.",
-        "link": "https://studiotatto.netlify.app/",
-        "github": "https://github.com/Laoset/StudioTattoo",
-        "tech": ["TypeScript", "React"]
-      },
-      {
-        "title": "Popcorn Plus",
-        "description": "Web de streaming, mezcla entre Netflix y Disney+, consume la API de TMDB para mostrar las peliculas y series.",
-        "link": "https://popcorn-plus.vercel.app/",
-        "github": "https://github.com/Laoset/PopcornPlus",
-        "tech": ["TypeScript", "React", "Redux", "Tailwind"]
+        "github": "https://github.com/Laoset/pomodoroApp"
       },
       {
         "title": "Crypto Cards",
-        "description": "Aplicacion que consume la API de CoinGecko para mostrar los datos relevantes de las criptomonedas actuales, en formato tarjeta.",
+        "description": "Aplicación web que muestra información de criptomonedas en formato de tarjetas.",
         "link": "https://show-crypto.vercel.app/",
-        "github": "https://github.com/Laoset/showCrypto",
-        "tech": ["Javascript", "React", "Redux", "Tailwind"]
+        "github": "https://github.com/Laoset/showCrypto"
       }
     ]
   },

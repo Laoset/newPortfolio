@@ -1,12 +1,9 @@
 import {
-  IconDiscord,
   IconFigma,
   IconGithub,
-  IconGmail,
   IconLinkedin,
   IconNextjs,
   IconReact,
-  IconReactAdmin,
   IconRedux,
   IconTailwindcss,
   IconTypescript
@@ -32,6 +29,11 @@ export const ElementsNavbar = [
   {
     id: 3,
     name: '3_name',
+    href: 'workingexperience'
+  },
+  {
+    id: 4,
+    name: '4_name',
     href: 'projects'
   }
 ];
@@ -41,7 +43,6 @@ export const ElementsAboutme = [
     title: 'extrainfo.title2',
     icons: [
       { name: 'Figma', icon: IconFigma },
-      { name: 'Discord', icon: IconDiscord },
       { name: 'Github', icon: IconGithub }
     ]
   },
@@ -53,8 +54,7 @@ export const ElementsAboutme = [
       { name: 'NextJS', icon: IconNextjs },
       { name: 'React', icon: IconReact },
       { name: 'Redux', icon: IconRedux },
-      { name: 'TailwindCSS', icon: IconTailwindcss },
-      { name: 'React Admin', icon: IconReactAdmin }
+      { name: 'TailwindCSS', icon: IconTailwindcss }
     ]
   },
   {
@@ -66,12 +66,7 @@ export const ElementsAboutme = [
         name: 'Linkedin',
         icon: IconLinkedin
       },
-      { href: 'https://github.com/Laoset', name: 'Github', icon: IconGithub },
-      {
-        href: 'mailto:kevin143corman@gmail.com',
-        name: 'Gmail',
-        icon: IconGmail
-      }
+      { href: 'https://github.com/Laoset', name: 'Github', icon: IconGithub }
     ]
   }
 ];
