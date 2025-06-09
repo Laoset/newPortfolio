@@ -11,7 +11,9 @@
   },
   "AboutMe": {
     "title": "Perfil",
-    "description": "👋 ¡Bienvenid@s! Soy Alan Kevin Corman Samanamud. Desde muy temprana edad, tuve la suerte de tener una computadora personal en la que pasaba mis días tratando de entender su funcionamiento. Así nació mi pasión por la <strong>tecnología</strong> que nunca dejó de crecer. Años después, descubrí el mundo de la <strong>programación</strong> y me enamoré desde el momento en que escribí mi primer <highlight>Hello World.</highlight>",
+    "description": "Soy Alan Kevin Corman Samanamud. Mi curiosidad por la informática comenzó a los 8 años, con mi primera PC un Pentium 4.",
+    "description2": "Desarrollador con más de 3 años de experiencia. Trabajé en equipos multidisciplinarios en proyectos internacionales.",
+    "description3": "Algunos de los desafíos más significativos fueron trabajar junto a Pomelo en su web, una fintech argentina de alto impacto, y en el desarrollo de un SaaS para la gestión de eventos.",
     "extrainfo": {
       "title1": "Me podes encontrar en",
       "title2": "Uso estas herramientas",
@@ -94,8 +96,14 @@
     "button": "Ver más",
     "cards": [
       {
+        "title": "Boom Festival",
+        "description": "Como parte del equipo Muvinai, desarrolle el sitio web para Boom Festival, un evento internacional que une artistas y asistentes en Portugal.",
+        "link": "https://www.boomfestival.org/",
+        "github": null
+      },
+      {
         "title": "Game Center",
-        "description": "Web que reúne 3 juegos interactivos: Memotest - WPM - Pokemon Finder",
+        "description": "Web que reúne 3 juegos interactivos: Memotest - WPM - Pokemon Finder.",
         "link": "https://game-center-akcs.netlify.app/",
         "github": "https://github.com/Laoset/gameCenter"
       },
@@ -114,7 +122,7 @@
     ]
   },
   "Footer": {
-    "title": "Gracias por llegar hasta aquí. Si tienes alguna propuesta o consulta, no dudes en contactarme.",
+    "title": "Gracias por llegar hasta aquí. Si tienes alguna propuesta, no dudes en contactarme.",
     "letter": "Hecho con",
     "letter2": "por Alan Kevin Corman Samanamud",
     "letter2Mobile": "por #KC"

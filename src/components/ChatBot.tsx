@@ -43,7 +43,7 @@ const ChatBot = () => {
     setModalOpen(!modalOpen);
   };
   return (
-    <div className="hidden lg:block section fixed bottom-0 right-0 mb-4 mr-4 w-auto">
+    <div className="hidden lg:block fixed bottom-0 right-0 mb-4 mr-4 w-auto">
       {modalOpen && (
         <div className="border-[2px] border-gray-400 dark:border-[#323234] rounded-[20px] shadow dark:from-[#030a14] dark:to-[#161b21] bg-gradient-to-b from-[#f8f7fe] to-[#e0e0e0] w-[310px]">
           <div className="flex flex-row items-center justify-between px-[20px] py-[10px] cursor-default bg-[#eaeaec] dark:bg-[#1c1a27] rounded-tl-[20px] rounded-tr-[20px]">

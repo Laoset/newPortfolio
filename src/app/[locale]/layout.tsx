@@ -1,12 +1,12 @@
 import '../globals.css';
 import type { Metadata } from 'next';
-import { Poppins, IBM_Plex_Mono } from 'next/font/google';
+import { Poppins, IBM_Plex_Mono, Onest } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-const poppinsFont = Poppins({
+const onestFont = Onest({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 });
@@ -52,7 +52,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${poppinsFont.className} min-h-screen min-w-full flex flex-col dark:from-[#030a14] dark:to-[#161b21] bg-gradient-to-b from-[#f8f7fe] to-[#e0e0e0] ${ibmPlexMono.variable}`}
+        className={`${onestFont.className} min-h-screen min-w-full flex flex-col dark:from-[#030a14] dark:to-[#161b21] bg-gradient-to-b from-[#f8f7fe] to-[#e0e0e0] ${ibmPlexMono.variable}`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

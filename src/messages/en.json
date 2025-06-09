@@ -11,7 +11,9 @@
   },
   "AboutMe": {
     "title": "Profile",
-    "description": "👋 Welcome! I'm Alan Kevin Corman Samanamud. From a very young age, I was lucky to have a personal computer, and I spent my days trying to understand how it worked. That's how my passion for <strong>technology</strong> was born—and it never stopped growing. Years later, I discovered the world of <strong>programming</strong> and fell in love the moment I wrote my first <highlight>Hello World.</highlight>",
+    "description": "I'm Alan Kevin Corman Samanamud. My curiosity about computer science started at 8 years old, with my first PC a Pentium 4.",
+    "description2": "Developer with more than 3 years of experience. I worked in multidisciplinary teams in international projects.",
+    "description3": "Some of the most significant challenges were working together with Pomelo in their web, a fintech in Argentina with high impact, and in the development of an SaaS for the management of events.",
     "studies": [
       {
         "title": "Frontend Developer",
@@ -116,6 +118,12 @@
     "button": "View More",
     "cards": [
       {
+        "title": "Boom Festival",
+        "description": "As part of the Muvinai team, I developed the website for Boom Festival, an international event that brings together multiple artits and attendees in Portugal.",
+        "link": "https://www.boomfestival.org/",
+        "github": null
+      },
+      {
         "title": "Game Center",
         "description": "A web app featuring three interactive games: Memotest, WPM, and Pokémon Finder.",
         "link": "https://game-center-akcs.netlify.app/",
@@ -136,7 +144,7 @@
     ]
   },
   "Footer": {
-    "title": "Thank you for making it this far! If you have any proposals or questions, feel free to reach out.",
+    "title": "Thank you for making it this far! If you have any proposals, feel free to reach out.",
     "letter": "Made with",
     "letter2": "by Alan Kevin Corman Samanamud",
     "letter2Mobile": "by #KC"

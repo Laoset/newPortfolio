@@ -16,7 +16,7 @@ const TextScramble = ({ callback, element }: TextScrambleProps) => {
     <button
       onClick={() => callback(element.href)}
       key={element.id}
-      className="hover-underline-animation text-base md:text-lg"
+      className="hover-underline-animation text-base"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >

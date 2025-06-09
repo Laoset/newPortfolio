@@ -6,7 +6,8 @@ import {
   IconReact,
   IconRedux,
   IconTailwindcss,
-  IconTypescript
+  IconTypescript,
+  IconSlack
 } from '@/components/icons';
 
 export type ElementNavbar = {
@@ -26,11 +27,11 @@ export const ElementsNavbar = [
     name: '2_name',
     href: 'aboutme'
   },
-  {
-    id: 3,
-    name: '3_name',
-    href: 'workingexperience'
-  },
+  // {
+  //   id: 3,
+  //   name: '3_name',
+  //   href: 'workingexperience'
+  // },
   {
     id: 4,
     name: '4_name',
@@ -43,7 +44,7 @@ export const ElementsAboutme = [
     title: 'extrainfo.title2',
     icons: [
       { name: 'Figma', icon: IconFigma },
-      { name: 'Github', icon: IconGithub }
+      { name: 'Slack', icon: IconSlack }
     ]
   },
   {

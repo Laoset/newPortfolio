@@ -21,18 +21,14 @@ const WorkingExperience = () => {
   return (
     <motion.section
       id="workingexperience"
-      className="section flex flex-col h-auto dark:text-[#bbb] mt-[80px] lg:mt-[160px]"
+      className="section flex flex-col h-auto dark:text-[#bbb]"
       initial={{ opacity: 0, y: 150 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
     >
-      <h3 className="lg:text-4xl text-3xl font-bold mb-4 lg:mb-16 dark:text-[#ddd]">
-        {t('title')}
-      </h3>
-      <p className="text-[18px] m:text-xl mb-[40px] lg:mb-16">
-        {t('description')}
-      </p>
+      <h3 className="sectionTitle">{t('title')}</h3>
+      <p className="text-base mb-[40px] lg:mb-10">{t('description')}</p>
       <div className="flex flex-col justify-between lg:gap-4">
         <div className="flex flex-col justify-between items-center gap-[2.25rem]">
           {experienceList.map((exp: projectsType, index: number) => {
@@ -50,10 +46,9 @@ const WorkingExperience = () => {
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                       <div className="flex items-start gap-4">
                         <div className="flex-1">
-                          <h3 className="leading-none tracking-tight text-xl font-semibold text-gray-900 mb-2">
+                          <h3 className="leading-none tracking-tight text-lg font-semibold text-gray-900 mb-2">
                             {exp.title}
                           </h3>
-
                           <div className="flex flex-wrap gap-3 text-sm text-gray-600">
                             <p className="text-lg font-semibold text-gray-700">
                               {exp.company}
@@ -71,7 +66,7 @@ const WorkingExperience = () => {
                   </div>
 
                   <div className="p-6 pt-0 space-y-6">
-                    <p className="text-gray-700 text-lg leading-relaxed">
+                    <p className="text-gray-700 text-base leading-relaxed">
                       {exp.description}
                     </p>
 

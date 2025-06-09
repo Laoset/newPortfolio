@@ -40,7 +40,7 @@ describe('Navbar render all the content correctly', () => {
       expect(screen.getByTestId('navbar-header')).toBeInTheDocument();
       expect(screen.getByText('#KC')).toBeInTheDocument();
       const content = screen.getByTestId('navbar-content');
-      expect(content.children.length).toBe(4);
+      expect(content.children.length).toBe(3);
       expect(
         screen.getByTestId('navbar-desktop-bttheme-dark')
       ).toBeInTheDocument();

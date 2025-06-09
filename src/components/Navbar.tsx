@@ -59,13 +59,13 @@ const Navbar = () => {
             isScroll
               ? 'insideNav bg-[#ffffff] dark:bg-[#f8f7fe] dark:text-black '
               : 'insideNavNoScroll bg-[#f8f7fe]  dark:bg-[#1c1a27] dark:text-[#ffffff] '
-          } h-[4.75rem] flex flex-row justify-between items-center  z-50  text-lg font-medium  `}
+          } h-[4.75rem] flex flex-row justify-between items-center  z-50 text-base font-medium  `}
           initial={{ opacity: 1 }}
           animate={{ opacity: modal ? 0 : 1 }}
           transition={{ duration: 0.3 }}
         >
           <button onClick={() => scrollTo(0, 0)} data-testid="navbar-btlogo">
-            <h1 className="hover:animate-pulse hover:text-[#BB2649] transition-colors md:text-lg">
+            <h1 className="hover:animate-pulse hover:text-[#BB2649] transition-colors text-base">
               #KC
             </h1>
           </button>
@@ -146,7 +146,7 @@ const Navbar = () => {
                 </div>
                 <button>
                   <IconClose
-                    className="text-xl text-white"
+                    className="text-lg text-white"
                     onClick={() => setModal(!modal)}
                     data-testid="navbar-mobile-btclose"
                   />
@@ -161,7 +161,7 @@ const Navbar = () => {
                   <button
                     onClick={() => handlerMoveAndCloseModal(item.href)}
                     key={item.id}
-                    className="hover-underline-animation text-lg text-white"
+                    className="hover-underline-animation text-base text-white"
                   >
                     {'<'}
                     {t(item.name)}

@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="sectionWrapper overflow-hidden">
+      <main className="sectionWrapper overflow-hidden space-y-24">
         <MainContextAlter />
         <Aboutme />
-        <WorkingExperience />
+        {/* <WorkingExperience /> */}
         <ProyectosHome />
         <ChatBot />
       </main>

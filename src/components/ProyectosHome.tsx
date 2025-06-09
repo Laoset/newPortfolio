@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { IconCode, IconArrowRight, IconGithub } from './icons';
+import { IconGithub } from './icons';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -8,7 +8,7 @@ type projectsType = {
   title: string;
   description: string;
   link: string;
-  github: string;
+  github: string | null;
   tech: string[];
 };
 const ProyectosHome = () => {
@@ -18,25 +18,21 @@ const ProyectosHome = () => {
   return (
     <motion.section
       id="projects"
-      className="section h-auto flex flex-col justify-center dark:text-[#bbb] mt-[80px] lg:mt-[160px]"
+      className="section h-auto flex flex-col justify-center dark:text-[#bbb]"
       initial={{ opacity: 0, y: 150 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
     >
-      <h3 className="lg:text-4xl text-3xl font-bold mb-4 lg:mb-16 dark:text-[#ddd]">
-        {t('title')}
-      </h3>
-      <div className="flex flex-col justify-between lg:gap-4">
-        <div className="flex flex-col lg:flex-row justify-between items-center mb-4 lg:mb-16">
-          <p className="text-[18px] m:text-xl mb-[40px] lg:mb-0">
-            {t('description')}
-          </p>
+      <h3 className="sectionTitle">{t('title')}</h3>
+      <div className="flex flex-col justify-between">
+        <div className="flex flex-col lg:flex-row justify-between items-center mb-4 lg:mb-10">
+          <p className="text-base mb-[40px] lg:mb-0">{t('description')}</p>
           <a
             href="https://github.com/Laoset"
             target="_blank"
             aria-label="GitHub"
-            className="hidden lg:block px-2 py-[6px] rounded-md bg-[#BB2649] text-[#FFFFFF] hover:bg-opacity-80 transition-colors text-[18px] w-auto max-w-[115px]"
+            className="hidden lg:block px-2 py-[6px] rounded-md bg-[#BB2649] text-[#FFFFFF] hover:bg-opacity-80 transition-colors text-base w-auto max-w-[115px]"
           >
             {t('button')}
           </a>
@@ -46,7 +42,7 @@ const ProyectosHome = () => {
             return (
               <motion.div
                 key={index}
-                className="relative flex flex-col justify-between lg:h-[200px] 2xl:max-w-[350px] max-w-full 3xl:max-w-[400px] rounded-lg card dark:bg-[#e7e6ece0] cursor-pointer"
+                className="relative lg:h-[220px] 2xl:max-w-[350px] max-w-full 3xl:max-w-[400px] rounded-lg card dark:bg-[#e7e6ece0] cursor-pointer py-6 lg:py-5 px-6"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -55,18 +51,20 @@ const ProyectosHome = () => {
                 <a
                   href={item.link}
                   target="_blank"
-                  className="h-full w-full flex flex-col lg:justify-evenly py-6 lg:py-0 px-6"
+                  className="h-full w-full flex flex-col"
                 >
                   <p className="text-lg font-medium dark:text-black">
                     {item.title}
                   </p>
-                  <p className="text-base lg:text-lg font-normal dark:text-gray-700 ">
+                  <p className="text-base font-normal dark:text-gray-700 ">
                     {item.description}
                   </p>
                 </a>
-                <a href={item.github} target="_blank" aria-label="GitHub">
-                  <IconGithub className="absolute top-5 lg:top-8 right-3 hover:text-black text-gray-600 transition-colors w-[24px] h-[24px]" />
-                </a>
+                {item.github && (
+                  <a href={item.github} target="_blank" aria-label="GitHub">
+                    <IconGithub className="absolute top-5 lg:top-4 right-3 hover:text-black text-gray-600 transition-colors w-[24px] h-[24px]" />
+                  </a>
+                )}
               </motion.div>
             );
           })}
