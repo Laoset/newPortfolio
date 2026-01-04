@@ -1,82 +1,97 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenAI } from '@google/genai';
 import { NextRequest, NextResponse } from 'next/server';
-import * as cheerio from 'cheerio';
+import ES_DATA from '../../../messages/es.json';
+import EN_DATA from '../../../messages/en.json';
 
 const apiKey = process.env.GEMINI_API_KEY;
+
 if (!apiKey) {
-  throw new Error('GEMINI_API_KEY is not defined in the environment variables');
+  throw new Error('GEMINI_API_KEY is missing');
 }
-const genAI = new GoogleGenerativeAI(apiKey);
-const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
-async function getPortfolioContent(url: string): Promise<string> {
-  try {
-    const response = await fetch(url);
-    const html = await response.text();
-    const $ = cheerio.load(html);
+const client = new GoogleGenAI({ apiKey });
 
-    const content = {
-      about: $('#aboutme').text(),
-      projects: $('#projects').text(),
-      skills: $('#skills').text(),
-      experience: $('#experience').text()
-    };
+// --- SISTEMA DE RATE LIMIT SIMPLIFICADO ---
+// Almacena: IP -> { count: número de mensajes, lastMessage: fecha }
+const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
 
-    return `
-        Información del Portfolio:
-        
-        Sobre mí:
-        ${content.about}
-        
-        Proyectos:
-        ${content.projects}
-        
-        Habilidades:
-        ${content.skills}
-        
-        Experiencia:
-        ${content.experience}
-      `;
-  } catch (error) {
-    console.error('Error al obtener el contenido del portfolio:', error);
-    return '';
-  }
-}
+// Configuración
+const WINDOW_SIZE = 10 * 60 * 1000; // 10 minutos (en milisegundos)
+const MAX_MESSAGES = 15; // Máximo de mensajes permitidos por ventana de 10 min
+
 export async function POST(req: NextRequest) {
   try {
-    const { message, locale } = await req.json();
-    const portfolioUrl = `https://kevincorman.vercel.app/${locale}`;
-    const portfolioContent = await getPortfolioContent(portfolioUrl);
-    const prompt = `
-      You are a virtual assistant specialized EXCLUSIVELY in providing information about the following portfolio.
-      
-      CONTEXT OF THE PORTFOLIO:
-      ${portfolioContent}
+    // 1. OBTENER IP DEL USUARIO
+    // En Vercel/Next.js, la IP real suele estar en 'x-forwarded-for'
+    const ip = req.headers.get('x-forwarded-for') || 'ip-desconocida';
 
-      STRICT INSTRUCTIONS:
-      1. you may ONLY answer questions related to the portfolio information provided above.
-      2. If the question is not portfolio related:
-         - If it is a greeting like "Hello", "Hi", "How are you?" in English or "Hola", "¿Qué tal?" in Spanish, respond politely in the same language.
-         - Otherwise, answer ONLY: ${
-           locale === 'es'
-             ? '“Lo siento, solo puedo responder preguntas sobre el portafolio del autor. ¿Te gustaría saber algo específico sobre sus proyectos o habilidades?”'
-             : "“Sorry, I can only answer questions about the author's portfolio. Would you like to know anything specific about their projects or skills?”"
-         }
-      3. Respond ONLY in the language of the question: ${
-        locale === 'es' ? 'Spanish' : 'English'
+    const now = Date.now();
+    const userRecord = rateLimitMap.get(ip);
+
+    if (userRecord) {
+      if (now - userRecord.lastReset > WINDOW_SIZE) {
+        userRecord.count = 1;
+        userRecord.lastReset = now;
+      } else {
+        userRecord.count++;
+
+        if (userRecord.count > MAX_MESSAGES) {
+          return NextResponse.json(
+            {
+              response:
+                '⛔ You reached the maximum number of messages allowed. Please try again later.'
+            },
+            { status: 429 } // 429 = Too Many Requests
+          );
+        }
       }
-      4. You should not make up information that is not in the context provided.
-      5. If you are asked about a specific project that is not in the portfolio, indicate that this project is not part of the current portfolio.
-      6. Keep your answers focused exclusively on the projects, skills and technologies mentioned in the context.
+    } else {
+      // Usuario nuevo, lo registramos
+      rateLimitMap.set(ip, { count: 1, lastReset: now });
+    }
 
-      Question: "${message}"
+    const { message, locale } = await req.json();
 
-      Respond to the above question in a friendly, detailed, and accurate manner. Keep your answers short and avoid repeating the user's words: 
-    `;
+    const currentLocale = locale === 'en' ? 'en' : 'es';
+    const data = currentLocale === 'en' ? EN_DATA : ES_DATA;
+    const response = await client.models.generateContent({
+      model: 'gemini-2.5-flash-lite',
+      config: {
+        systemInstruction: {
+          parts: [
+            {
+              text: `
+                You are a virtual assistant for Kevin Corman's portfolio.
+                CONTEXT:
+                About: ${data.AboutMe} 
+                Projects: ${data.Projects}
+                Skills: ${data.Experience} 
+                Experience: ${data.Experience}
+                RULES:
+                1. Answer ONLY based on the context.
+                2. Respond in ${currentLocale === 'es' ? 'Spanish' : 'English'}.
+              `
+            }
+          ]
+        }
+      },
+      contents: [
+        {
+          role: 'user',
+          parts: [{ text: message }]
+        }
+      ]
+    });
 
-    const result = await model.generateContent(prompt);
-    return NextResponse.json({ response: result.response.text() });
+    const responseText =
+      response.text || 'Lo siento, no pude generar una respuesta.';
+
+    return NextResponse.json({ response: responseText });
   } catch (error) {
-    return NextResponse.json({ error: 'Error al procesar la solicitud.' });
+    console.log('error', error);
+    return NextResponse.json(
+      { error: 'Error procesando la solicitud' },
+      { status: 500 }
+    );
   }
 }

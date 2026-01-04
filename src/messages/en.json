@@ -151,8 +151,11 @@
   },
   "Chatbot": {
     "modalTitle": "Virtual Assistant",
+    "welcomeMessage": "Hello! How can I assist you?",
     "placeholder": "Type your message...",
+    "errorMessage": "Sorry, an error occurred. Please try again.",
     "button": "Send",
+    "loading": "Thinking...",
     "default": "I'm actually not Kevin, I'm an AI. Please rephrase your question.",
     "intro": "Hi, how are you? I'm Kevin Corman, FrontEnd developer.",
     "personal": "I was born in Lima, Peru, currently living in Buenos Aires, Argentina. I work full-time as a FrontEnd developer.",

@@ -1,31 +1,38 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import ProjectsCircle from './ProjectsCircle';
 import { useTranslations } from 'next-intl';
+import * as motion from 'motion/react-client';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      when: 'beforeChildren',
+      staggerChildren: 0.3
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8 }
+  }
+};
 
 const MainContent = () => {
-  const [shouldRenderCircle, setShouldRenderCircle] = useState(false);
   const t = useTranslations();
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setShouldRenderCircle(true);
-    }, 1000);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
-
-  const renderCircle = () => {
-    return <ProjectsCircle />;
-  };
 
   return (
     <motion.section
       id="main"
-      className="section flex flex-col justify-center lg:scroll-mt-[4.75rem] lg:py-28 3xl:py-0 gap-[50px] 4xl:gap-20 text-black dark:text-[#ffedd5]"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      className="section flex flex-col justify-center lg:scroll-mt-[4.75rem] lg:py-28 gap-[50px] 4xl:gap-20 text-black dark:text-[#ffedd5]"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
     >
       <div className="flex flex-col text-center mt-[80px]">
         <h2 className="w-full title text-[2.6rem] 364:text-[2.8rem] xs:text-[3rem] sm:text-[4rem] md:text-[4.8rem] m:text-[5.5rem] lg:text-[5rem]">
@@ -38,11 +45,9 @@ const MainContent = () => {
       </div>
       <motion.div
         className="min-h-[150px] w-full flex justify-center text-[#333333] dark:text-[#ffedd5]"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
+        variants={itemVariants}
       >
-        {shouldRenderCircle && renderCircle()}
+        <ProjectsCircle />
       </motion.div>
     </motion.section>
   );
