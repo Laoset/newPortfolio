@@ -1,19 +1,32 @@
 {
+  "Metadata": {
+    "title": "Kevin Corman | Frontend Developer",
+    "description": "Portfolio of Kevin Corman. Frontend developer and orchestrator of AI agents.",
+    "imageAlt": "Pixel art of Kevin Corman"
+  },
   "Navbar": {
     "1_name": "/home",
     "2_name": "/profile",
     "3_name": "/experience",
-    "4_name": "/projects"
+    "4_name": "/projects",
+    "homeLabel": "Back to top",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "switchToSpanish": "Switch to Spanish",
+    "switchToEnglish": "Switch to English"
   },
   "Hero": {
     "subtitle": "SOFTWARE DEVELOPER",
-    "animationCircle": "My - projects - #KC®️"
+    "animationCircle": "My - projects - #KC®️",
+    "scrollToProjects": "Go to projects"
   },
   "AboutMe": {
     "title": "Profile",
-    "description": "I'm Alan Kevin Corman Samanamud. My curiosity about computer science started at 8 years old, with my first PC a Pentium 4.",
-    "description2": "Developer with more than 3 years of experience. I worked in multidisciplinary teams in international projects.",
-    "description3": "Some of the most significant challenges were working together with Pomelo in their web, a fintech in Argentina with high impact, and in the development of an SaaS for the management of events.",
+    "description": "I'm Kevin Corman. My curiosity about computing started at 8, with my first PC, a Pentium 4.",
+    "description2": "I'm a frontend developer, but today I work more as an orchestrator: I design AI agents and QA and development flows, and I direct them to build software faster and more safely, still getting into the code when it's needed.",
+    "avatarAlt": "Pixel art of Kevin Corman, wearing glasses, a black jacket, and blue pants",
     "studies": [
       {
         "title": "Frontend Developer",
@@ -32,14 +45,14 @@
       },
       {
         "title": "Computer networks -",
-        "subtitle": "EducacionIT , Argentina -",
+        "subtitle": "EducacionIT, Argentina -",
         "time": "2018"
       }
     ],
     "extrainfo": {
       "title1": "You can find me at",
       "title2": "I use these tools",
-      "title3": "My actual stack is"
+      "title3": "My current stack is"
     }
   },
   "Experience": {
@@ -51,24 +64,27 @@
         "company": "Puntospoint",
         "time": "May 2025 - Present",
         "country": "Santiago de Chile, Chile",
-        "description": "I'm part of the web development team, where I am responsible for creating and maintaining web applications using React and TypeScript. I work in an agile environment, collaborating closely with designers and other developers to create suitable and efficient user experiences.",
+        "description": "Frontend development of loyalty platforms: apps, websites, and backoffices that brands use to build loyalty with their customers. I combine development with AI agents and autonomous QA systems, which I design and implement to speed up development cycles and improve the quality of deliveries.",
         "techTitle": "Technologies used",
         "tech": [
           "TypeScript",
           "React",
           "Material UI",
-          "NextJS",
+          "Next.js",
           "Zustand",
           "Jest",
-          "Testing Library"
+          "Playwright",
+          "Cypress"
         ],
         "workingTitle": "Key Achievements",
-        "workingKeys": null
+        "workingKeys": [
+          "I created an autonomous AI QA flow that tests the app, generates reports with the exact failure points, and adds automated code review."
+        ]
       },
       {
         "title": "FrontEnd Developer",
         "company": "Muvinai",
-        "time": "Oct 2023- Feb 2025",
+        "time": "Oct 2023 - Feb 2025",
         "country": "Buenos Aires, Argentina",
         "description": "I was part of a multidisciplinary team in the IT area, developing digital solutions focused on festivals, SPAs, and mobile applications.",
         "techTitle": "Technologies used",
@@ -81,7 +97,7 @@
           "Testing Library",
           "Material UI",
           "React Admin",
-          "NextJS"
+          "Next.js"
         ],
         "workingTitle": "Key Achievements",
         "workingKeys": [
@@ -94,13 +110,13 @@
         "company": "TechMinds",
         "time": "June 2023 - Aug 2023",
         "country": "Puebla, Mexico",
-        "description": "Developed a backoffice for stock management and food distribution using React and NodeJS.",
+        "description": "Developed a backoffice for stock management and food distribution using React and Node.js.",
         "techTitle": "Technologies used",
         "tech": [
           "TypeScript",
           "React",
           "Material UI",
-          "NodeJS",
+          "Node.js",
           "PrismaORM",
           "PostgreSQL"
         ],
@@ -119,51 +135,71 @@
     "cards": [
       {
         "title": "Boom Festival",
-        "description": "As part of the Muvinai team, I developed the website for Boom Festival, an international event that brings together multiple artits and attendees in Portugal.",
+        "description": "As part of the Muvinai team, I developed the website for Boom Festival, an international event that brings together multiple artists and attendees in Portugal.",
         "link": "https://www.boomfestival.org/",
-        "github": null
+        "github": null,
+        "tech": [],
+        "image": null
       },
       {
         "title": "Game Center",
         "description": "A web app featuring three interactive games: Memotest, WPM, and Pokémon Finder.",
         "link": "https://game-center-akcs.netlify.app/",
-        "github": "https://github.com/Laoset/gameCenter"
+        "github": "https://github.com/Laoset/gameCenter",
+        "tech": ["React", "TypeScript", "Vite", "Tailwind CSS"],
+        "image": null
       },
       {
         "title": "Pomodoro App",
         "description": "A customizable Pomodoro-style timer built as a web application.",
         "link": "https://pomodoro-app-sooty.vercel.app/",
-        "github": "https://github.com/Laoset/pomodoroApp"
+        "github": "https://github.com/Laoset/pomodoroApp",
+        "tech": ["React", "TypeScript", "Tailwind CSS"],
+        "image": null
       },
       {
         "title": "Crypto Cards",
         "description": "A web app that fetches real-time cryptocurrency data from the CoinGecko API and displays it in a card-based layout.",
         "link": "https://show-crypto.vercel.app/",
-        "github": "https://github.com/Laoset/showCrypto"
+        "github": "https://github.com/Laoset/showCrypto",
+        "tech": ["Next.js", "React", "Tailwind CSS", "CoinGecko"],
+        "image": null
       }
     ]
   },
   "Footer": {
     "title": "Thank you for making it this far! If you have any proposals, feel free to reach out.",
     "letter": "Made with",
-    "letter2": "by Alan Kevin Corman Samanamud",
-    "letter2Mobile": "by #KC"
+    "letter2": "by Kevin Corman",
+    "letter2Mobile": "by #KC",
+    "linkedin": "Kevin Corman on LinkedIn",
+    "github": "Kevin Corman on GitHub"
   },
   "Chatbot": {
     "modalTitle": "Virtual Assistant",
     "welcomeMessage": "Hello! How can I assist you?",
     "placeholder": "Type your message...",
     "errorMessage": "Sorry, an error occurred. Please try again.",
+    "tooLong": "That message is too long. Please keep it under 1000 characters.",
+    "rateLimit": "You reached the message limit for now. Please try again later.",
+    "conversationLimit": "This conversation hit the message limit.",
+    "unavailable": "The assistant is not configured in this environment.",
     "button": "Send",
     "loading": "Thinking...",
+    "open": "Open chat",
+    "close": "Close chat",
     "default": "I'm actually not Kevin, I'm an AI. Please rephrase your question.",
-    "intro": "Hi, how are you? I'm Kevin Corman, FrontEnd developer.",
-    "personal": "I was born in Lima, Peru, currently living in Buenos Aires, Argentina. I work full-time as a FrontEnd developer.",
-    "contact": "You can contact me through ",
-    "contact2": " and also via ",
-    "contact3": "I have several projects on my ",
-    "contact4": " for you to take a look at.",
-    "skills": "My work technology stack includes React, MaterialUI, and React Admin. Personally, I often use TypeScript along with TailwindCSS instead. I also use tools like Jira, Figma, and Git. Currently, I'm studying NextJs.",
-    "experience": "I have 1 year of work experience in web development, I have worked in international as well as Argentine companies, and I currently hold the position of FrontEnd Developer."
+    "intro": "Hi, how are you? I'm Kevin Corman, a frontend developer and orchestrator of AI agents.",
+    "personal": "I was born in Lima, Peru, and I live in Buenos Aires, Argentina. I work full-time as a developer.",
+    "contact": "You can reach me on LinkedIn: https://www.linkedin.com/in/kevin-corman-samanamud/",
+    "contact2": "I am also on GitHub: https://github.com/Laoset",
+    "contact3": "Several projects are published on this portfolio.",
+    "contact4": "The site is https://kevincorman.com",
+    "skills": "I'm a frontend developer, but today I work more as an orchestrator: I design AI agents and QA and development flows, and I direct them to build software faster and more safely, still getting into the code when it's needed.",
+    "experience": "At Puntospoint I do frontend development of loyalty platforms: apps, websites, and backoffices that brands use to build loyalty with their customers. I combine development with AI agents and autonomous QA systems, which I design and implement to speed up development cycles and improve the quality of deliveries."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "back": "Back to home"
   }
 }

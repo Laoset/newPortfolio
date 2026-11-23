@@ -2,11 +2,14 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint src",
+    "lint": "eslint src",
     "lint-staged": "lint-staged",
     "test": "vitest",
     "test-commit": "vitest run",
@@ -22,10 +25,10 @@
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "autoprefixer": "10.4.16",
-    "eslint-config-next": "16.1.1",
+    "eslint-config-next": "^16.4.6",
     "motion": "^11.15.0",
-    "next": "16.1.1",
-    "next-intl": "^4.7.0",
+    "next": "^16.4.6",
+    "next-intl": "^4.15.3",
     "postcss": "^8.4.47",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -41,8 +44,8 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
-    "@vitejs/plugin-react": "^4.3.4",
-    "@vitest/coverage-v8": "^2.1.8",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@vitest/coverage-v8": "^5.1.1",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.37.3",
@@ -53,6 +56,7 @@
     "playwright": "^1.49.1",
     "prettier": "^3.4.2",
     "typescript-eslint": "^8.19.1",
-    "vitest": "^2.1.8"
+    "vite": "^7.3.1",
+    "vitest": "^5.1.1"
   }
 }

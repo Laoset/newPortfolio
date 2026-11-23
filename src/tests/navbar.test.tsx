@@ -28,6 +28,7 @@ vi.mock('@/utils/ScrollMovement', () => ({
 describe('Navbar render all the content correctly', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    window.localStorage.clear();
 
     Object.defineProperty(window, 'scrollTo', {
       value: vi.fn(),
@@ -40,7 +41,9 @@ describe('Navbar render all the content correctly', () => {
       expect(screen.getByTestId('navbar-header')).toBeInTheDocument();
       expect(screen.getByText('#KC')).toBeInTheDocument();
       const content = screen.getByTestId('navbar-content');
-      expect(content.children.length).toBe(3);
+      expect(content.children.length).toBe(4);
+      expect(screen.getByText('3_name')).toBeInTheDocument();
+      expect(screen.getByText('#KC').tagName).toBe('SPAN');
       expect(
         screen.getByTestId('navbar-desktop-bttheme-dark')
       ).toBeInTheDocument();
@@ -74,7 +77,12 @@ describe('Navbar render all the content correctly', () => {
       render(<Navbar />);
       const hamburger = screen.getByTestId('navbar-mobile-btmenu');
       expect(hamburger).toBeInTheDocument();
+      expect(hamburger).toHaveAttribute('aria-expanded', 'false');
       fireEvent.click(hamburger);
+      expect(screen.getByTestId('navbar-mobile-btmenu')).toHaveAttribute(
+        'aria-expanded',
+        'true'
+      );
       expect(screen.getByTestId('navbar-mobile-content')).toBeInTheDocument();
     });
     test('closes mobile menu when close button is clicked', () => {

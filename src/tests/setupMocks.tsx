@@ -1,25 +1,60 @@
+import React from 'react';
 import { vi } from 'vitest';
 
-// Mock framer-motion
-vi.mock('framer-motion', () => ({
-  motion: {
-    div: ({ children, ...props }: React.PropsWithChildren<{}>) => (
-      <div {...props}>{children}</div>
-    ),
-    ul: ({ children, ...props }: React.PropsWithChildren<{}>) => (
-      <ul {...props}>{children}</ul>
-    )
+const MOTION_PROPS = [
+  'initial',
+  'animate',
+  'exit',
+  'transition',
+  'whileInView',
+  'whileHover',
+  'whileTap',
+  'viewport',
+  'variants',
+  'layout'
+];
+
+vi.mock('motion/react', () => {
+  const omitMotionProps = (props: Record<string, unknown>) => {
+    const rest = { ...props };
+    for (const key of MOTION_PROPS) {
+      delete rest[key];
+    }
+    return rest;
+  };
+
+  const motion = new Proxy(
+    {},
+    {
+      get:
+        (_target, tag: string) =>
+        ({
+          children,
+          ...props
+        }: {
+          children?: React.ReactNode;
+        } & Record<string, unknown>) =>
+          React.createElement(tag, omitMotionProps(props), children)
+    }
+  );
+
+  return {
+    motion,
+    AnimatePresence: ({ children }: { children?: React.ReactNode }) => children,
+    useReducedMotion: () => false
+  };
+});
+
+vi.mock('next-intl', () => ({
+  useTranslations: () => {
+    const translate = (key: string) => key;
+    translate.raw = (key: string) => key;
+    return translate;
   },
-  AnimatePresence: ({ children }: React.PropsWithChildren<{}>) => (
-    <>{children}</>
-  )
+  hasLocale: (locales: readonly string[], candidate: unknown) =>
+    typeof candidate === 'string' && locales.includes(candidate)
 }));
 
-// Mock next-intl
-vi.mock('next-intl', () => ({
-  useTranslations: () => (key: string) => key
-}));
-// Function to change screen size
 export const setScreenSize = (width: number) => {
   Object.defineProperty(window, 'innerWidth', {
     writable: true,

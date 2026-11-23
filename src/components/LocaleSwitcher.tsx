@@ -1,24 +1,25 @@
 import { useRouter, useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { IconWorld } from './icons';
 
 const LocaleSwitcher = () => {
   const router = useRouter();
   const params = useParams();
+  const t = useTranslations('Navbar');
+  const isEnglish = params.locale === 'en';
+
   const onSelectChange = () => {
-    if (params.locale === 'en') {
-      router.replace(`/${'es'}`, {});
-    } else {
-      router.replace(`/${'en'}`, {});
-    }
+    router.replace(isEnglish ? '/es' : '/en');
   };
+
   return (
-    <button>
-      <IconWorld
-        className="hover:rotate-12  duration-300"
-        onClick={onSelectChange}
-        aria-label="Language"
-        data-testid="locale-switcher"
-      />
+    <button
+      type="button"
+      onClick={onSelectChange}
+      aria-label={isEnglish ? t('switchToSpanish') : t('switchToEnglish')}
+      data-testid="locale-switcher"
+    >
+      <IconWorld aria-hidden="true" className="hover:rotate-12 duration-300" />
     </button>
   );
 };

@@ -1,7 +1,7 @@
 import { useTextScramble } from '@/hooks/useTextScramble';
 import { ElementNavbar } from '@/utils/ElementsNavbar';
 import React from 'react';
-import { useTranslations } from 'use-intl';
+import { useTranslations } from 'next-intl';
 
 type TextScrambleProps = {
   element: ElementNavbar;

@@ -1,97 +1,187 @@
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 import { NextRequest, NextResponse } from 'next/server';
 import ES_DATA from '../../../messages/es.json';
 import EN_DATA from '../../../messages/en.json';
+import {
+  consumeRateLimit,
+  nextChatUsage,
+  RATE_LIMIT_MAX_MESSAGES,
+  RATE_LIMIT_WINDOW_MS,
+  sanitizeConversationId,
+  validateChatMessage,
+  type RateRecord
+} from '@/lib/chat-guard';
+import { geminiErrorForLog, resolveGeminiModel } from '@/lib/gemini-log';
+import { openUsage, sealUsage } from '@/lib/chat-seal';
+import { consumeSharedWindow } from '@/lib/chat-upstash';
 
-const apiKey = process.env.GEMINI_API_KEY;
+/**
+ * The Map is only a fallback when there is no signing secret and no Upstash.
+ * It does not survive across serverless isolates. The signed cookie does,
+ * and an optional Upstash counter does too. A Vercel Firewall rate-limit
+ * rule is still the limit a client cannot skip by dropping cookies.
+ */
+const rateLimitMap = new Map<string, RateRecord>();
 
-if (!apiKey) {
-  throw new Error('GEMINI_API_KEY is missing');
+const USAGE_COOKIE = 'kc_chat';
+
+function portfolioContext(locale: 'en' | 'es') {
+  const data = locale === 'en' ? EN_DATA : ES_DATA;
+
+  return JSON.stringify({
+    about: data.AboutMe,
+    experience: data.Experience,
+    projects: data.Projects.cards.map((card) => ({
+      title: card.title,
+      description: card.description,
+      link: card.link,
+      tech: card.tech
+    })),
+    assistant: {
+      intro: data.Chatbot.intro,
+      personal: data.Chatbot.personal,
+      contact: data.Chatbot.contact,
+      contact2: data.Chatbot.contact2,
+      skills: data.Chatbot.skills,
+      experience: data.Chatbot.experience
+    }
+  });
 }
 
-const client = new GoogleGenAI({ apiKey });
+function clientIp(req: NextRequest) {
+  const forwarded = req.headers.get('x-forwarded-for');
+  return forwarded?.split(',')[0]?.trim() || 'unknown';
+}
 
-// --- SISTEMA DE RATE LIMIT SIMPLIFICADO ---
-// Almacena: IP -> { count: número de mensajes, lastMessage: fecha }
-const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
-
-// Configuración
-const WINDOW_SIZE = 10 * 60 * 1000; // 10 minutos (en milisegundos)
-const MAX_MESSAGES = 15; // Máximo de mensajes permitidos por ventana de 10 min
+function withUsageCookie(
+  response: NextResponse,
+  sealedUsage: string | null,
+  req: NextRequest
+) {
+  if (!sealedUsage) return response;
+  const secure =
+    req.nextUrl.protocol === 'https:' ||
+    req.headers.get('x-forwarded-proto') === 'https';
+  response.cookies.set(USAGE_COOKIE, sealedUsage, {
+    httpOnly: true,
+    sameSite: 'lax',
+    path: '/',
+    maxAge: 60 * 60 * 24,
+    secure
+  });
+  return response;
+}
 
 export async function POST(req: NextRequest) {
+  let body: { message?: unknown; locale?: unknown; conversationId?: unknown };
   try {
-    // 1. OBTENER IP DEL USUARIO
-    // En Vercel/Next.js, la IP real suele estar en 'x-forwarded-for'
-    const ip = req.headers.get('x-forwarded-for') || 'ip-desconocida';
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'invalid_message' }, { status: 400 });
+  }
 
-    const now = Date.now();
-    const userRecord = rateLimitMap.get(ip);
+  const validation = validateChatMessage(body.message);
+  if (!validation.ok) {
+    return NextResponse.json({ error: validation.error }, { status: 400 });
+  }
 
-    if (userRecord) {
-      if (now - userRecord.lastReset > WINDOW_SIZE) {
-        userRecord.count = 1;
-        userRecord.lastReset = now;
-      } else {
-        userRecord.count++;
+  const ip = clientIp(req);
+  const shared = await consumeSharedWindow({
+    url: process.env.UPSTASH_REDIS_REST_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN,
+    key: `chat:${ip}`,
+    windowMs: RATE_LIMIT_WINDOW_MS,
+    max: RATE_LIMIT_MAX_MESSAGES
+  });
+  if (shared === 'deny') {
+    return NextResponse.json({ error: 'rate_limit' }, { status: 429 });
+  }
 
-        if (userRecord.count > MAX_MESSAGES) {
-          return NextResponse.json(
-            {
-              response:
-                '⛔ You reached the maximum number of messages allowed. Please try again later.'
-            },
-            { status: 429 } // 429 = Too Many Requests
-          );
-        }
-      }
-    } else {
-      // Usuario nuevo, lo registramos
-      rateLimitMap.set(ip, { count: 1, lastReset: now });
+  const secret = process.env.CHAT_LIMIT_SECRET || process.env.GEMINI_API_KEY;
+  let sealedUsage: string | null = null;
+  if (secret) {
+    const current = openUsage(
+      req.cookies.get(USAGE_COOKIE)?.value ?? '',
+      secret
+    );
+    const decision = nextChatUsage(
+      current,
+      sanitizeConversationId(body.conversationId),
+      Date.now()
+    );
+    if (!decision.ok) {
+      return NextResponse.json(
+        {
+          error:
+            decision.reason === 'conversation' ? 'conversation' : 'rate_limit'
+        },
+        { status: 429 }
+      );
     }
+    sealedUsage = sealUsage(decision.usage, secret);
+  } else if (shared !== 'allow') {
+    const allowed = consumeRateLimit(rateLimitMap, ip, Date.now());
+    if (!allowed) {
+      return NextResponse.json({ error: 'rate_limit' }, { status: 429 });
+    }
+  }
 
-    const { message, locale } = await req.json();
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    const missing = NextResponse.json(
+      { error: 'unconfigured' },
+      { status: 503 }
+    );
+    return withUsageCookie(missing, sealedUsage, req);
+  }
 
-    const currentLocale = locale === 'en' ? 'en' : 'es';
-    const data = currentLocale === 'en' ? EN_DATA : ES_DATA;
+  const currentLocale = body.locale === 'en' ? 'en' : 'es';
+
+  try {
+    const client = new GoogleGenAI({ apiKey });
     const response = await client.models.generateContent({
-      model: 'gemini-2.5-flash-lite',
+      model: resolveGeminiModel(process.env.GEMINI_MODEL),
       config: {
-        systemInstruction: {
-          parts: [
-            {
-              text: `
+        thinkingConfig: { thinkingLevel: ThinkingLevel.MINIMAL },
+        systemInstruction: `
                 You are a virtual assistant for Kevin Corman's portfolio.
                 CONTEXT:
-                About: ${data.AboutMe} 
-                Projects: ${data.Projects}
-                Skills: ${data.Experience} 
-                Experience: ${data.Experience}
+                ${portfolioContext(currentLocale)}
                 RULES:
                 1. Answer ONLY based on the context.
-                2. Respond in ${currentLocale === 'es' ? 'Spanish' : 'English'}.
+                2. If a field is missing, say you don't have that information.
+                3. Do not invent an email address, phone number, or project URL.
+                4. Contact channels in the context are LinkedIn and GitHub only.
+                5. Respond in ${currentLocale === 'es' ? 'Spanish' : 'English'}.
+                6. Keep the answer short.
+                7. Format with Markdown: one list item per line, **bold** for names, and [text](https://...) for links. Do not use HTML.
               `
-            }
-          ]
-        }
       },
-      contents: [
-        {
-          role: 'user',
-          parts: [{ text: message }]
-        }
-      ]
+      contents: validation.value
     });
 
     const responseText =
-      response.text || 'Lo siento, no pude generar una respuesta.';
+      response.text ||
+      (currentLocale === 'es'
+        ? 'Lo siento, no pude generar una respuesta.'
+        : 'Sorry, I could not generate a response.');
 
-    return NextResponse.json({ response: responseText });
+    return withUsageCookie(
+      NextResponse.json({ response: responseText }),
+      sealedUsage,
+      req
+    );
   } catch (error) {
-    console.log('error', error);
-    return NextResponse.json(
-      { error: 'Error procesando la solicitud' },
-      { status: 500 }
+    if (process.env.NODE_ENV !== 'production') {
+      const details = geminiErrorForLog(error);
+      console.error('Gemini request failed', details);
+    } else {
+      console.error('Chatbot request failed');
+    }
+    return withUsageCookie(
+      NextResponse.json({ error: 'upstream' }, { status: 500 }),
+      sealedUsage,
+      req
     );
   }
 }
