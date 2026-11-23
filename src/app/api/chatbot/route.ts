@@ -1,4 +1,4 @@
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 import { NextRequest, NextResponse } from 'next/server';
 import ES_DATA from '../../../messages/es.json';
 import EN_DATA from '../../../messages/en.json';
@@ -11,6 +11,7 @@ import {
   validateChatMessage,
   type RateRecord
 } from '@/lib/chat-guard';
+import { geminiErrorForLog, resolveGeminiModel } from '@/lib/gemini-log';
 import { openUsage, sealUsage } from '@/lib/chat-seal';
 import { consumeSharedWindow } from '@/lib/chat-upstash';
 
@@ -139,12 +140,10 @@ export async function POST(req: NextRequest) {
   try {
     const client = new GoogleGenAI({ apiKey });
     const response = await client.models.generateContent({
-      model: 'gemini-2.5-flash-lite',
+      model: resolveGeminiModel(process.env.GEMINI_MODEL),
       config: {
-        systemInstruction: {
-          parts: [
-            {
-              text: `
+        thinkingConfig: { thinkingLevel: ThinkingLevel.MINIMAL },
+        systemInstruction: `
                 You are a virtual assistant for Kevin Corman's portfolio.
                 CONTEXT:
                 ${portfolioContext(currentLocale)}
@@ -155,16 +154,8 @@ export async function POST(req: NextRequest) {
                 4. Contact channels in the context are LinkedIn and GitHub only.
                 5. Respond in ${currentLocale === 'es' ? 'Spanish' : 'English'}.
               `
-            }
-          ]
-        }
       },
-      contents: [
-        {
-          role: 'user',
-          parts: [{ text: validation.value }]
-        }
-      ]
+      contents: validation.value
     });
 
     const responseText =
@@ -178,8 +169,13 @@ export async function POST(req: NextRequest) {
       sealedUsage,
       req
     );
-  } catch {
-    console.error('Chatbot request failed');
+  } catch (error) {
+    if (process.env.NODE_ENV !== 'production') {
+      const details = geminiErrorForLog(error);
+      console.error('Gemini request failed', details);
+    } else {
+      console.error('Chatbot request failed');
+    }
     return withUsageCookie(
       NextResponse.json({ error: 'upstream' }, { status: 500 }),
       sealedUsage,

@@ -14,7 +14,7 @@ npm run dev
 
 Abrí [http://localhost:3000](http://localhost:3000). La raíz redirige a `/en`. El español está en `/es`.
 
-`GEMINI_API_KEY` solo hace falta para el chatbot. Sin esa variable el resto del sitio funciona y `POST /api/chatbot` responde 503.
+`GEMINI_API_KEY` solo hace falta para el chatbot. Sin esa variable el resto del sitio funciona y `POST /api/chatbot` responde 503. El modelo por defecto es `gemini-3.5-flash-lite`. Una clave nueva de AI Studio no puede usar `gemini-2.5-flash-lite`.
 
 ## Límite del chatbot
 

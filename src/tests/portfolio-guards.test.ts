@@ -8,6 +8,7 @@ import {
   sanitizeConversationId,
   validateChatMessage
 } from '@/lib/chat-guard';
+import { geminiErrorForLog, resolveGeminiModel } from '@/lib/gemini-log';
 import { openUsage, sealUsage } from '@/lib/chat-seal';
 import { consumeSharedWindow } from '@/lib/chat-upstash';
 import { hasWorkingAchievements } from '@/lib/experience';
@@ -15,6 +16,27 @@ import { SITE_URL, buildRobots, buildSitemap } from '@/lib/site';
 import { pendingMuvinaiProjects } from '@/content/pending-projects';
 
 describe('chat message guard', () => {
+  test('uses the current flash-lite model unless overridden', () => {
+    expect(resolveGeminiModel()).toBe('gemini-3.5-flash-lite');
+    expect(resolveGeminiModel('  gemini-3.5-flash-lite  ')).toBe(
+      'gemini-3.5-flash-lite'
+    );
+    expect(resolveGeminiModel()).not.toBe('gemini-2.5-flash-lite');
+  });
+
+  test('redacts an API key from a Gemini error', () => {
+    const error = Object.assign(
+      new Error('bad key AIzaSyABCDEFghijklmnop123456'),
+      {
+        status: 404
+      }
+    );
+    expect(geminiErrorForLog(error)).toEqual({
+      status: 404,
+      message: 'bad key [redacted]'
+    });
+  });
+
   test('rejects empty messages and accepts a normal one', () => {
     expect(validateChatMessage('   ').ok).toBe(false);
     expect(validateChatMessage('Hola').ok).toBe(true);
