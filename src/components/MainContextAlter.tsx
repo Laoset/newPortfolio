@@ -21,9 +21,6 @@ const MainContent = () => {
           </span>
           <span className="block">{t('Hero.subtitle')}</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#333333] dark:text-[#ffedd5] md:text-lg">
-          {t('Hero.value')}
-        </p>
       </div>
       <motion.div
         className="min-h-[150px] w-full flex justify-center text-[#333333] dark:text-[#ffedd5]"

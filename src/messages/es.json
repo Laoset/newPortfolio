@@ -19,7 +19,6 @@
   },
   "Hero": {
     "subtitle": "DESARROLLADOR DE SOFTWARE",
-    "value": "Desarrollador frontend y orquestador de agentes de IA.",
     "animationCircle": "Mis - proyectos - #KC®️",
     "scrollToProjects": "Ir a proyectos"
   },
@@ -183,6 +182,7 @@
     "errorMessage": "Lo siento, ha ocurrido un error. Por favor, intenta de nuevo.",
     "tooLong": "El mensaje es demasiado largo. Probá con menos de 1000 caracteres.",
     "rateLimit": "Llegaste al máximo de mensajes por ahora. Probá de nuevo más tarde.",
+    "conversationLimit": "Esta conversación llegó al máximo de mensajes.",
     "unavailable": "El asistente no está configurado en este entorno.",
     "button": "Enviar",
     "loading": "Pensando...",

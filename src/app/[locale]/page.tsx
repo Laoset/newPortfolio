@@ -27,9 +27,9 @@ export default async function Home({
         <Aboutme />
         <WorkingExperience />
         <ProyectosHome />
-        <ChatBot />
       </main>
       <Footer />
+      <ChatBot />
     </>
   );
 }

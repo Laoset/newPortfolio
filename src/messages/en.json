@@ -19,7 +19,6 @@
   },
   "Hero": {
     "subtitle": "SOFTWARE DEVELOPER",
-    "value": "Frontend developer and orchestrator of AI agents.",
     "animationCircle": "My - projects - #KC®️",
     "scrollToProjects": "Go to projects"
   },
@@ -183,6 +182,7 @@
     "errorMessage": "Sorry, an error occurred. Please try again.",
     "tooLong": "That message is too long. Please keep it under 1000 characters.",
     "rateLimit": "You reached the message limit for now. Please try again later.",
+    "conversationLimit": "This conversation hit the message limit.",
     "unavailable": "The assistant is not configured in this environment.",
     "button": "Send",
     "loading": "Thinking...",
