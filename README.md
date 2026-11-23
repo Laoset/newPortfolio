@@ -4,6 +4,8 @@ Sitio personal en Next.js (App Router) con español e inglés (`next-intl`), Tai
 
 ## Correr en local
 
+Hace falta Node.js 22.13 o más nuevo. Vitest 5, que deja `npm audit` en cero, no corre en Node 20.
+
 ```bash
 npm ci
 cp .env.example .env.local
