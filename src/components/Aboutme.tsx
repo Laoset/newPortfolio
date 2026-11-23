@@ -24,7 +24,6 @@ const Aboutme = () => {
           <div className="flex w-full flex-col gap-4 md:w-1/2">
             <p className="text-base">{t('description')}</p>
             <p className="text-base">{t('description2')}</p>
-            <p className="text-base">{t('description3')}</p>
           </div>
           <Image
             src={'/avatar.png'}

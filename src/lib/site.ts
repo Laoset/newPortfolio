@@ -44,9 +44,8 @@ export function buildPersonJsonLd() {
     name: 'Kevin Corman',
     url: SITE_URL,
     image: `${SITE_URL}/avatar.png`,
-    jobTitle: 'Software Developer',
-    description:
-      'Software developer who builds agents, automated QA flows, and AI-assisted development, with a frontend base.',
+    jobTitle: 'Frontend Developer',
+    description: 'Frontend developer and orchestrator of AI agents.',
     worksFor: {
       '@type': 'Organization',
       name: 'Puntospoint'

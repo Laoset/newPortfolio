@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Kevin Corman | Software Developer",
-    "description": "Portfolio of Kevin Corman, in Buenos Aires. Agents, automated QA, and AI-assisted development, with a frontend base.",
+    "title": "Kevin Corman | Frontend Developer",
+    "description": "Portfolio of Kevin Corman. Frontend developer and orchestrator of AI agents.",
     "imageAlt": "Pixel art of Kevin Corman"
   },
   "Navbar": {
@@ -19,15 +19,14 @@
   },
   "Hero": {
     "subtitle": "SOFTWARE DEVELOPER",
-    "value": "I build agents, automated QA flows, and AI-assisted development. Frontend is still the base.",
+    "value": "Frontend developer and orchestrator of AI agents.",
     "animationCircle": "My - projects - #KC®️",
     "scrollToProjects": "Go to projects"
   },
   "AboutMe": {
     "title": "Profile",
-    "description": "I'm Kevin Corman. Computers got hold of me at 8, with a Pentium 4.",
-    "description2": "I come from frontend. These days I build agents, automated QA flows, and AI-assisted development flows.",
-    "description3": "Along the way I worked on Pomelo's website, an Argentine fintech, and on a SaaS for managing events.",
+    "description": "I'm Kevin Corman. My curiosity about computing started at 8, with my first PC, a Pentium 4.",
+    "description2": "I'm a frontend developer, but today I work more as an orchestrator: I design AI agents and QA and development flows, and I direct them to build software faster and more safely, still getting into the code when it's needed.",
     "avatarAlt": "Pixel art of Kevin Corman, wearing glasses, a black jacket, and blue pants",
     "studies": [
       {
@@ -66,7 +65,7 @@
         "company": "Puntospoint",
         "time": "May 2025 - Present",
         "country": "Santiago de Chile, Chile",
-        "description": "I'm part of the web development team, where I am responsible for creating and maintaining web applications using React and TypeScript. I work in an agile environment, collaborating closely with designers and other developers to create suitable and efficient user experiences.",
+        "description": "Frontend development of loyalty platforms: apps, websites, and backoffices that brands use to build loyalty with their customers. I combine development with AI agents and autonomous QA systems, which I design and implement to speed up development cycles and improve the quality of deliveries.",
         "techTitle": "Technologies used",
         "tech": [
           "TypeScript",
@@ -187,14 +186,14 @@
     "open": "Open chat",
     "close": "Close chat",
     "default": "I'm actually not Kevin, I'm an AI. Please rephrase your question.",
-    "intro": "Hi, how are you? I'm Kevin Corman, a software developer.",
+    "intro": "Hi, how are you? I'm Kevin Corman, a frontend developer and orchestrator of AI agents.",
     "personal": "I was born in Lima, Peru, and I live in Buenos Aires, Argentina. I work full-time as a developer.",
     "contact": "You can reach me on LinkedIn: https://www.linkedin.com/in/kevin-corman-samanamud/",
     "contact2": "I am also on GitHub: https://github.com/Laoset",
     "contact3": "Several projects are published on this portfolio.",
     "contact4": "The site is https://kevincorman.com",
-    "skills": "These days I build agents, automated QA flows, and AI-assisted development flows. For interfaces I use TypeScript, React, Next.js, Material UI, Zustand, Jest, and Testing Library. I also use Tailwind CSS, Redux, Figma, Slack, and Git.",
-    "experience": "I worked at TechMinds and Muvinai. The public profile currently lists me at Puntospoint as a frontend developer. I also build agents, automated QA flows, and AI-assisted development."
+    "skills": "I'm a frontend developer, but today I work more as an orchestrator: I design AI agents and QA and development flows, and I direct them to build software faster and more safely, still getting into the code when it's needed.",
+    "experience": "At Puntospoint I do frontend development of loyalty platforms: apps, websites, and backoffices that brands use to build loyalty with their customers. I combine development with AI agents and autonomous QA systems, which I design and implement to speed up development cycles and improve the quality of deliveries."
   },
   "NotFound": {
     "title": "Page not found",

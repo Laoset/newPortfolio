@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Kevin Corman | Desarrollador de software",
-    "description": "Portfolio de Kevin Corman, en Buenos Aires. Agentes, QA automatizado y desarrollo asistido por IA, con base en frontend.",
+    "title": "Kevin Corman | Desarrollador frontend",
+    "description": "Portfolio de Kevin Corman. Desarrollador frontend y orquestador de agentes de IA.",
     "imageAlt": "Pixel art de Kevin Corman"
   },
   "Navbar": {
@@ -19,15 +19,14 @@
   },
   "Hero": {
     "subtitle": "DESARROLLADOR DE SOFTWARE",
-    "value": "Armo agentes, flujos de QA automatizados y desarrollo asistido por IA. El frontend sigue siendo la base.",
+    "value": "Desarrollador frontend y orquestador de agentes de IA.",
     "animationCircle": "Mis - proyectos - #KC®️",
     "scrollToProjects": "Ir a proyectos"
   },
   "AboutMe": {
     "title": "Perfil",
-    "description": "Soy Kevin Corman. La informática me agarró a los 8 años, con un Pentium 4.",
-    "description2": "Vengo del frontend. Hoy armo agentes, flujos de QA automatizados y flujos de desarrollo asistidos por IA.",
-    "description3": "En el camino trabajé en la web de Pomelo, una fintech argentina, y en un SaaS para gestionar eventos.",
+    "description": "Soy Kevin Corman. Mi curiosidad por la informática comenzó a los 8 años, con mi primera PC, un Pentium 4.",
+    "description2": "Desarrollador frontend, pero hoy trabajo más como orquestador: diseño agentes de IA, flujos de QA y de desarrollo, y los dirijo para construir software más rápido y seguro sin dejar de meter mano en el código cuando hace falta.",
     "avatarAlt": "Pixel art de Kevin Corman, con lentes, campera negra y pantalón azul",
     "studies": [
       {
@@ -66,7 +65,7 @@
         "company": "Puntospoint",
         "time": "Mayo 2025 - Actualidad",
         "country": "Santiago de Chile, Chile",
-        "description": "Formo parte del equipo de desarrollo web, donde me encargo de la creación y mantenimiento de aplicaciones web utilizando React y TypeScript. Trabajo en un entorno ágil, colaborando estrechamente con diseñadores y otros desarrolladores para crear experiencias de usuario adecuadas y eficientes.",
+        "description": "Desarrollo frontend de plataformas de fidelización: apps, webs y backoffices con los que las marcas fidelizan a sus clientes. Combino el desarrollo con agentes de IA y sistemas de QA autónomos, que diseño e implemento para acelerar los ciclos de desarrollo y mejorar la calidad de las entregas.",
         "techTitle": "Tecnologías utilizadas",
         "tech": [
           "TypeScript",
@@ -187,14 +186,14 @@
     "open": "Abrir chat",
     "close": "Cerrar chat",
     "default": "En realidad no soy Kevin, soy una IA. Por favor reformula tu pregunta.",
-    "intro": "Hola, ¿cómo estás? Soy Kevin Corman, desarrollador de software.",
+    "intro": "Hola, ¿cómo estás? Soy Kevin Corman, desarrollador frontend y orquestador de agentes de IA.",
     "personal": "Nací en Lima, Perú y vivo en Buenos Aires, Argentina. Trabajo a tiempo completo como desarrollador.",
     "contact": "Me puedes contactar por LinkedIn: https://www.linkedin.com/in/kevin-corman-samanamud/",
     "contact2": "También estoy en GitHub: https://github.com/Laoset",
     "contact3": "Tengo varios proyectos publicados en este portfolio.",
     "contact4": "El sitio es https://kevincorman.com",
-    "skills": "Hoy armo agentes, flujos de QA automatizados y flujos de desarrollo asistidos por IA. En interfaces uso TypeScript, React, Next.js, Material UI, Zustand, Jest y Testing Library. También Tailwind CSS, Redux, Figma, Slack y Git.",
-    "experience": "Trabajé en TechMinds y en Muvinai. El perfil público me ubica ahora en Puntospoint como desarrollador frontend. Además armo agentes, flujos de QA automatizados y desarrollo asistido por IA."
+    "skills": "Desarrollador frontend, pero hoy trabajo más como orquestador: diseño agentes de IA, flujos de QA y de desarrollo, y los dirijo para construir software más rápido y seguro sin dejar de meter mano en el código cuando hace falta.",
+    "experience": "En Puntospoint hago desarrollo frontend de plataformas de fidelización: apps, webs y backoffices con los que las marcas fidelizan a sus clientes. Combino el desarrollo con agentes de IA y sistemas de QA autónomos, que diseño e implemento para acelerar los ciclos de desarrollo y mejorar la calidad de las entregas."
   },
   "NotFound": {
     "title": "Página no encontrada",
