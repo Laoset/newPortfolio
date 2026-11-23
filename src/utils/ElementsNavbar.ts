@@ -27,11 +27,11 @@ export const ElementsNavbar = [
     name: '2_name',
     href: 'aboutme'
   },
-  // {
-  //   id: 3,
-  //   name: '3_name',
-  //   href: 'workingexperience'
-  // },
+  {
+    id: 3,
+    name: '3_name',
+    href: 'workingexperience'
+  },
   {
     id: 4,
     name: '4_name',
@@ -64,10 +64,10 @@ export const ElementsAboutme = [
     icons: [
       {
         href: 'https://www.linkedin.com/in/kevin-corman-samanamud/',
-        name: 'Linkedin',
+        name: 'LinkedIn',
         icon: IconLinkedin
       },
-      { href: 'https://github.com/Laoset', name: 'Github', icon: IconGithub }
+      { href: 'https://github.com/Laoset', name: 'GitHub', icon: IconGithub }
     ]
   }
 ];

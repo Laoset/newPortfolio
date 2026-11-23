@@ -30,11 +30,11 @@ const config: Config = {
       '2xl': '1450px',
       // => @media (min-width: 1536px) { ... }
 
-      '3xl': '1650px ',
-      // => @media (min-width: 1536px) { ... }
+      '3xl': '1650px',
+      // => @media (min-width: 1650px) { ... }
 
-      '4xl': '1920px ',
-      // => @media (min-width: 1536px) { ... }
+      '4xl': '1920px',
+      // => @media (min-width: 1920px) { ... }
       tall: { raw: '(min-height: 720px)' }
       // => @media (min-height: 800px) { ... }
     },

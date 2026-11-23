@@ -1,21 +1,25 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
+import { prefersReducedMotion } from '@/lib/motion';
+
+const CHARACTERS = '!<>-_\\/[]{}—=+*^?#';
 
 export const useTextScramble = (text: string, scrambleSpeed: number = 50) => {
-  const [displayText, setDisplayText] = useState(text);
+  const [scrambled, setScrambled] = useState<string | null>(null);
   const [isHovering, setIsHovering] = useState(false);
-  const characters = '!<>-_\\/[]{}—=+*^?#';
 
-  const scramble = useCallback(() => {
+  useEffect(() => {
+    if (!isHovering || prefersReducedMotion()) return;
+
     let iteration = 0;
     const interval = setInterval(() => {
-      setDisplayText((prevText) =>
+      setScrambled(
         text
           .split('')
           .map((letter, index) => {
             if (index < iteration) {
               return text[index];
             }
-            return characters[Math.floor(Math.random() * characters.length)];
+            return CHARACTERS[Math.floor(Math.random() * CHARACTERS.length)];
           })
           .join('')
       );
@@ -28,16 +32,10 @@ export const useTextScramble = (text: string, scrambleSpeed: number = 50) => {
     }, scrambleSpeed);
 
     return () => clearInterval(interval);
-  }, [text, scrambleSpeed]);
+  }, [isHovering, text, scrambleSpeed]);
 
-  useEffect(() => {
-    if (isHovering) {
-      const cleanup = scramble();
-      return cleanup;
-    } else {
-      setDisplayText(text);
-    }
-  }, [isHovering, scramble, text]);
+  const displayText =
+    isHovering && !prefersReducedMotion() ? (scrambled ?? text) : text;
 
   return { displayText, setIsHovering };
 };

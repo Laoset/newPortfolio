@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio de Kevin Corman
 
-## Getting Started
+Sitio personal en Next.js (App Router) con español e inglés (`next-intl`), Tailwind y deploy en Vercel. El dominio canónico es [https://kevincorman.com](https://kevincorman.com).
 
-First, run the development server:
+## Correr en local
 
 ```bash
+npm ci
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrí [http://localhost:3000](http://localhost:3000). La raíz redirige a `/en`. El español está en `/es`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`GEMINI_API_KEY` solo hace falta para el chatbot. Sin esa variable el resto del sitio funciona y `POST /api/chatbot` responde 503.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Scripts
 
-## Learn More
+- `npm run dev` — desarrollo
+- `npm run build` — build de producción
+- `npm run lint` — ESLint
+- `npm run test-commit` — tests (Vitest) una sola vez
+- `npm run prettier` — formatea el repo
 
-To learn more about Next.js, take a look at the following resources:
+## Contenido pendiente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Los logros de Puntospoint (`workingKeys: null`) y los proyectos de Muvinai (SaaS y paquete NPM) no están inventados. La plantilla para sumarlos está en `src/content/pending-projects.ts`. Las capturas de proyectos van en `public/projects/` y se referencian desde `image` en `src/messages/es.json` y `src/messages/en.json`.

@@ -7,7 +7,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['/src/tests/vitest.setup.tsx', '/src/tests/setupMocks.tsx']
+    setupFiles: ['./src/tests/vitest.setup.tsx', './src/tests/setupMocks.tsx']
   },
   resolve: {
     alias: {

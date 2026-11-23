@@ -1,21 +1,58 @@
 {
+  "Metadata": {
+    "title": "Kevin Corman | Desarrollador de software",
+    "description": "Portfolio de Alan Kevin Corman Samanamud, desarrollador frontend de Buenos Aires, Argentina.",
+    "imageAlt": "Pixel art de Kevin Corman"
+  },
   "Navbar": {
     "1_name": "/inicio",
     "2_name": "/perfil",
     "3_name": "/experiencia",
-    "4_name": "/proyectos"
+    "4_name": "/proyectos",
+    "homeLabel": "Volver al inicio",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "switchToLight": "Activar modo claro",
+    "switchToDark": "Activar modo oscuro",
+    "switchToSpanish": "Cambiar a español",
+    "switchToEnglish": "Cambiar a inglés"
   },
   "Hero": {
-    "subtitle": "SOFTWARE DEVELOPER",
-    "animationCircle": "Mis - proyectos - #KC®️"
+    "subtitle": "DESARROLLADOR DE SOFTWARE",
+    "value": "Desarrollador con más de 3 años de experiencia en equipos multidisciplinarios y proyectos internacionales.",
+    "animationCircle": "Mis - proyectos - #KC®️",
+    "scrollToProjects": "Ir a proyectos"
   },
   "AboutMe": {
     "title": "Perfil",
     "description": "Soy Alan Kevin Corman Samanamud. Mi curiosidad por la informática comenzó a los 8 años, con mi primera PC un Pentium 4.",
     "description2": "Desarrollador con más de 3 años de experiencia. Trabajé en equipos multidisciplinarios en proyectos internacionales.",
     "description3": "Algunos de los desafíos más significativos fueron trabajar junto a Pomelo en su web, una fintech argentina de alto impacto, y en el desarrollo de un SaaS para la gestión de eventos.",
+    "avatarAlt": "Pixel art de Kevin Corman, con lentes, campera negra y pantalón azul",
+    "studies": [
+      {
+        "title": "Desarrollador Frontend",
+        "subtitle": "de 2022 a 2023",
+        "time": "2022"
+      },
+      {
+        "title": "Diseño web adaptable -",
+        "subtitle": "freeCodeCamp -",
+        "time": "2022"
+      },
+      {
+        "title": "Técnico en PC -",
+        "subtitle": "Centro de Formación Profesional, Argentina -",
+        "time": "2019"
+      },
+      {
+        "title": "Redes informáticas -",
+        "subtitle": "EducacionIT, Argentina -",
+        "time": "2018"
+      }
+    ],
     "extrainfo": {
-      "title1": "Me podes encontrar en",
+      "title1": "Me puedes encontrar en",
       "title2": "Uso estas herramientas",
       "title3": "Mi stack actual es"
     }
@@ -27,15 +64,15 @@
       {
         "title": "Desarrollador FrontEnd",
         "company": "Puntospoint",
-        "time": "May 2025 - Actualidad",
+        "time": "Mayo 2025 - Actualidad",
         "country": "Santiago de Chile, Chile",
-        "description": "Formo parte del equipo de desarrollo web, donde me encargo de la creación y mantenimiento de aplicaciones web utilizando React y TypeScript. Trabajo en un entorno ágil, colaborando estrechamente con diseñadores y otros desarrolladores para crear experiencias de usuario adecuadass y eficientes.",
+        "description": "Formo parte del equipo de desarrollo web, donde me encargo de la creación y mantenimiento de aplicaciones web utilizando React y TypeScript. Trabajo en un entorno ágil, colaborando estrechamente con diseñadores y otros desarrolladores para crear experiencias de usuario adecuadas y eficientes.",
         "techTitle": "Tecnologías utilizadas",
         "tech": [
           "TypeScript",
           "React",
           "Material UI",
-          "NextJS",
+          "Next.js",
           "Zustand",
           "Jest",
           "Testing Library"
@@ -46,7 +83,7 @@
       {
         "title": "Desarrollador FrontEnd",
         "company": "Muvinai",
-        "time": "Oct 2023- Feb 2025",
+        "time": "Octubre 2023 - Febrero 2025",
         "country": "Buenos Aires, Argentina",
         "description": "Formé parte de un equipo multidisciplinario en el área de IT, desarrollando soluciones digitales enfocadas para festivales, SPAs y aplicaciones móviles.",
         "techTitle": "Tecnologías utilizadas",
@@ -59,7 +96,7 @@
           "Testing Library",
           "Material UI",
           "React Admin",
-          "NextJS"
+          "Next.js"
         ],
         "workingTitle": "Logros destacados",
         "workingKeys": [
@@ -70,15 +107,15 @@
       {
         "title": "Desarrollador FullStack",
         "company": "TechMinds",
-        "time": "June 2023 - Aug 2023",
-        "country": "Puebla, Mexico",
-        "description": "Desarrolle un backoffice de gestion de stock y distribución de alimentos. usando React y NodeJS",
+        "time": "Junio 2023 - Agosto 2023",
+        "country": "Puebla, México",
+        "description": "Desarrollé un backoffice de gestión de stock y distribución de alimentos, usando React y Node.js.",
         "techTitle": "Tecnologías utilizadas",
         "tech": [
           "TypeScript",
           "React",
           "Material UI",
-          "NodeJS",
+          "Node.js",
           "PrismaORM",
           "PostgreSQL"
         ],
@@ -97,27 +134,35 @@
     "cards": [
       {
         "title": "Boom Festival",
-        "description": "Como parte del equipo Muvinai, desarrolle el sitio web para Boom Festival, un evento internacional que une artistas y asistentes en Portugal.",
+        "description": "Como parte del equipo Muvinai, desarrollé el sitio web para Boom Festival, un evento internacional que une artistas y asistentes en Portugal.",
         "link": "https://www.boomfestival.org/",
-        "github": null
+        "github": null,
+        "tech": [],
+        "image": null
       },
       {
         "title": "Game Center",
         "description": "Web que reúne 3 juegos interactivos: Memotest - WPM - Pokemon Finder.",
         "link": "https://game-center-akcs.netlify.app/",
-        "github": "https://github.com/Laoset/gameCenter"
+        "github": "https://github.com/Laoset/gameCenter",
+        "tech": ["React", "TypeScript", "Vite", "Tailwind CSS"],
+        "image": null
       },
       {
         "title": "Pomodoro App",
         "description": "Aplicación web con temporizador estilo Pomodoro, configurable por el usuario.",
         "link": "https://pomodoro-app-sooty.vercel.app/",
-        "github": "https://github.com/Laoset/pomodoroApp"
+        "github": "https://github.com/Laoset/pomodoroApp",
+        "tech": ["React", "TypeScript", "Tailwind CSS"],
+        "image": null
       },
       {
         "title": "Crypto Cards",
         "description": "Aplicación web que muestra información de criptomonedas en formato de tarjetas.",
         "link": "https://show-crypto.vercel.app/",
-        "github": "https://github.com/Laoset/showCrypto"
+        "github": "https://github.com/Laoset/showCrypto",
+        "tech": ["Next.js", "React", "Tailwind CSS", "CoinGecko"],
+        "image": null
       }
     ]
   },
@@ -125,23 +170,34 @@
     "title": "Gracias por llegar hasta aquí. Si tienes alguna propuesta, no dudes en contactarme.",
     "letter": "Hecho con",
     "letter2": "por Alan Kevin Corman Samanamud",
-    "letter2Mobile": "por #KC"
+    "letter2Mobile": "por #KC",
+    "linkedin": "LinkedIn de Kevin Corman",
+    "github": "GitHub de Kevin Corman"
   },
   "Chatbot": {
     "modalTitle": "Asistente Virtual",
     "welcomeMessage": "¡Hola! ¿En qué puedo ayudarte?",
     "placeholder": "Escribe tu mensaje...",
     "errorMessage": "Lo siento, ha ocurrido un error. Por favor, intenta de nuevo.",
+    "tooLong": "El mensaje es demasiado largo. Probá con menos de 1000 caracteres.",
+    "rateLimit": "Llegaste al máximo de mensajes por ahora. Probá de nuevo más tarde.",
+    "unavailable": "El asistente no está configurado en este entorno.",
     "button": "Enviar",
     "loading": "Pensando...",
+    "open": "Abrir chat",
+    "close": "Cerrar chat",
     "default": "En realidad no soy Kevin, soy una IA. Por favor reformula tu pregunta.",
-    "intro": "Hola, como estas ? Soy Kevin Corman, desarrollador FrontEnd.",
-    "personal": "Nací en Lima, Perú, actualmente vivo en Buenos Aires, Argentina. Trabajo a tiempo completo como desarrollador FrontEnd.",
-    "contact": "Me puedes contactar por ",
-    "contact2": " y también por ",
-    "contact3": "Tengo varios proyectos en mi ",
-    "contact4": " para que le eches un vistazo.",
-    "skills": "Mi stack tecnológico laboral comprende React, MaterialUI y React Admin. Por mi cuenta suelo utilizar TypeScript junto a TailwindCSS en reemplazo. Además hago uso de herramientas como Jira, Figma y Git. Actualmente me encuentro estudiando NextJs.",
-    "experience": "Tengo 1 año de experiencia laboral en el área de desarrollo web, trabajé en empresas internacionales como también argentinas, actualmente tengo el cargo de Desarrollador FrontEnd."
+    "intro": "Hola, ¿cómo estás? Soy Kevin Corman, desarrollador de software.",
+    "personal": "Nací en Lima, Perú y vivo en Buenos Aires, Argentina. Trabajo a tiempo completo como desarrollador frontend.",
+    "contact": "Me puedes contactar por LinkedIn: https://www.linkedin.com/in/kevin-corman-samanamud/",
+    "contact2": "También estoy en GitHub: https://github.com/Laoset",
+    "contact3": "Tengo varios proyectos publicados en este portfolio.",
+    "contact4": "El sitio es https://kevincorman.com",
+    "skills": "Mi stack laboral incluye TypeScript, React, Next.js, Material UI, Zustand, Jest y Testing Library. También uso Tailwind CSS, Redux, Figma, Slack y Git.",
+    "experience": "Tengo más de 3 años de experiencia en desarrollo web, en equipos de Argentina y del exterior. Trabajé en TechMinds y Muvinai, y el perfil público me ubica actualmente en Puntospoint como desarrollador frontend."
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "back": "Volver al inicio"
   }
 }

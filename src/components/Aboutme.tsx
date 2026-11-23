@@ -1,36 +1,38 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { ElementsAboutme } from '@/utils/ElementsNavbar';
 import Image from 'next/image';
 
 const Aboutme = () => {
   const t = useTranslations('AboutMe');
+  const reduceMotion = useReducedMotion();
 
   return (
     <motion.section
       id="aboutme"
-      className="section flex flex-col h-auto dark:text-[#bbb]"
-      initial={{ opacity: 0, y: 150 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      className="section scroll-mt-36 flex flex-col h-auto dark:text-[#bbb]"
+      initial={reduceMotion ? false : { opacity: 0, y: 40 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: reduceMotion ? 0 : 0.5 }}
     >
-      <h3 className="sectionTitle">{t('title')}</h3>
+      <h2 className="sectionTitle">{t('title')}</h2>
       <article className="flex flex-col justify-between">
-        <div className="flex md:flex-row gap-8 justify-between lg:max-h-[233px] mb-4 lg:mb-16">
-          <div className="w-2/4 flex flex-col justify-between">
+        <div className="mb-4 flex flex-col items-center gap-8 md:mb-16 md:flex-row md:items-start md:justify-between">
+          <div className="flex w-full flex-col gap-4 md:w-1/2">
             <p className="text-base">{t('description')}</p>
             <p className="text-base">{t('description2')}</p>
-            <p className="text-base ">{t('description3')}</p>
+            <p className="text-base">{t('description3')}</p>
           </div>
           <Image
             src={'/avatar.png'}
             width={250}
             height={250}
-            alt="avatarkc"
-            className="object-cover p-1 lg:p-1 aspect-square rounded-2xl ring-2 ring-[#BB2649]/70 "
+            alt={t('avatarAlt')}
+            sizes="220px"
+            className="aspect-square w-[220px] max-w-full rounded-2xl object-cover p-1 [image-rendering:pixelated] ring-2 ring-[#BB2649]/70"
           />
         </div>
         <div className="flex flex-col lg:flex-row gap-[40px] m:gap-16 mt-[40px] lg:mt-0  justify-center">
@@ -61,25 +63,24 @@ const IconComponent = ({ icon }: { icon: any }) => {
         href={icon.href}
         className="hover:text-[#BB2649] transition-colors relative group"
         target="_blank"
-        aria-label="redirects"
+        rel="noopener noreferrer"
+        aria-label={icon.name}
       >
-        <icon.icon className="w-[24px] h-[24px]" />
+        <icon.icon aria-hidden="true" className="w-[24px] h-[24px]" />
         <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out text-center">
           {icon.name}
         </div>
       </a>
     );
-  } else {
-    return (
-      <>
-        <div className="hover:text-[#BB2649] transition-colors relative group">
-          <icon.icon className="w-[24px] h-[24px]" />
-          <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out text-center">
-            {icon.name}
-          </div>
-        </div>
-      </>
-    );
   }
+
+  return (
+    <div className="hover:text-[#BB2649] transition-colors relative group">
+      <icon.icon aria-hidden="true" className="w-[24px] h-[24px]" />
+      <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out text-center">
+        {icon.name}
+      </div>
+    </div>
+  );
 };
 export default Aboutme;

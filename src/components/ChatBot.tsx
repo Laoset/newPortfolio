@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import React, { useState, useRef, useEffect } from 'react';
 import { IconBot, IconChatBot } from './icons';
+import { MAX_MESSAGE_LENGTH } from '@/lib/chat-guard';
+import { prefersReducedMotion } from '@/lib/motion';
 
 // Definimos tipos para evitar el uso de "any" implícito o estructuras sueltas
 type Message = {
@@ -27,15 +29,18 @@ const ChatBot = () => {
   // Efecto para bajar el scroll cuando hay nuevos mensajes o se abre el modal
   useEffect(() => {
     if (modalOpen) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current?.scrollIntoView({
+        behavior: prefersReducedMotion() ? 'auto' : 'smooth'
+      });
     }
   }, [messages, modalOpen]);
 
   const sendMessage = async (e?: React.FormEvent) => {
-    e?.preventDefault(); // Prevenir refresh del form
-    if (!input.trim() || isLoading) return;
+    e?.preventDefault();
+    const trimmed = input.trim();
+    if (!trimmed || isLoading || trimmed.length > MAX_MESSAGE_LENGTH) return;
 
-    const userMessage: Message = { sender: 'user', text: input };
+    const userMessage: Message = { sender: 'user', text: trimmed };
     setMessages((prev) => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
@@ -44,21 +49,31 @@ const ChatBot = () => {
       const response = await fetch('/api/chatbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: input, locale: params.locale })
+        body: JSON.stringify({ message: trimmed, locale: params.locale })
       });
 
-      if (!response.ok) throw new Error('Network response was not ok');
+      if (!response.ok) {
+        const fallback =
+          response.status === 429
+            ? t('rateLimit')
+            : response.status === 400
+              ? t('tooLong')
+              : response.status === 503
+                ? t('unavailable')
+                : t('errorMessage');
+        setMessages((prev) => [...prev, { sender: 'bot', text: fallback }]);
+        return;
+      }
 
       const data = await response.json();
       const botMessage: Message = { sender: 'bot', text: data.response };
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error('Error fetching chatbot response:', error);
-      const errorMessage: Message = {
-        sender: 'bot',
-        text: t('errorMessage') || 'Hubo un error, inténtalo más tarde.'
-      };
-      setMessages((prev) => [...prev, errorMessage]);
+      setMessages((prev) => [
+        ...prev,
+        { sender: 'bot', text: t('errorMessage') }
+      ]);
     } finally {
       setIsLoading(false);
     }
@@ -81,7 +96,7 @@ const ChatBot = () => {
             <button
               onClick={() => setModalOpen(false)}
               className="dark:text-[#ddd] font-bold hover:text-[#BB2649] transition-colors"
-              aria-label="Cerrar chat"
+              aria-label={t('close')}
             >
               ✕
             </button>
@@ -137,9 +152,12 @@ const ChatBot = () => {
               <input
                 type="text"
                 value={input}
-                onChange={(e) => setInput(e.target.value)}
+                onChange={(e) =>
+                  setInput(e.target.value.slice(0, MAX_MESSAGE_LENGTH))
+                }
                 placeholder={t('placeholder')}
                 disabled={isLoading}
+                maxLength={MAX_MESSAGE_LENGTH}
                 className="bg-transparent dark:text-white text-sm px-3 py-2 focus:outline-none w-full disabled:opacity-50"
               />
               <button
@@ -157,7 +175,8 @@ const ChatBot = () => {
       {/* Floating Button */}
       <button
         onClick={() => setModalOpen(!modalOpen)}
-        aria-label={modalOpen ? 'Cerrar chat' : 'Abrir chat'}
+        aria-label={modalOpen ? t('close') : t('open')}
+        aria-expanded={modalOpen}
         className="relative flex justify-end place-self-end transition-transform hover:scale-105"
       >
         <IconChatBot

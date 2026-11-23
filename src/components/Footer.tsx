@@ -16,11 +16,12 @@ const Footer = () => {
             href={'https://www.linkedin.com/in/kevin-corman-samanamud/'}
             className="hover:text-[#BB2649] transition-colors relative group"
             target="_blank"
-            aria-label="redirects"
+            rel="noopener noreferrer"
+            aria-label={t('linkedin')}
           >
-            <IconLinkedin className="w-[24px] h-[24px]" />
+            <IconLinkedin aria-hidden="true" className="w-[24px] h-[24px]" />
             <div className="absolute hidden bg-gray-800 text-white text-xs rounded px-2 py-1 -top-10 left-1/2 transform -translate-x-1/2 group-hover:block cursor-none transition-opacity duration-1000 ease-in-out text-center">
-              Linkedin
+              LinkedIn
             </div>
           </a>
         </div>
@@ -32,6 +33,8 @@ const Footer = () => {
             className="hidden lg:block "
             href="https://github.com/Laoset"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t('github')}
           >
             <p>{t('letter2')}</p>
           </a>
@@ -39,6 +42,8 @@ const Footer = () => {
             className="lg:hidden"
             href="https://github.com/Laoset"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t('github')}
           >
             <p>{t('letter2Mobile')}</p>
           </a>
