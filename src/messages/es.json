@@ -86,7 +86,7 @@
         "company": "Muvinai",
         "time": "Octubre 2023 - Febrero 2025",
         "country": "Buenos Aires, Argentina",
-        "description": "Formé parte de un equipo multidisciplinario en el área de IT, desarrollando soluciones digitales enfocadas para festivales, SPAs y aplicaciones móviles.",
+        "description": "Desarrollé y escalé las interfaces web y móviles de productos digitales para festivales y eventos masivos, con TypeScript, React, React Native y Next.js. Traduje reglas de negocio complejas en interfaces claras y cuidé la arquitectura del código y el rendimiento en los picos de demanda.",
         "techTitle": "Tecnologías utilizadas",
         "tech": [
           "TypeScript",
@@ -110,7 +110,7 @@
         "company": "TechMinds",
         "time": "Junio 2023 - Agosto 2023",
         "country": "Puebla, México",
-        "description": "Desarrollé un backoffice de gestión de stock y distribución de alimentos, usando React y Node.js.",
+        "description": "Desarrollé de punta a punta la plataforma web de backoffice para el control de inventario, la trazabilidad de alimentos y la logística de distribución, con TypeScript, React y Node.js.",
         "techTitle": "Tecnologías utilizadas",
         "tech": [
           "TypeScript",

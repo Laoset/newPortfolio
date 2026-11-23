@@ -86,7 +86,7 @@
         "company": "Muvinai",
         "time": "Oct 2023 - Feb 2025",
         "country": "Buenos Aires, Argentina",
-        "description": "I was part of a multidisciplinary team in the IT area, developing digital solutions focused on festivals, SPAs, and mobile applications.",
+        "description": "I built and scaled the web and mobile interfaces of digital products for festivals and large-scale events, with TypeScript, React, React Native and Next.js. I translated complex business rules into clear interfaces and took care of code architecture and performance during demand peaks.",
         "techTitle": "Technologies used",
         "tech": [
           "TypeScript",
@@ -110,7 +110,7 @@
         "company": "TechMinds",
         "time": "June 2023 - Aug 2023",
         "country": "Puebla, Mexico",
-        "description": "Developed a backoffice for stock management and food distribution using React and Node.js.",
+        "description": "I built end to end the backoffice web platform for inventory control, food traceability and distribution logistics, with TypeScript, React and Node.js.",
         "techTitle": "Technologies used",
         "tech": [
           "TypeScript",
@@ -122,8 +122,8 @@
         ],
         "workingTitle": "Key Achievements",
         "workingKeys": [
-          "Developed an efficient stock management system, optimizing food distribution processes",
-          "Implemented a user-friendly interface for real-time stock monitoring and management"
+          "I developed a modern, functional dashboard, improving the user experience and making internal stock management easier.",
+          "I implemented efficient microservices, which let the platform scale properly and optimized data management."
         ]
       }
     ]
