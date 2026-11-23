@@ -153,6 +153,8 @@ export async function POST(req: NextRequest) {
                 3. Do not invent an email address, phone number, or project URL.
                 4. Contact channels in the context are LinkedIn and GitHub only.
                 5. Respond in ${currentLocale === 'es' ? 'Spanish' : 'English'}.
+                6. Keep the answer short.
+                7. Format with Markdown: one list item per line, **bold** for names, and [text](https://...) for links. Do not use HTML.
               `
       },
       contents: validation.value

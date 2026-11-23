@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import React, { useState, useRef, useEffect } from 'react';
 import { IconBot, IconChatBot } from './icons';
+import ChatMarkdown from './ChatMarkdown';
 import {
   MAX_CONVERSATION_MESSAGES,
   MAX_MESSAGE_LENGTH
@@ -190,15 +191,15 @@ const ChatBot = () => {
                     <IconBot className="text-white w-3 h-3" />
                   </div>
                 )}
-                <span
-                  className={`inline-block py-2 px-3 rounded-xl text-sm max-w-[80%] break-words shadow-sm ${
-                    msg.sender === 'user'
-                      ? 'bg-[#d1e7dd] text-gray-800 rounded-br-none'
-                      : 'bg-white dark:bg-[#2a2a2e] dark:text-gray-200 rounded-bl-none'
-                  }`}
-                >
-                  {msg.text}
-                </span>
+                {msg.sender === 'bot' ? (
+                  <div className="max-w-[85%] break-words rounded-xl rounded-bl-none bg-white px-3 py-2 text-sm text-gray-800 shadow-sm dark:bg-[#2a2a2e] dark:text-gray-200">
+                    <ChatMarkdown text={msg.text} />
+                  </div>
+                ) : (
+                  <span className="inline-block max-w-[85%] break-words rounded-xl rounded-br-none bg-[#d1e7dd] px-3 py-2 text-sm text-gray-800 shadow-sm">
+                    {msg.text}
+                  </span>
+                )}
               </div>
             ))}
             {isLoading && (
