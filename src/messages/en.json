@@ -74,10 +74,13 @@
           "Next.js",
           "Zustand",
           "Jest",
-          "Testing Library"
+          "Playwright",
+          "Cypress"
         ],
         "workingTitle": "Key Achievements",
-        "workingKeys": null
+        "workingKeys": [
+          "I created an autonomous AI QA flow that tests the app, generates reports with the exact failure points, and adds automated code review."
+        ]
       },
       {
         "title": "FrontEnd Developer",
