@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Kevin Corman | Desarrollador de software",
-    "description": "Portfolio de Alan Kevin Corman Samanamud, desarrollador frontend de Buenos Aires, Argentina.",
+    "description": "Portfolio de Kevin Corman, en Buenos Aires. Agentes, QA automatizado y desarrollo asistido por IA, con base en frontend.",
     "imageAlt": "Pixel art de Kevin Corman"
   },
   "Navbar": {
@@ -19,15 +19,15 @@
   },
   "Hero": {
     "subtitle": "DESARROLLADOR DE SOFTWARE",
-    "value": "Desarrollador con más de 3 años de experiencia en equipos multidisciplinarios y proyectos internacionales.",
+    "value": "Armo agentes, flujos de QA automatizados y desarrollo asistido por IA. El frontend sigue siendo la base.",
     "animationCircle": "Mis - proyectos - #KC®️",
     "scrollToProjects": "Ir a proyectos"
   },
   "AboutMe": {
     "title": "Perfil",
-    "description": "Soy Alan Kevin Corman Samanamud. Mi curiosidad por la informática comenzó a los 8 años, con mi primera PC un Pentium 4.",
-    "description2": "Desarrollador con más de 3 años de experiencia. Trabajé en equipos multidisciplinarios en proyectos internacionales.",
-    "description3": "Algunos de los desafíos más significativos fueron trabajar junto a Pomelo en su web, una fintech argentina de alto impacto, y en el desarrollo de un SaaS para la gestión de eventos.",
+    "description": "Soy Kevin Corman. La informática me agarró a los 8 años, con un Pentium 4.",
+    "description2": "Vengo del frontend. Hoy armo agentes, flujos de QA automatizados y flujos de desarrollo asistidos por IA.",
+    "description3": "En el camino trabajé en la web de Pomelo, una fintech argentina, y en un SaaS para gestionar eventos.",
     "avatarAlt": "Pixel art de Kevin Corman, con lentes, campera negra y pantalón azul",
     "studies": [
       {
@@ -169,7 +169,7 @@
   "Footer": {
     "title": "Gracias por llegar hasta aquí. Si tienes alguna propuesta, no dudes en contactarme.",
     "letter": "Hecho con",
-    "letter2": "por Alan Kevin Corman Samanamud",
+    "letter2": "por Kevin Corman",
     "letter2Mobile": "por #KC",
     "linkedin": "LinkedIn de Kevin Corman",
     "github": "GitHub de Kevin Corman"
@@ -188,13 +188,13 @@
     "close": "Cerrar chat",
     "default": "En realidad no soy Kevin, soy una IA. Por favor reformula tu pregunta.",
     "intro": "Hola, ¿cómo estás? Soy Kevin Corman, desarrollador de software.",
-    "personal": "Nací en Lima, Perú y vivo en Buenos Aires, Argentina. Trabajo a tiempo completo como desarrollador frontend.",
+    "personal": "Nací en Lima, Perú y vivo en Buenos Aires, Argentina. Trabajo a tiempo completo como desarrollador.",
     "contact": "Me puedes contactar por LinkedIn: https://www.linkedin.com/in/kevin-corman-samanamud/",
     "contact2": "También estoy en GitHub: https://github.com/Laoset",
     "contact3": "Tengo varios proyectos publicados en este portfolio.",
     "contact4": "El sitio es https://kevincorman.com",
-    "skills": "Mi stack laboral incluye TypeScript, React, Next.js, Material UI, Zustand, Jest y Testing Library. También uso Tailwind CSS, Redux, Figma, Slack y Git.",
-    "experience": "Tengo más de 3 años de experiencia en desarrollo web, en equipos de Argentina y del exterior. Trabajé en TechMinds y Muvinai, y el perfil público me ubica actualmente en Puntospoint como desarrollador frontend."
+    "skills": "Hoy armo agentes, flujos de QA automatizados y flujos de desarrollo asistidos por IA. En interfaces uso TypeScript, React, Next.js, Material UI, Zustand, Jest y Testing Library. También Tailwind CSS, Redux, Figma, Slack y Git.",
+    "experience": "Trabajé en TechMinds y en Muvinai. El perfil público me ubica ahora en Puntospoint como desarrollador frontend. Además armo agentes, flujos de QA automatizados y desarrollo asistido por IA."
   },
   "NotFound": {
     "title": "Página no encontrada",

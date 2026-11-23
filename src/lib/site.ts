@@ -41,11 +41,12 @@ export function buildPersonJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Alan Kevin Corman Samanamud',
-    alternateName: 'Kevin Corman',
+    name: 'Kevin Corman',
     url: SITE_URL,
     image: `${SITE_URL}/avatar.png`,
     jobTitle: 'Software Developer',
+    description:
+      'Software developer who builds agents, automated QA flows, and AI-assisted development, with a frontend base.',
     worksFor: {
       '@type': 'Organization',
       name: 'Puntospoint'
